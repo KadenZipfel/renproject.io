@@ -1,0 +1,11 @@
+@mixin section-background {
+    content: none;
+    background-color: $off-white;
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    z-index: -1;
+    @media(min-width: $min-md) {
+        content: '';
+    }
+}

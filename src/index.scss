@@ -1,0 +1,134 @@
+@import 'styles/reset';
+@import 'styles/variables';
+@import 'styles/grid';
+@import 'styles/fonts';
+@import 'styles/mixins';
+
+@import 'styles/about';
+@import 'styles/button';
+@import 'styles/content';
+@import 'styles/expandablelist';
+@import 'styles/featured';
+@import 'styles/featurettes';
+@import 'styles/footer';
+@import 'styles/header';
+@import 'styles/home';
+@import 'styles/lines';
+@import 'styles/list';
+@import 'styles/logos';
+@import 'styles/maximage';
+@import 'styles/mediumbanner';
+@import 'styles/mobilemenu';
+@import 'styles/section';
+@import 'styles/team';
+
+* {
+    box-sizing: border-box;
+}
+html, body {
+    overflow-x: hidden;
+}
+html {
+    font-size: 62.5%;
+    height: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    @media(max-width: $min-md) {
+        &.noscroll {
+            overflow: hidden;
+        }
+    }
+}
+body {
+    font-family: 'PingFangSC';
+    color: $grey;
+}
+h1 {
+    color: $dark-grey;
+    font-size: 2.4rem;
+    font-weight: 500;
+    line-height: 1.6;
+    @media(min-width: $min-md) {
+        font-size: 3.4rem;
+        line-height: 1.4;
+    }
+    @media(min-width: $min-lg) {
+        font-size: 4.4rem;
+    }
+}
+h2 {
+    color: $dark-grey;
+    font-size: 2.2rem;
+    font-weight: 500;
+    line-height: 1.5;
+    @media(min-width: $min-md) {
+        font-size: 2.8rem;
+    }
+    @media(min-width: $min-lg) {
+        font-size: 3.2rem;
+    }
+}
+h3 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 1.5;
+    @media(min-width: $min-md) {
+        font-size: 2rem;
+    }
+    @media(min-width: $min-lg) {
+        font-size: 2.2rem;
+    }
+}
+h4 {
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1.5;
+    @media(min-width: $min-md) {
+        font-size: 1.8rem;
+    }
+}
+p {
+    font-size: 1.4rem;
+    line-height: 2;
+}
+b {
+    font-weight: 500;
+}
+a {
+    font-size: 1.4rem;
+    text-decoration: none;
+    color: $blue;
+    display: inline-block;
+    transition: opacity 0.2s ease-in-out;
+}
+a:hover {
+    opacity: 0.8;
+}
+a.disabled:hover {
+    opacity: 0.5;
+}
+.container {
+    max-width: 728px;
+    padding: 0 2rem;
+    @media(min-width: $min-md) {
+        padding: 0;
+    }
+    @media(min-width: $min-lg) {
+        max-width: 952px;
+    }
+    @media(min-width: $min-xl) {
+        max-width: 1200px;
+    }
+    @media(min-width: $min-xxl) {
+        max-width: 1400px;
+    }
+}
+small, sub, sup {
+    font-size: .83em;
+}
+sub {
+    vertical-align: sub;
+}
+sup {
+    vertical-align: super;
+}

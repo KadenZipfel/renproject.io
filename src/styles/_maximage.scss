@@ -1,0 +1,11 @@
+.max-image {
+    display: none;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+    position: absolute;
+    @media(min-width: $min-md) {
+        display: initial;
+    }
+}

@@ -1,0 +1,25 @@
+.lines {
+    display: none;
+    @media(min-width: $min-md) {
+        display: block;
+    }
+}
+.lines .container,
+.lines .row {
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+.lines--item {
+    @include col-md-4();
+}
+.lines--item:first-child {
+    @include offset-md-4();
+}
+.lines--item:before {
+    content: '';
+    background-color: $border;
+    height: 100%;
+    width: 0.1rem;
+    position: fixed;
+}

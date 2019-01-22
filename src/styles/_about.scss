@@ -1,0 +1,118 @@
+.section.section--banner {
+    background-color: #006FE8;
+    text-align: center;
+    padding: 20px;
+    &::before {
+        background-image: url('#{$images}/illustration-about_header.svg');
+        background-repeat: no-repeat;
+        background-position: left top;
+        background-size: contain;
+        width: 35%;
+        height: 100%;
+        content: "";
+        position: absolute;
+        top: 0;
+        right: -50px;
+        @media(min-width: $min-md) {
+            background-position: left bottom;
+            background-size: cover;
+            right: 0;
+        }
+    }
+    h1 {
+        color: white;
+    }
+    @media(min-width: $min-md) {
+        text-align: left;
+        padding: 0;
+    }
+}
+.section.section--story {
+    background-image: url('#{$images}/city.svg');
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-size: cover;
+    .container {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+        @media(min-width: $min-md) {
+            padding-top: 12rem;
+            padding-bottom: 12rem;
+        }
+    }
+    .block--item {
+        @include offset-md-4();
+        background-color: white;
+    }
+    .section--content {
+        @include col-md-10();
+    }
+    .section--stats {
+        @include offset-md-1();
+        margin-top: 6.7rem;
+        @media(min-width: $min-sm) {
+            padding-left: 4.5rem;
+        }
+    }
+}
+.about .featured--content {
+    @media(min-width: $min-xl) {
+        padding-right: 15rem;
+    }
+    @media(min-width: $min-xxl) {
+        padding-right: 30rem;
+    }
+}
+.team {
+    padding: 6rem 0;
+    position: relative;
+    background-color: white;
+    @media(min-width: $min-md) {
+        padding: 10rem 0;
+    }
+}
+.team .container {
+    position: relative;
+}
+.team + .team {
+    padding-top: 0;
+}
+.medium--banner {
+    background-color: #FAFAFA;
+    position: relative;
+    z-index: 0;
+}
+.medium--banner .banner--content {
+    @include row();
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    min-height: 11rem;
+    padding: 4rem 0;
+    position: relative;
+    @media(min-width: $min-md) {
+        flex-direction: row;
+    }
+}
+.medium--banner .banner--content .button--alt {
+    color: #58585B;
+    border: 0.2rem solid #58585B;
+    width: auto;
+    margin-top: 1rem;
+
+    &::before {
+        background-color: #58585B;
+    }
+    &:hover {
+        color: #FAFAFA;
+    }
+    @media(min-width: $min-md) {
+        margin-top: 0;
+    }
+}
+.medium--banner .banner--content img {
+    margin-right: 1rem;
+}
+.medium--banner .banner--content p {
+    font-size: 1.6rem;
+}

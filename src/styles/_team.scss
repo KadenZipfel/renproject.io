@@ -1,0 +1,30 @@
+.team--item {
+    @include col-xs-6();
+    @include col-md-4();
+    @include col-lg-3();
+    position: relative;
+    margin-top: 4rem;
+    padding-right: 1rem;
+    @media(min-width: $min-md) {
+        margin-top: 6rem;
+    }
+}
+.team--item::before {
+    position: absolute;
+    height: 0.1rem;
+    width: 150vw;
+    left: -50vw;
+    top: -2.5rem;
+    background-color: #eee;
+    content: '';
+}
+.team--links {
+    @include flex();
+    margin-top: 1rem;
+    @media(min-width: $min-md) {
+        margin-top: 1.5rem;
+    }
+}
+.team--links li + li {
+    margin-left: 0.8rem;
+}

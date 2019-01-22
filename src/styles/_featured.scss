@@ -1,0 +1,88 @@
+.featured {
+    @include flex();
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    height: 60rem;
+    @media(min-width: $min-md) {
+        height: 70rem;
+    }
+    background-color: #FEFEFE;
+    &::after {
+        background-image: url('#{$images}/illustration-header.svg');
+        background-repeat: no-repeat;
+        background-position: left;
+        background-size: cover;
+        z-index: -1;
+        width: 50%;
+        height: 100%;
+        content: "";
+        position: absolute;
+        right: 0;
+    }
+}
+.featured .row {
+    height: 100%;
+}
+.featured .container {
+    padding: 0;
+}
+.featured--content {
+    @include col-xs-12();
+    @include col-md-7();
+    overflow: hidden;
+    padding: 10rem 2rem;
+    text-align: center;
+    @media(min-width: $min-md) {
+        align-self: center;
+        text-align: left;
+        padding: 0;
+    }
+}
+.featured--content .content--body {
+    @media(min-width: $min-md) {
+        width: 85%;
+    }
+}
+.featured .container {
+    @include flex();
+    @include vertical();
+    @include justify-center();
+    height: 100%;
+}
+.featured--content img + .content--heading,
+.featured--content .content--heading + .content--heading {
+    margin-top: 3rem;
+    @media(min-width: $min-md) {
+        margin-top: 4rem;
+    }
+}
+.featured .content--heading h1 {
+    color: $dark-grey;
+}
+.featured .content--body > *:first-child:not(.content--links) {
+    margin-top: 4rem;
+}
+.featured .content--buttons {
+    margin-top: 0;
+}
+.featured .button {
+    color: $dark-grey;
+    background-color: white;
+}
+.featured .button--alt {
+    color: white;
+    background-color: transparent;
+    border-color: white;
+}
+.featured .button--alt:hover {
+    color: $navy;
+}
+.featured .button--alt:before {
+    background-color: white;
+}
+.featured .content--links {
+    width: 100%;
+    margin-top: 8rem;
+    float: left;
+}

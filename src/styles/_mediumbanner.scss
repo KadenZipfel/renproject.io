@@ -1,0 +1,109 @@
+.medium-banner {
+    height: 6rem;
+    background-color: #F5F5F5;
+    border-bottom: 0.2rem solid #E9E9E9;
+}
+.medium-banner .medium-banner--link {
+    text-align: center;
+    line-height: 6rem;
+}
+.medium-banner .medium-banner--link a {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #006FE8;
+    display: block;
+    &:hover {
+        span.new::before {
+            color: white;
+            background-color: #006FE8;
+        }
+    }
+}
+.medium-banner .medium-banner--link a span.new::before {
+    content: "New";
+    text-transform: uppercase;
+    margin-right: 1.5rem;
+    border: 0.2rem solid #006FE8;
+    border-radius: 0.2rem;
+    padding: 0 0.5rem;
+    transition: all 0.2s ease-in-out;
+}
+.medium-banner--slider {
+    opacity: 0;
+    transition: opacity 500ms;
+    &.ready {
+        opacity: 1;
+    }
+}
+/* react-slider css */
+.slick-list,
+.slick-slider,
+.slick-track {
+	position: relative;
+	display: block
+}
+.slick-loading .slick-slide,
+.slick-loading .slick-track {
+	visibility: hidden
+}
+.slick-slider {
+	box-sizing: border-box;
+	user-select: none;
+	touch-action: pan-y;
+}
+.slick-list {
+	overflow: hidden;
+	margin: 0;
+	padding: 0
+}
+.slick-list:focus {
+	outline: 0
+}
+.slick-list.dragging {
+	cursor: pointer;
+	cursor: hand
+}
+.slick-slider .slick-list,
+.slick-slider .slick-track {
+	transform: translate3d(0, 0, 0)
+}
+.slick-track {
+	top: 0;
+	left: 0
+}
+.slick-track:after,
+.slick-track:before {
+	display: table;
+	content: ''
+}
+.slick-track:after {
+	clear: both
+}
+.slick-slide {
+	display: none;
+	float: left;
+	height: 100%;
+}
+[dir=rtl] .slick-slide {
+	float: right
+}
+.slick-slide img {
+	display: block
+}
+.slick-slide.slick-loading img {
+	display: none
+}
+.slick-slide.dragging img {
+	pointer-events: none
+}
+.slick-initialized .slick-slide {
+	display: block
+}
+.slick-vertical .slick-slide {
+	display: block;
+	height: auto;
+}
+.slick-arrow.slick-hidden {
+	display: none
+}

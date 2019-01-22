@@ -1,0 +1,530 @@
+.section.section--protocol {
+    color: white;
+    background-color: #001B3A;
+    padding-top: 40rem;
+    @media(min-width: $min-md) {
+        padding-top: 10rem;
+    }
+
+    &::before {
+        content: "";
+        background-image: url('#{$images}/illustration-renex.svg');
+        background-repeat: no-repeat;
+        background-position: bottom center;
+        background-size: 50rem auto;
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 40rem;
+        width: 100%;
+        @media(min-width: $min-md) {
+            background-position: top left;
+            background-size: unset;
+            width: 30%;
+            height: 100%;
+        }
+        @media(min-width: $min-lg) {
+            width: 40%;
+        }
+    }
+
+    .content--body {
+        @media(min-width: $min-md) {
+            width: 80%;
+        }
+    }
+    .content--buttons {
+        @include flex();
+        flex-direction: column;
+        @media(min-width: $min-lg) {
+            @include align-center();
+            flex-direction: row;
+        }
+        margin-top: 5rem;
+    }
+    .content--link {
+        margin-top: 2rem;
+        @media(min-width: $min-sm) {
+            margin-top: 3rem;
+        }
+        @media(min-width: $min-lg) {
+            margin-top: 0;
+        }
+    }
+    .section--content {
+        @media(min-width: $min-xl) {
+            padding-bottom: 30rem;
+        }
+    }
+    h1 {
+        color: white;
+    }
+}
+.section.section--renex {
+    .section--image { 
+        img {
+            width: 60%;
+            margin-top: 10rem;
+            @media(min-width: $min-lg) {
+                width: 45%;
+                margin-top: 0;
+                margin-left: 10rem;
+            }
+        }
+    }
+    .content--body { 
+        @media(min-width: $min-sm) {
+            width: 100%;
+        }
+    }
+    .content--body .expandable-list {
+        width: 100%;
+        @media(min-width: $min-lg) {
+            width: 40%;
+            float: left;
+        }
+    }
+    .content--body .section--image {
+        width: 100%;
+        @media(min-width: $min-lg) {
+            width: 60%;
+        }
+    }
+    .section--content {
+        @include col-xs-12;
+        text-align: center;
+        @media(min-width: $min-lg) {
+            @include col-lg-10;
+            @include offset-lg-1();
+        }
+    }
+}
+.section.section--darknodes {
+    border-top: 1px solid $border;
+    background: url(styles/images/world.svg) no-repeat center center;
+    background-size: cover;
+    text-align: center;
+    .container {
+        padding-top: 10rem;
+        padding-bottom: 10rem;
+        @media(min-width: $min-xl) {
+            padding-top: 20rem;
+            padding-bottom: 20rem;
+        }
+    }
+    .block--item {
+        @include offset-md-4();
+        background-color: white;
+    }
+    .content--body {
+        width: 100%;
+    }
+    .section--content {
+        @include col-xs-12;
+        @include col-md-8;
+        @include offset-md-2;
+        @include col-lg-6;
+        @include offset-lg-3;
+    }
+    .section--darknodes--footer {
+        margin-top: 5rem;
+        font-size: 1.2rem;
+        @media(min-width: $min-md) {
+            margin-top: 10rem;
+        }
+        @media(min-width: $min-lg) {
+            margin-top: 15rem;
+        }
+    }
+}
+.section.section--token {
+    &:before {
+        @media(min-width: $min-md) {
+            content: '';
+            background-image: url('#{$images}/illustration-ren_token.svg');
+            background-repeat: no-repeat;
+            background-position: top right;
+            background-size: unset;
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 55%;
+            height: 100%;
+        }
+    }
+    .container {
+        @media(min-width: $min-xl) {
+            padding: 15rem 0;
+        }
+        @media(min-width: $min-xxl) {
+            padding: 25rem 0;
+        }
+    }
+    border-top: 1px solid $border;
+    .block--item {
+        @include offset-md-4();
+        background-color: white;
+    }
+    .section--content {
+        @include col-md-5();
+    }
+    .section--logos {
+        @include col-md-5();
+        @include col-lg-4();
+        @include offset-lg-1();
+        margin-top: 0;
+        @media(min-width: $min-md) {
+            margin-top: 7.6rem;
+        }
+    }
+    .section--logos > div {
+        @include flex();
+        @include vertical();
+        @include center();
+        @media(min-width: $min-xl) {
+            @include horizontal();
+            @include justify-end();
+        }
+    }
+    .section--logos > div + div {
+        @media(min-width: $min-xl) {
+            margin-top: 6rem;
+        }
+    }
+}
+.section.section--builders {
+    border-top: 1px solid $border;
+    &:before {
+        background-image: url('#{$images}/illustration-buildingblocks.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        content: "";
+        position: absolute;
+        z-index: -1;
+    }
+    .container {
+        @media(min-width: $min-md) {
+            padding-top: 8rem;
+            padding-bottom: 8rem;
+        }
+    }
+    .section--content {
+        @media(min-width: $min-md) {
+            padding-top: 10rem;
+        }
+    }
+    .content--body {
+        @media(min-width: $min-md) {
+            width: 80%;
+        }
+    }
+    .content--buttons {
+        @media(max-width: $min-sm) {
+            text-align: center;
+        }
+    }
+    .block--item {
+        @include offset-md-4();
+        background-color: white;
+    }
+    .section--content {
+        @include col-sm-12();
+        @include col-md-6();
+    }
+    .section--list {
+        @include col-md-6();
+        @include col-xl-5();
+        @include offset-xl-1();
+    }
+    a.content--link {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+        padding-left: 0;
+        @media(min-width: $min-xl) {
+            padding-left: 3rem;
+            padding-right: 3rem;
+        }
+    }
+}
+.block {
+    display: none;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    @media(min-width: $min-md) {
+        display: block;
+    }
+}
+.block .container {
+    height: 100%;
+    .section & {
+        padding: 0;
+    }
+}
+.block .container .row {
+    height: 100%;
+    .section & {
+        flex-direction: row;
+    }
+}
+.block--item {
+    @include col-md-4();
+    background-color: $off-white;
+}
+.investors {
+    position: relative;
+    &:before {
+        content: '';
+        background-color: white;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        z-index: 0;
+    }
+    border-top: 0.1rem solid $border;
+}
+.investors .container {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    @media(min-width: $min-md) {
+        padding-top: 10rem;
+        padding-bottom: 10rem;
+    }
+}
+.investors .row {
+    justify-content: center;
+}
+.investors--heading {
+    @include col-xs-12();
+    margin-bottom: 2rem;
+    z-index: 1;
+    @media(min-width: $min-md) {
+        margin-bottom: 0;
+        text-align: center;
+    }
+}
+.investors--image {
+    @include col-xs-6();
+    @include col-md-4();
+    @include flex();
+    @include align-center();
+    margin-top: 4rem;
+    position: relative;
+    filter: grayscale(100%);
+    opacity: 0.75;
+    transition: 0.2s all ease-in-out;
+    @media(min-width: $min-md) {
+        margin-top: 7rem;
+    }
+    @media screen and (min-width: $min-lg) {
+        flex-basis: 20%;
+        max-width: 20%;
+        box-sizing: border-box;
+    }
+    &:hover {
+        filter: none;
+        opacity: 1;
+    }
+}
+.investors--image > * {
+    flex-grow: 1;
+}
+.investors--image div {
+    margin: 0 2rem;
+    @media(min-width: $min-lg) {
+        margin: 0 3rem;
+    }
+    @media(min-width: $min-md) {
+        background-position: center;
+    }
+}
+.exchanges {
+    position: relative;
+    &:before {
+        content: '';
+        background-color: #F5F5F5;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        z-index: 0;
+    }
+    border: 0.1rem solid $border;
+}
+.exchanges .container {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+.exchanges .row {
+    justify-content: center;
+}
+.exchanges--heading {
+    @include col-xs-12();
+    color: #979797;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    z-index: 1;
+    text-align: center;
+    @media(min-width: $min-md) {
+        margin-bottom: 0;
+    }
+}
+.exchanges--image {
+    @include col-xs-12();
+    @include col-sm-4();
+    @include flex();
+    @include align-center();
+    margin-top: 4rem;
+    position: relative;
+    opacity: 0.75;
+    transition: 0.2s all ease-in-out;
+    @media(min-width: $min-md) {
+        margin-top: 7rem;
+    }
+    @media screen and (min-width: $min-lg) {
+        flex-basis: 20%;
+        max-width: 20%;
+        box-sizing: border-box;
+    }
+    &:hover {
+        filter: none !important;
+        opacity: 1;
+    }
+}
+.exchanges--image > * {
+    flex-grow: 1;
+}
+.exchanges--image div {
+    margin: 0 2rem;
+    @media(min-width: $min-lg) {
+        margin: 0 3rem;
+    }
+    @media(min-width: $min-md) {
+        background-position: center;
+    }
+}
+.contact {
+    background-color: #F5F5F5;
+    padding: 4rem 0;
+    position: relative;
+    text-align: center;
+    @media(min-width: $min-md) {
+        text-align: left;
+    }
+}
+.contact .container {
+    @include flex();
+    @include vertical();
+    @media(min-width: $min-md) {
+        @include horizontal();
+        @include justify-between();
+        padding: 0 3rem;
+    }
+    @media(min-width: $min-lg) {
+        padding: 0 5rem;
+    }
+    @media(min-width: 1240px) {
+        padding: 0 10rem;
+    }
+}
+.contact--item + .contact--item {
+    margin-top: 4rem;
+    @media(min-width: $min-md) {
+        margin-top: 0;
+    }
+}
+.contact--item p + a {
+    margin-top: 0.5rem;
+}
+.contact--item a {
+    color: $grey;
+}
+.list--item {
+    padding-right: 0;
+    position: relative;
+    color: $dark-grey;
+}
+.list--item:hover {
+    color: $blue;
+    &.disabled {
+        color: $dark-grey;
+    }
+}
+.list--item .list--title {
+    color: $blue;
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+.list--item.disabled {
+    opacity: 0.5;
+}
+.list--item:first-child:before {
+    content: '';
+    background-color: $border;
+    height: 0.1rem;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    @media(min-width: $min-md) {
+        width: 100vw;
+    }
+}
+.list--item:after {
+    content: '';
+    background-color: $border;
+    height: 0.1rem;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    @media(min-width: $min-md) {
+        width: 100vw;
+    }
+}
+.renex-banner {
+    background-color: #00183B;
+    color: white;
+    padding: 6rem 0;
+}
+.renex-banner .container {
+    @include flex();
+    @include justify-between();
+    @media(max-width: $min-sm) {
+        flex-direction: column;
+    }
+}
+.renex-banner .renex-banner--content {
+    @include flex();
+    @media(max-width: $min-sm) {
+        text-align: center;
+        flex-direction: column;
+    }
+    & > div {
+        margin: auto 0;
+        padding-bottom: 2rem;
+        padding-right: 0;
+        @media(min-width: $min-sm) {
+            padding-bottom: 0;
+            padding-right: 2rem;
+        }
+    }
+    h1 {
+        color: white;
+    }
+    .renex-banner--logo {
+        padding-right: 4rem;
+        @media(max-width: $min-sm) {
+            display: none;
+        }
+        img {
+            width: 10rem;
+        }
+    }
+}
+.renex-banner .renex-banner--buttons {
+    margin: auto 0;
+}

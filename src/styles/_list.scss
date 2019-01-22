@@ -1,0 +1,32 @@
+.list {
+    @include flex();
+    @include vertical();
+    @include justify-between();
+    height: 100%;
+}
+.list--item {
+    @include flex();
+    padding: 2rem;
+    @media(min-width: $min-md) {
+        padding: 4rem;
+    }
+}
+.list--image {
+    @include flex();
+    align-items: center;
+    margin-right: 2rem;
+}
+.list--image img {
+    width: 6rem;
+    @media(min-width: $min-xl) {
+        width: 8rem;
+    }
+}
+.list--content {
+    @include flex();
+    @include vertical();
+    @include justify-center();
+}
+.list--content a + p {
+    margin-top: 1rem;
+}

@@ -1,0 +1,30 @@
+@font-face {
+  font-family: 'BankGothic';
+  src: url('#{$fonts}/BankGothicBold.eot?#iefix') format('embedded-opentype'),  url('#{$fonts}/BankGothicBold.woff') format('woff'), url('#{$fonts}/BankGothicBold.ttf')  format('truetype'), url('#{$fonts}/BankGothicBold.svg#BankGothicBold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PingFangSC';
+  src: url('#{$fonts}/PingFangSC-Light.eot?#iefix') format('embedded-opentype'),  url('#{$fonts}/PingFangSC-Light.woff') format('woff'), url('#{$fonts}/PingFangSC-Light.ttf')  format('truetype'), url('#{$fonts}/PingFangSC-Light.svg#PingFangSC-Light') format('svg');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PingFangSC';
+  src: url('#{$fonts}/PingFangSC.eot?#iefix') format('embedded-opentype'),  url('#{$fonts}/PingFangSC.woff') format('woff'), url('#{$fonts}/PingFangSC.ttf')  format('truetype'), url('#{$fonts}/PingFangSC.svg#PingFangSC') format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PingFangSC';
+  src: url('#{$fonts}/PingFangSC-Medium.eot?#iefix') format('embedded-opentype'),  url('#{$fonts}/PingFangSC-Medium.woff') format('woff'), url('#{$fonts}/PingFangSC-Medium.ttf')  format('truetype'), url('#{$fonts}/PingFangSC-Medium.svg#PingFangSC-Medium') format('svg');
+  font-weight: 500;
+  font-style: normal;
+}
+.small-caps {
+  font-family: 'BankGothic';
+  font-size: 2.4rem;
+  line-height: 1.5;
+  text-transform: uppercase;
+}

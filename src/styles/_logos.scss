@@ -1,0 +1,9 @@
+.logos--image a:hover {
+    opacity: 1;
+}
+.logos--image div {
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: background-image 0.2s ease-in-out;
+    background-position: center;
+}

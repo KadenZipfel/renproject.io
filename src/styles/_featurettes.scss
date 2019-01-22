@@ -1,0 +1,47 @@
+.featurettes {
+    position: relative;
+    background-color: #001B3A;
+    color: #F5F5F5;
+    padding-bottom: 10rem;
+}
+.featurettes--items {
+    @include row();
+    @media (min-width: $min-md) {
+        text-align: left;
+    }
+}
+.featurettes--items > div {
+    @include col-xs-12();
+    @include col-md-4();
+}
+.featurettes--items > div + div {
+    margin-top: 4rem;
+    @media(min-width: $min-md) {
+        margin-top: 0;
+        padding-left: 2rem;
+    }
+    @media(min-width: $min-lg) {
+        padding-left: 5rem;
+    }
+}
+.featurettes--items img {
+    max-width: 7rem;
+    margin-right: 2rem;
+}
+.featurettes--items .featurettes--item {
+    @include flex();
+    align-items: flex-start;
+}
+.featurettes--items h2.featurette--title {
+    color: #F5F5F5;
+    font-weight: bold;
+    font-size: 2.4rem;
+}
+.featurettes--items img + p {
+    margin-top: 1.5rem;
+}
+.featurettes--items p + p {
+    margin-top: 0.6rem;
+    font-size: 1.8rem;
+    line-height: initial;
+}

@@ -1,0 +1,44 @@
+.expandable-list {
+    text-align: left;
+}
+.expandable-list--item {
+    border-bottom: 0.1rem solid #E4E4E4;
+}
+.expandable-list--item--title {
+    @include flex();
+    @include justify-between();
+    margin-top: 2rem;
+    margin-bottom: 1.2rem;
+    cursor: pointer;
+    @media(min-width: $min-md) {
+        margin-top: 3.5rem;
+    }
+}
+.expandable-list--item--title h2 {
+    font-size: 2.2rem;
+}
+.expandable-list--item--title:after {
+    content: "+";
+    font-size: 2.2rem;
+    font-weight: 500;
+    color: #0E61EC;
+    right: 0;
+    position: relative;
+}
+.expandable-list--item.open .expandable-list--item--title:after {
+        content: "-";
+    }
+.expandable-list--item--description {
+    opacity: 0;
+    max-height: 0.8rem;
+    overflow: hidden;
+    transition: all 0.4s ease-in-out;
+    @media(min-width: $min-md) {
+        max-height: 2.3rem;
+    }
+}
+.expandable-list--item.open .expandable-list--item--description {
+    opacity: 1;
+    max-height: 230px;
+    padding-bottom: 2.5rem;
+}
