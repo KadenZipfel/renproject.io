@@ -14,7 +14,7 @@
   "static/media/illustration-tech-stack.svg": "/static/media/illustration-tech-stack.af9e80ec.svg",
   "static/media/logo-white.svg": "/static/media/logo-white.608e78b6.svg",
   "static/media/background.png": "/static/media/background.f1698020.png",
-  "static/media/index.css": "/static/media/PingFangSC.d95166fc.svg",
+  "static/media/index.css": "/static/media/PingFangSC-Light.136cead5.svg",
   "static/media/exchange-diagram.svg": "/static/media/exchange-diagram.45e26963.svg",
   "static/media/binance.svg": "/static/media/binance.84c67730.svg",
   "static/media/hadax.png": "/static/media/hadax.3ac769bd.png",
@@ -69,6 +69,6 @@
   "static/media/zhenfund.png": "/static/media/zhenfund.adf13e18.png",
   "static/css/main.1c9992d3.chunk.css.map": "/static/css/main.1c9992d3.chunk.css.map",
   "index.html": "/index.html",
-  "precache-manifest.93850a19cf5c0cbdea542755f7dddbca.js": "/precache-manifest.93850a19cf5c0cbdea542755f7dddbca.js",
+  "precache-manifest.258dc76aa89fb780c525430e5ff754a3.js": "/precache-manifest.258dc76aa89fb780c525430e5ff754a3.js",
   "service-worker.js": "/service-worker.js"
 }
