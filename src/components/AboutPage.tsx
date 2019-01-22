@@ -92,7 +92,7 @@ class AboutPage extends React.Component {
                     <div className="container">
                         <div className="banner--content">
                             <p>Updates and news posted through the blog.</p>
-                            <a className="button button--alt" href="https://medium.com/republicprotocol"><FontAwesomeIcon icon={faMediumM} pull="left" />Visit the Blog</a>
+                            <a className="button button--alt" href="https://medium.com/renproject"><FontAwesomeIcon icon={faMediumM} pull="left" />Visit the Blog</a>
                         </div>
                     </div>
                 </div>

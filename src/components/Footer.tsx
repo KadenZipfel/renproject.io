@@ -16,7 +16,7 @@ class Footer extends React.Component {
                         <div className="footer--links">
                             <p>Community</p>
                             <ul>
-                                <li><a href="https://t.me/republicprotocolannouncements" target="_blank" rel="noopener noreferrer">Telegram Announcements</a></li>
+                                <li><a href="https://t.me/renprojectann" target="_blank" rel="noopener noreferrer">Telegram Announcements</a></li>
                                 <li><a href="https://t.me/renproject" target="_blank" rel="noopener noreferrer">Telegram Community (EN)</a></li>
                                 <li><a href="https://t.me/renkorea" target="_blank" rel="noopener noreferrer">Telegram Community (KR)</a></li>
                                 <li><a href="https://republicprotocol.zendesk.com" target="_blank" rel="noopener noreferrer">Help</a></li>
@@ -59,7 +59,7 @@ class Footer extends React.Component {
 
 export const CopySocial = <ul className="copy--social">
     <li><a title="Facebook" href="https://facebook.com/renproject" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faFacebookF} /></a></li>
-    <li><a title="Twitter" href="https://twitter.com/renplatform" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faTwitter} /></a></li>
+    <li><a title="Twitter" href="https://twitter.com/renprotocol" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faTwitter} /></a></li>
     <li><a title="Github" href="https://github.com/renproject" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faGithub} /></a></li>
     <li><a title="Telegram" href="https://t.me/renproject" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faTelegramPlane} /></a></li>
     <li><a title="Reddit" href="https://www.reddit.com/r/renproject" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faRedditAlien} /></a></li>

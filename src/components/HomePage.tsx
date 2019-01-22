@@ -132,7 +132,7 @@ class HomePage extends React.Component {
                                         <div>
                                             <a className="button" href="https://github.com/republicprotocol" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faGithub} pull="left" />Go to Github</a>
                                         </div>
-                                        <a className="content--link" href="mailto:build@renproject.com">build@renproject.com</a>
+                                        <a className="content--link" href="mailto:build@renproject.io">build@renproject.io</a>
                                     </div>
                                 </ContentBlock>
                             </div>

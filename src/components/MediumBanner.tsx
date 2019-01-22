@@ -99,4 +99,4 @@ export class MediumBanner extends React.Component<MediumBannerProps, MediumBanne
 }
 
 
-export const MediumBannerInstance = <MediumBanner mediumName="republicprotocol" limit={3} freshness={3} />;
+export const MediumBannerInstance = <MediumBanner mediumName="renproject" limit={3} freshness={3} />;
