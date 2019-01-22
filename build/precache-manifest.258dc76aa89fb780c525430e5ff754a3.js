@@ -316,28 +316,24 @@ self.__precacheManifest = [
     "url": "/static/media/PingFangSC-Light.6c81380d.woff"
   },
   {
-    "revision": "cbc9cb77d24975f2b43a71881d0c7326",
-    "url": "/static/media/PingFangSC.cbc9cb77.woff"
-  },
-  {
     "revision": "8fdd5a9ccc6b0f8fe01701d751dd25c9",
     "url": "/static/media/PingFangSC-Medium.8fdd5a9c.woff"
   },
   {
-    "revision": "19efcf688d7318d884ba67e4b88973b9",
-    "url": "/static/media/PingFangSC-Medium.19efcf68.ttf"
+    "revision": "cbc9cb77d24975f2b43a71881d0c7326",
+    "url": "/static/media/PingFangSC.cbc9cb77.woff"
   },
   {
     "revision": "877c8aab1e87b234bbbfbcdf93bbc556",
     "url": "/static/media/PingFangSC.877c8aab.eot"
   },
   {
-    "revision": "0458afab0b6d622f49b6c4ef6cf4ba98",
-    "url": "/static/media/PingFangSC-Light.0458afab.ttf"
+    "revision": "19efcf688d7318d884ba67e4b88973b9",
+    "url": "/static/media/PingFangSC-Medium.19efcf68.ttf"
   },
   {
-    "revision": "500ff5d3b41359964b7148d0983562f0",
-    "url": "/static/media/PingFangSC-Light.500ff5d3.eot"
+    "revision": "0458afab0b6d622f49b6c4ef6cf4ba98",
+    "url": "/static/media/PingFangSC-Light.0458afab.ttf"
   },
   {
     "revision": "17f5979cdc7bbc9b12d8640b743c6594",
@@ -348,16 +344,20 @@ self.__precacheManifest = [
     "url": "/static/media/PingFangSC.e616106e.ttf"
   },
   {
+    "revision": "500ff5d3b41359964b7148d0983562f0",
+    "url": "/static/media/PingFangSC-Light.500ff5d3.eot"
+  },
+  {
     "revision": "e9da78e44b5cecc07bc942d80f7c7d8e",
     "url": "/static/media/PingFangSC-Medium.e9da78e4.svg"
   },
   {
-    "revision": "136cead5c8c0ea91b81066a8410ca35d",
-    "url": "/static/media/PingFangSC-Light.136cead5.svg"
-  },
-  {
     "revision": "d95166fcbd14f327473f49b56917dc1f",
     "url": "/static/media/PingFangSC.d95166fc.svg"
+  },
+  {
+    "revision": "136cead5c8c0ea91b81066a8410ca35d",
+    "url": "/static/media/PingFangSC-Light.136cead5.svg"
   },
   {
     "revision": "ef3d093390d965029e715e564397a35c",
