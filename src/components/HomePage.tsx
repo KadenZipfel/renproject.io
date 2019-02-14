@@ -37,13 +37,13 @@ class HomePage extends React.Component {
                                                 <p>Build applications that run in complete secrecy, where no one can reveal the inputs or application state. Utilize our core financial layers to empower your applications to make private transactions and to interoperate between blockchains.</p>
                                             </ExpandableListItem>
                                             <ExpandableListItem title="Dark Pool Layer">
-                                                <p>Any party to can setup and deploy their own dark pool exchange utilizing a hidden order book. Traders can open orders, and settle order matches, in secret. Prices and amounts are never revealed.</p>
+                                                <p>Any party can setup and deploy their own dark pool exchange utilizing a hidden order book. Traders can open orders, and settle order matches, in secret. Prices and amounts are never revealed.</p>
                                             </ExpandableListItem>
                                             <ExpandableListItem title="Interoperability Layer">
                                                 <p>Instantly execute trustless swaps between blockchains in secret, without hash-time lock contracts. Work with tokens on their native blockchains without the need for trusted third-parties, federations, or centralized exchanges.</p>
                                             </ExpandableListItem>
                                             <ExpandableListItem title="Zero Knowledge Transactions">
-                                                <p>Store and transfer tokens from any blockchain without exposing wallet balances or transaction amounts. Enabling sensitive OTC deals and eliminating front running. Use this tool to build your own completely private settlement layer.</p>
+                                                <p>Store and transfer tokens from any blockchain without exposing wallet balances or transaction amounts. Enables sensitive OTC deals and eliminates front-running. Use this tool to build your own completely private settlement layer.</p>
                                             </ExpandableListItem>
                                             <ExpandableListItem title="RenVM">
                                                 <p>RenVM powers the entire ecosystem. It is a general purpose virtual machine allowing anyone to perform private computations in a decentralized network without revealing information to anyone.</p>
@@ -81,7 +81,7 @@ class HomePage extends React.Component {
                         <div className="row">
                             <div className="section--content">
                                 <ContentBlock subtitle="Darknodes power RenVM, earning rewards for their work.">
-                                    <p>Darknodes cooperate to run secret multiparty computations, power all layers of Ren, capable of running any kind of application.</p>
+                                    <p>Darknodes cooperate to run secret multiparty computations, power all layers of Ren, and are capable of running any kind of application.</p>
                                     <div className="content--columns">
                                         <div className="content--links">
                                             <a href="https://republicprotocol.zendesk.com/hc/en-us/articles/360004268853-Darknode-Quick-Summary">More about Darknodes</a>
