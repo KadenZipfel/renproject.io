@@ -2,6 +2,7 @@ import * as React from "react";
 
 interface ExpandableListItemProps {
     title: string;
+    open?: boolean;
 }
 
 interface ExpandableListItemState {
@@ -18,10 +19,11 @@ export class ExpandableListItem extends React.Component<ExpandableListItemProps,
     }
 
     public render(): JSX.Element {
-        const { title, children } = this.props;
+        const { open, title, children } = this.props;
         const { selected } = this.state;
+        const showContent = (open === undefined) ? selected : open;
         return (
-            <div className={`expandable-list--item ${selected ? "open" : ""}`} key={title}>
+            <div className={`expandable-list--item ${showContent ? "open" : ""}`} key={title}>
                 <div onClick={() => { this.setState({ selected: !selected }); }} className={`expandable-list--item--title`}><h2>{title}</h2></div>
                 <div className="expandable-list--item--description">{children}</div>
             </div>
