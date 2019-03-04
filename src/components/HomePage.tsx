@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Block from "./Block";
 import ContactItem from "./ContactItem";
 import ContentBlock from "./ContentBlock";
-import { ExpandableListItem } from "./ExpandableListItem";
+import { ExpandableListItem } from "./ExpandableList";
 import Featured from "./Featured";
 import Featurettes from "./Featurettes";
 import Footer from "./Footer";
