@@ -7,11 +7,11 @@
 .expandable-list--item--title {
     @include flex();
     @include justify-between();
-    margin-top: 2rem;
-    margin-bottom: 1.2rem;
+    padding-top: 2rem;
+    padding-bottom: 1.2rem;
     cursor: pointer;
     @media(min-width: $min-md) {
-        margin-top: 3.5rem;
+        padding-top: 3.5rem;
     }
 }
 .expandable-list--item--title h2 {

@@ -22,15 +22,24 @@ export class ExpandableListItem extends React.Component<ExpandableListItemProps,
     }
 
     public render(): JSX.Element {
-        const { open, title, children, onClick } = this.props;
+        const { open, title, children } = this.props;
         const { selected } = this.state;
         const showContent = (open !== undefined) ? open : selected;
         return (
             <div className={`expandable-list--item ${showContent ? "open" : ""}`} key={title}>
-                <div onClick={() => { if (onClick) { onClick(); } this.setState({ selected: !selected }); }} className={`expandable-list--item--title unselectable`}><h2>{title}</h2></div>
-                <div className="expandable-list--item--description">{children}</div>
+                <div onClick={this.handleClick} className={`expandable-list--item--title unselectable`}><h2>{title}</h2></div>
+                <div style={{cursor: `${!showContent ? "pointer" : "default"}`}} onClick={() => { if (showContent) {return;} this.handleClick(); }} className="expandable-list--item--description">{children}</div>
             </div>
         );
+    }
+
+    private handleClick = () => {
+        const { onClick } = this.props;
+        const { selected } = this.state;
+        if (onClick) {
+            onClick();
+        }
+        this.setState({ selected: !selected });
     }
 }
 
