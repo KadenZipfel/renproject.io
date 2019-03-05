@@ -54,6 +54,15 @@
     }
 }
 
+img.techstack--img--mobile {
+    width: 100%;
+    padding-bottom: 4rem;
+    max-height: 40rem;
+    @media(min-width: $min-md) {
+        display: none;
+    }
+}
+
 .techstack img.techstack--img {
     position: absolute;
     transition: all 0.2s ease-in-out;

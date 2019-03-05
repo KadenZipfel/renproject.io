@@ -18,6 +18,7 @@ import { MediumBannerInstance } from "./MediumBanner";
 class HomePage extends React.Component {
     public render(): JSX.Element {
         const whiteRenLogo = require("../styles/images/logo-white.svg");
+        const techStackImage = require("../styles/images/illustration-tech-stack-2.svg");
         const codeImage = require("../styles/images/icons/rp-icon-code.svg");
         const codeImageHover = require("../styles/images/icons/rp-icon-code-hvr.svg");
         return (
@@ -29,6 +30,7 @@ class HomePage extends React.Component {
                     <div className="container">
                         <div className="row">
                             <div className="section--content">
+                                <img className="techstack--img--mobile" src={techStackImage} />
                                 <ContentBlock subtitle="A suite of privacy-focused tools for dark pools and other financial applications.">
                                     <ExpandableList items={[
                                         {
