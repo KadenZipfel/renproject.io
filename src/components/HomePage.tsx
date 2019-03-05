@@ -19,7 +19,6 @@ class HomePage extends React.Component {
     public render(): JSX.Element {
         const whiteRenLogo = require("../styles/images/logo-white.svg");
         const codeImage = require("../styles/images/icons/rp-icon-code.svg");
-        const techStackImage = require("../styles/images/illustration-tech-stack.svg");
         const codeImageHover = require("../styles/images/icons/rp-icon-code-hvr.svg");
         return (
             <div className="home">
@@ -31,33 +30,35 @@ class HomePage extends React.Component {
                         <div className="row">
                             <div className="section--content">
                                 <ContentBlock subtitle="A suite of privacy-focused tools for dark pools and other financial applications.">
-                                    <div>
-                                        <ExpandableList items={[
-                                            {
-                                                title: "Application Layer",
-                                                description: <p>Build applications that run in complete secrecy, where no one can reveal the inputs or application state. Utilize our core financial layers to empower your applications to make private transactions and to interoperate between blockchains.</p>,
-                                            },
-                                            {
-                                                title: "Dark Pool Layer",
-                                                description: <p>Any party can setup and deploy their own dark pool exchange utilizing a hidden order book. Traders can open orders, and settle order matches, in secret. Prices and amounts are never revealed.</p>,
-                                            },
-                                            {
-                                                title: "Interoperability Layer",
-                                                description: <p>Instantly execute trustless swaps between blockchains in secret, without hash-time lock contracts. Work with tokens on their native blockchains without the need for trusted third-parties, federations, or centralized exchanges.</p>,
-                                            },
-                                            {
-                                                title: "Zero Knowledge Transactions",
-                                                description: <p>Store and transfer tokens from any blockchain without exposing wallet balances or transaction amounts. Enables sensitive OTC deals and eliminates front-running. Use this tool to build your own completely private settlement layer.</p>,
-                                            },
-                                            {
-                                                title: "RenVM",
-                                                description: <>
-                                                    <p>RenVM powers the entire ecosystem. It is a general purpose virtual machine allowing anyone to perform private computations in a decentralized network without revealing information to anyone.</p>
-                                                    <p>Leverage RenVM to build your own unstoppable private application.</p>
-                                                </>,
-                                            }]} />
-                                        <div className="section--image"><img src={techStackImage} /></div>
-                                    </div>
+                                    <ExpandableList items={[
+                                        {
+                                            title: "Application Layer",
+                                            description: <p>Build applications that run in complete secrecy, where no one can reveal the inputs or application state. Utilize our core financial layers to empower your applications to make private transactions and to interoperate between blockchains.</p>,
+                                            image: "illustration-application.svg",
+                                        },
+                                        {
+                                            title: "Dark Pool Layer",
+                                            description: <p>Any party can setup and deploy their own dark pool exchange utilizing a hidden order book. Traders can open orders, and settle order matches, in secret. Prices and amounts are never revealed.</p>,
+                                            image: "illustration-darkpool.svg",
+                                        },
+                                        {
+                                            title: "Interoperability Layer",
+                                            description: <p>Instantly execute trustless swaps between blockchains in secret, without hash-time lock contracts. Work with tokens on their native blockchains without the need for trusted third-parties, federations, or centralized exchanges.</p>,
+                                            image: "illustration-interoperability.svg",
+                                        },
+                                        {
+                                            title: "Zero Knowledge Transactions",
+                                            description: <p>Store and transfer tokens from any blockchain without exposing wallet balances or transaction amounts. Enables sensitive OTC deals and eliminates front-running. Use this tool to build your own completely private settlement layer.</p>,
+                                            image: "illustration-zeroknowledge.svg",
+                                        },
+                                        {
+                                            title: "RenVM",
+                                            description: <>
+                                                <p>RenVM powers the entire ecosystem. It is a general purpose virtual machine allowing anyone to perform private computations in a decentralized network without revealing information to anyone.</p>
+                                                <p>Leverage RenVM to build your own unstoppable private application.</p>
+                                            </>,
+                                            image: "illustration-renvm.svg",
+                                        }]} />
                                 </ContentBlock>
                             </div>
                         </div>

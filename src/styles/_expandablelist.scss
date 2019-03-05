@@ -42,3 +42,79 @@
     max-height: 230px;
     padding-bottom: 2.5rem;
 }
+
+.techstack--column {
+    flex: 60%;
+}
+
+.techstack {
+    position: relative;
+    height: 500px;
+    width: 500px;
+    margin-left: 200px;
+}
+
+.techstack img.techstack--img {
+    position: absolute;
+    transition: all 0.2s ease-in-out;
+
+    &.application-layer {
+        z-index: 10;
+        top: 0;
+        left: 0;
+        &.selected {
+            top: 90px;
+            left: -150px;
+        }
+    }
+
+    &.dark-pool-layer {
+        z-index: 7;
+        width: 300px;
+        bottom: 219px;
+        left: 0;
+        &.selected {
+            bottom: 135px;
+            left: -150px;
+        }
+    }
+
+    &.interoperability-layer {
+        z-index: 8;
+        width: 300px;
+        bottom: 158px;
+        left: 98px;
+        &.selected {
+            bottom: 74px;
+            left: -53px;
+        }
+    }
+
+    &.zero-knowledge-transactions {
+        z-index: 9;
+        width: 300px;
+        bottom: 96px;
+        left: 202px;
+        &.selected {
+            bottom: 12px;
+            left: 51px;
+        }
+    }
+
+    &.renvm {
+        z-index: 6;
+        left: 0;
+        bottom: 0;
+        &.selected {
+            bottom: -84px;
+            left: -150px;
+        }
+    }
+}
+
+.section--techstack {
+    display: flex;
+    @media(max-width: $min-md) {
+        flex-direction: column;
+    }
+}

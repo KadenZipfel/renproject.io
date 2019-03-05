@@ -1,5 +1,7 @@
 import * as React from "react";
 
+import inflection from "inflection";
+
 interface ExpandableListItemProps {
     title: string;
     open?: boolean;
@@ -25,7 +27,7 @@ export class ExpandableListItem extends React.Component<ExpandableListItemProps,
         const showContent = (open !== undefined) ? open : selected;
         return (
             <div className={`expandable-list--item ${showContent ? "open" : ""}`} key={title}>
-                <div onClick={() => { if (onClick) {onClick();} this.setState({ selected: !selected }); }} className={`expandable-list--item--title unselectable`}><h2>{title}</h2></div>
+                <div onClick={() => { if (onClick) { onClick(); } this.setState({ selected: !selected }); }} className={`expandable-list--item--title unselectable`}><h2>{title}</h2></div>
                 <div className="expandable-list--item--description">{children}</div>
             </div>
         );
@@ -33,7 +35,7 @@ export class ExpandableListItem extends React.Component<ExpandableListItemProps,
 }
 
 interface ExpandableListProps {
-    items: Array<{ title: string; description: React.ReactNode; }>;
+    items: Array<{ title: string; description: React.ReactNode; image: string }>;
 }
 
 interface ExpandableListState {
@@ -51,17 +53,29 @@ export class ExpandableList extends React.Component<ExpandableListProps, Expanda
     public render(): JSX.Element {
         const { items } = this.props;
         return (
-            <div className="expandable-list">
-                {items.map((item, index) => {
-                    const props = {
-                        title: item.title,
-                        open: this.state.selected === index,
-                        onClick: () => {this.onClickHandler(index);},
-                    };
-                    return (<ExpandableListItem key={index} {...props}>
-                        {item.description}
-                    </ExpandableListItem>);
-                })}
+            <div className="section--techstack">
+                <div className="expandable-list">
+                    {items.map((item, index) => {
+                        const props = {
+                            title: item.title,
+                            open: this.state.selected === index,
+                            onClick: () => { this.onClickHandler(index); },
+                        };
+                        return (<ExpandableListItem key={index} {...props}>
+                            {item.description}
+                        </ExpandableListItem>);
+                    })}
+                </div>
+                <div className="techstack--column">
+                    <div className="techstack">
+                        {
+                            items.map((item, index) => {
+                                const imageUrl = require(`../styles/images/illustration-techstack/${item.image}`);
+                                return (<img className={`techstack--img${this.state.selected === index ? " selected" : "" } ${inflection.dasherize(item.title.toLowerCase())}`} key={`teckstack-image--${index}`} src={imageUrl} />);
+                            })
+                        }
+                    </div>
+                </div>
             </div>
         );
     }
