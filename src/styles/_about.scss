@@ -1,7 +1,7 @@
 .section.section--banner {
     background-color: #006FE8;
     text-align: center;
-    padding: 20px;
+    padding: 2rem;
     &::before {
         background-image: url('#{$images}/illustration-about_header.svg');
         background-repeat: no-repeat;
@@ -12,7 +12,7 @@
         content: "";
         position: absolute;
         top: 0;
-        right: -50px;
+        right: -5rem;
         @media(min-width: $min-md) {
             background-position: left bottom;
             background-size: cover;

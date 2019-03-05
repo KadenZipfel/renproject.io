@@ -39,16 +39,16 @@
 }
 .expandable-list--item.open .expandable-list--item--description {
     opacity: 1;
-    max-height: 300px;
+    max-height: 30rem;
     padding-bottom: 2.5rem;
 }
 
 .techstack {
     position: relative;
-    height: 500px;
-    width: 500px;
-    top: 50px;
-    left: 250px;
+    height: 50rem;
+    width: 50rem;
+    top: 5rem;
+    left: 25rem;
     @media(max-width: $min-md) {
         display: none;
     }
@@ -69,56 +69,56 @@ img.techstack--img--mobile {
 
     &.application-layer {
         z-index: 10;
-        width: 500px;
+        width: 50rem;
         top: 0;
         left: 0;
         &.selected {
-            top: 90px;
-            left: -150px;
+            top: 9rem;
+            left: -15rem;
         }
     }
 
     &.dark-pool-layer {
         z-index: 7;
-        width: 300px;
-        bottom: 219px;
+        width: 30rem;
+        bottom: 21.9rem;
         left: 0;
         &.selected {
-            bottom: 135px;
-            left: -150px;
+            bottom: 13.5rem;
+            left: -15rem;
         }
     }
 
     &.interoperability-layer {
         z-index: 8;
-        width: 300px;
-        bottom: 158px;
-        left: 98px;
+        width: 30rem;
+        bottom: 15.8rem;
+        left: 9.8rem;
         &.selected {
-            bottom: 74px;
-            left: -53px;
+            bottom: 7.4rem;
+            left: -5.3rem;
         }
     }
 
     &.zero-knowledge-transactions {
         z-index: 9;
-        width: 300px;
-        bottom: 96px;
-        left: 202px;
+        width: 30rem;
+        bottom: 9.6rem;
+        left: 20.2rem;
         &.selected {
-            bottom: 12px;
-            left: 51px;
+            bottom: 1.2rem;
+            left: 5.1rem;
         }
     }
 
     &.renvm {
         z-index: 6;
-        width: 500px;
+        width: 50rem;
         left: 0;
         bottom: 0;
         &.selected {
-            bottom: -84px;
-            left: -150px;
+            bottom: -8.4rem;
+            left: -15rem;
         }
     }
 }

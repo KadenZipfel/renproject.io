@@ -100,7 +100,7 @@
     }
 }
 .section.section--darknodes {
-    border-top: 1px solid $border;
+    border-top: 0.1rem solid $border;
     background: url(styles/images/world.svg) no-repeat center center;
     background-size: cover;
     text-align: center;
@@ -160,7 +160,7 @@
             padding: 25rem 0;
         }
     }
-    border-top: 1px solid $border;
+    border-top: 0.1rem solid $border;
     .block--item {
         @include offset-md-4();
         background-color: white;
@@ -193,7 +193,7 @@
     }
 }
 .section.section--builders {
-    border-top: 1px solid $border;
+    border-top: 0.1rem solid $border;
     &:before {
         background-image: url('#{$images}/illustration-buildingblocks.png');
         background-repeat: no-repeat;
