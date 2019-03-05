@@ -43,15 +43,15 @@
     padding-bottom: 2.5rem;
 }
 
-.techstack--column {
-    flex: 60%;
-}
-
 .techstack {
     position: relative;
     height: 500px;
     width: 500px;
-    margin-left: 200px;
+    top: 50px;
+    left: 250px;
+    @media(max-width: $min-md) {
+        display: none;
+    }
 }
 
 .techstack img.techstack--img {
