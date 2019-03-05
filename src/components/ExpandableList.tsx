@@ -24,7 +24,7 @@ export class ExpandableListItem extends React.Component<ExpandableListItemProps,
         const showContent = (open === undefined) ? selected : open;
         return (
             <div className={`expandable-list--item ${showContent ? "open" : ""}`} key={title}>
-                <div onClick={() => { this.setState({ selected: !selected }); }} className={`expandable-list--item--title`}><h2>{title}</h2></div>
+                <div onClick={() => { this.setState({ selected: !selected }); }} className={`expandable-list--item--title unselectable`}><h2>{title}</h2></div>
                 <div className="expandable-list--item--description">{children}</div>
             </div>
         );
