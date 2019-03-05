@@ -7,7 +7,6 @@
         "@fortawesome/free-brands-svg-icons": "^5.1.0-11",
         "@fortawesome/free-solid-svg-icons": "^5.1.0-11",
         "@fortawesome/react-fontawesome": "0.1.0-11",
-        "@types/inflection": "^1.5.28",
         "axios": "^0.18.0",
         "inflection": "^1.12.0",
         "react": "^16.4.2",
@@ -26,6 +25,7 @@
         "deploy": "npm run build; echo 'renproject.io' > build/CNAME; git add build -f; git commit -m 'Deploying to renproject.io'; git push origin `git subtree split --prefix build master`:gh-pages --force"
     },
     "devDependencies": {
+        "@types/inflection": "^1.5.28",
         "@types/jest": "^23.3.14",
         "@types/node": "^10.12.29",
         "@types/react": "^16.8.6",
