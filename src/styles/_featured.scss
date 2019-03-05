@@ -86,3 +86,9 @@
     margin-top: 8rem;
     float: left;
 }
+.featured .content--links a {
+    display: flex;
+    img {
+        padding-right: 10px;
+    }
+}
