@@ -34,12 +34,12 @@
     overflow: hidden;
     transition: all 0.2s ease-in-out;
     @media(min-width: $min-md) {
-        max-height: 2.3rem;
+        max-height: 3rem;
     }
 }
 .expandable-list--item.open .expandable-list--item--description {
     opacity: 1;
-    max-height: 230px;
+    max-height: 300px;
     padding-bottom: 2.5rem;
 }
 
