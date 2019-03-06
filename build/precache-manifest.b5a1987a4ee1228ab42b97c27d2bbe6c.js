@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/static/media/blockasset-alt.fcc96b5e.png"
   },
   {
-    "revision": "98096488d6b610934969",
+    "revision": "8b301ffcecf2078da75f",
     "url": "/static/css/main.b34681ad.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = [
     "url": "/static/js/runtime~main.fdfcfda2.js"
   },
   {
-    "revision": "ca28e194590c62fefc5b",
-    "url": "/static/js/2.ca28e194.chunk.js"
+    "revision": "33e2c2f15e31d011fcfc",
+    "url": "/static/js/2.33e2c2f1.chunk.js"
   },
   {
     "revision": "56a959a7fe6d8153fe4860271565ef65",
@@ -196,8 +196,8 @@ self.__precacheManifest = [
     "url": "/static/media/binaryfin.c0c4552b.png"
   },
   {
-    "revision": "98096488d6b610934969",
-    "url": "/static/js/main.98096488.chunk.js"
+    "revision": "8b301ffcecf2078da75f",
+    "url": "/static/js/main.8b301ffc.chunk.js"
   },
   {
     "revision": "ce72b72f6a37a3e4a410d8a795849cc6",
@@ -324,20 +324,20 @@ self.__precacheManifest = [
     "url": "/static/media/world.90f2968e.svg"
   },
   {
-    "revision": "690c85db7c0bfecdd6dc02677991890d",
-    "url": "/static/media/BankGothicBold.690c85db.eot"
-  },
-  {
-    "revision": "5c0e89697ee7c013b639a55822075e62",
-    "url": "/static/media/BankGothicBold.5c0e8969.svg"
-  },
-  {
     "revision": "7524f9dabea030f8563a2d6d23861536",
     "url": "/static/media/BankGothicBold.7524f9da.woff"
   },
   {
+    "revision": "690c85db7c0bfecdd6dc02677991890d",
+    "url": "/static/media/BankGothicBold.690c85db.eot"
+  },
+  {
     "revision": "93fa84a9b6f7340f070f544f2e7ba62d",
     "url": "/static/media/BankGothicBold.93fa84a9.ttf"
+  },
+  {
+    "revision": "5c0e89697ee7c013b639a55822075e62",
+    "url": "/static/media/BankGothicBold.5c0e8969.svg"
   },
   {
     "revision": "6c81380d5054c0c0a62654406afafa41",
@@ -352,43 +352,43 @@ self.__precacheManifest = [
     "url": "/static/media/PingFangSC-Light.0458afab.ttf"
   },
   {
-    "revision": "136cead5c8c0ea91b81066a8410ca35d",
-    "url": "/static/media/PingFangSC-Light.136cead5.svg"
+    "revision": "877c8aab1e87b234bbbfbcdf93bbc556",
+    "url": "/static/media/PingFangSC.877c8aab.eot"
   },
   {
     "revision": "cbc9cb77d24975f2b43a71881d0c7326",
     "url": "/static/media/PingFangSC.cbc9cb77.woff"
   },
   {
-    "revision": "877c8aab1e87b234bbbfbcdf93bbc556",
-    "url": "/static/media/PingFangSC.877c8aab.eot"
+    "revision": "136cead5c8c0ea91b81066a8410ca35d",
+    "url": "/static/media/PingFangSC-Light.136cead5.svg"
   },
   {
     "revision": "e616106e3a7d41191470c30a96eacb1e",
     "url": "/static/media/PingFangSC.e616106e.ttf"
   },
   {
-    "revision": "8fdd5a9ccc6b0f8fe01701d751dd25c9",
-    "url": "/static/media/PingFangSC-Medium.8fdd5a9c.woff"
-  },
-  {
     "revision": "17f5979cdc7bbc9b12d8640b743c6594",
     "url": "/static/media/PingFangSC-Medium.17f5979c.eot"
   },
   {
-    "revision": "19efcf688d7318d884ba67e4b88973b9",
-    "url": "/static/media/PingFangSC-Medium.19efcf68.ttf"
+    "revision": "8fdd5a9ccc6b0f8fe01701d751dd25c9",
+    "url": "/static/media/PingFangSC-Medium.8fdd5a9c.woff"
   },
   {
     "revision": "d95166fcbd14f327473f49b56917dc1f",
     "url": "/static/media/PingFangSC.d95166fc.svg"
   },
   {
+    "revision": "19efcf688d7318d884ba67e4b88973b9",
+    "url": "/static/media/PingFangSC-Medium.19efcf68.ttf"
+  },
+  {
     "revision": "e9da78e44b5cecc07bc942d80f7c7d8e",
     "url": "/static/media/PingFangSC-Medium.e9da78e4.svg"
   },
   {
-    "revision": "29a58a1c9b89ab010362de78d624685b",
+    "revision": "79072b06edafbc3638e91ab020962dab",
     "url": "/index.html"
   }
 ];
