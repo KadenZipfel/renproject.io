@@ -140,7 +140,7 @@ class HomePage extends React.Component {
                                     <p>Build a Dark Pool or utilize our other privacy preserving layers to create financial applications. Get in touch if you have a project idea you’d like to discuss with the Ren team.</p>
                                     <div className="content--buttons">
                                         <div>
-                                            <a className="button" href="https://github.com/republicprotocol" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faGithub} pull="left" />Go to Github</a>
+                                            <a className="button" href={REN_URLS.github} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faGithub} pull="left" />Go to Github</a>
                                         </div>
                                         <a className="content--link" href="mailto:build@renproject.io">build@renproject.io</a>
                                     </div>
