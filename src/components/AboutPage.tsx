@@ -57,22 +57,22 @@ class AboutPage extends React.Component {
                     <div className="container">
                         <h2>The Team</h2>
                         <div className="row">
-                            <TeamItem name="Taiyang Zhang" position="CEO" github="https://github.com/sixteen" linkedin="https://www.linkedin.com/in/taiyangzhang/" medium="https://medium.com/@taiyangzhang" />
-                            <TeamItem name="Loong Wang" position="CTO" github="https://github.com/loongy" twitter="https://twitter.com/bzlwang" linkedin="https://www.linkedin.com/in/bzlwang" medium="https://medium.com/@loong" />
+                            <TeamItem name="Taiyang Zhang" position="CEO" github="sixteen" linkedin="taiyangzhang" medium="@taiyangzhang" />
+                            <TeamItem name="Loong Wang" position="CTO" github="loongy" twitter="bzlwang" linkedin="bzlwang" medium="@loong" />
                         </div>
                         <div className="row">
-                            <TeamItem name="Noah I" position="Blockchain Developer" github="https://github.com/negaex" linkedin="https://www.linkedin.com/in/noahi/" />
-                            <TeamItem name="Susruth Nadimpalli" position="Blockchain Developer" github="https://github.com/susruth" linkedin="https://www.linkedin.com/in/susruth-nadimpalli/" />
-                            <TeamItem name="Yunshi Sun" position="Software Developer" github="https://github.com/tok-kkk" linkedin="https://www.linkedin.com/in/yunshi-sun" />
-                            <TeamItem name="Jaz Gulati" position="Software Developer" github="https://github.com/jazg" linkedin="https://www.linkedin.com/in/jazg/" />
-                            <TeamItem name="Divya Mary" position="Software Developer" github="https://github.com/divyakoshy" linkedin="https://www.linkedin.com/in/divya-mary-5a5969104/" />
-                            <TeamItem name="Vincent Au" position="Software Developer" github="https://github.com/vinceau" linkedin="https://www.linkedin.com/in/vinceau/" />
-                            <TeamItem name="Pfalzgraf Martin" position="Software Developer" github="https://github.com/Skyfold" linkedin="https://www.linkedin.com/in/benjaminpfalzgrafmartin/" />
-                            <TeamItem name="Ross Pure" position="Researcher" github="https://github.com/ross-pure" />
-                            <TeamItem name="Hugh Greethead" position="Community" linkedin="https://www.linkedin.com/in/hugh-greethead/" />
-                            <TeamItem name="Darren Toh" position="Legal &amp; Communications" linkedin="https://www.linkedin.com/in/darren-toh-2a29885/" />
-                            <TeamItem name="Michael Burgess" position="Liquidity" linkedin="https://www.linkedin.com/in/michaelwburgess/" />
-                            <TeamItem name="Vincent Ward" position="Design" twitter="https://twitter.com/thevward" />
+                            <TeamItem name="Noah I" position="Blockchain Developer" github="negaex" linkedin="noahi" />
+                            <TeamItem name="Susruth Nadimpalli" position="Blockchain Developer" github="susruth" linkedin="susruth-nadimpalli" />
+                            <TeamItem name="Yunshi Sun" position="Software Developer" github="tok-kkk" linkedin="yunshi-sun" />
+                            <TeamItem name="Jaz Gulati" position="Software Developer" github="jazg" linkedin="jazg" />
+                            <TeamItem name="Divya Mary" position="Software Developer" github="divyakoshy" linkedin="divya-mary-5a5969104" />
+                            <TeamItem name="Vincent Au" position="Software Developer" github="vinceau" linkedin="vinceau" />
+                            <TeamItem name="Pfalzgraf Martin" position="Software Developer" github="Skyfold" linkedin="benjaminpfalzgrafmartin" />
+                            <TeamItem name="Ross Pure" position="Researcher" github="ross-pure" />
+                            <TeamItem name="Hugh Greethead" position="Community" linkedin="hugh-greethead" />
+                            <TeamItem name="Darren Toh" position="Legal &amp; Communications" linkedin="darren-toh-2a29885" />
+                            <TeamItem name="Michael Burgess" position="Liquidity" linkedin="michaelwburgess" />
+                            <TeamItem name="Vincent Ward" position="Design" twitter="thevward" />
                         </div>
                     </div>
                 </div>
@@ -80,11 +80,11 @@ class AboutPage extends React.Component {
                     <div className="container">
                         <h2>The Advisors</h2>
                         <div className="row">
-                            <TeamItem name="Dorjee Sun" position="CEO, Perlin Network" linkedin="https://www.linkedin.com/in/dorjee/" />
-                            <TeamItem name="Loi Luu" position="CEO, KyberNetwork" linkedin="https://www.linkedin.com/in/loiluu/" />
-                            <TeamItem name="John Ng Pangilinan" position="Partner, Signum Capital" linkedin="https://www.linkedin.com/in/johnngp/" />
-                            <TeamItem name="Prabhakar Reddy" position="Investor, Accel Partners" linkedin="https://www.linkedin.com/in/prabhakar2reddy/" />
-                            <TeamItem name="Anup Malani" position="Economics, University of Chicago" linkedin="https://www.linkedin.com/in/anup-malani-a1551b2/" />
+                            <TeamItem name="Dorjee Sun" position="CEO, Perlin Network" linkedin="dorjee" />
+                            <TeamItem name="Loi Luu" position="CEO, KyberNetwork" linkedin="loiluu" />
+                            <TeamItem name="John Ng Pangilinan" position="Partner, Signum Capital" linkedin="johnngp" />
+                            <TeamItem name="Prabhakar Reddy" position="Investor, Accel Partners" linkedin="prabhakar2reddy" />
+                            <TeamItem name="Anup Malani" position="Economics, University of Chicago" linkedin="anup-malani-a1551b2" />
                         </div>
                     </div>
                 </div>

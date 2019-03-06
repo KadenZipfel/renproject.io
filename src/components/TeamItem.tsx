@@ -24,16 +24,16 @@ class TeamItem extends React.Component<TeamItemProps, TeamItemState> {
                 <p>{position}</p>
                 <ul className="team--links">
                     {github &&
-                        <li><a href={github} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faGithub} /></a></li>
+                        <li><a href={`https://github.com/${github}`} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faGithub} /></a></li>
                     }
                     {twitter &&
-                        <li><a href={twitter} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faTwitter} /></a></li>
+                        <li><a href={`https://twitter.com/${twitter}`} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faTwitter} /></a></li>
                     }
                     {linkedin &&
-                        <li><a href={linkedin} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faLinkedin} /></a></li>
+                        <li><a href={`https://www.linkedin.com/in/${linkedin}`} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faLinkedin} /></a></li>
                     }
                     {medium &&
-                        <li><a href={medium} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faMediumM} /></a></li>
+                        <li><a href={`https://medium.com/${medium}`} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faMediumM} /></a></li>
                     }
                 </ul>
             </div>
