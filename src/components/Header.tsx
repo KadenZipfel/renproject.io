@@ -68,6 +68,7 @@ class Header extends React.Component<HeaderProps, HeaderState> {
                             <ul className="header--menu">
                                 <Menu />
                                 <li className="menu--toggle menu--link"><a href="#" onClick={this.handleOnClick}><FontAwesomeIcon icon={this.state.menuOpened ? faTimes : faBars} pull="left" /></a></li>
+                            <a className="header--renex button" href="https://ren.exchange" target="_blank" rel="noopener noreferrer">Trade on RenEx</a>
                             </ul>
                         </div>
                     </div>

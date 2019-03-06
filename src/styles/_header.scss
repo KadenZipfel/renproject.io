@@ -102,4 +102,11 @@
   .headroom--pinned {
     position: fixed;
     transform: translateY(0%);
-  }
+}
+
+.header--renex.button {
+    margin-left: 4rem;
+    @media (max-width: $min-md) {
+        display: none;
+    }
+}
