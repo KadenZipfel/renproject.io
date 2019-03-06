@@ -1,4 +1,5 @@
-.fake--header, .header {
+.fake--header,
+.header {
     height: 8rem !important;
 }
 .headroom-wrapper {
@@ -13,7 +14,8 @@
     background-color: rgba(255, 255, 255, 1);
     border-bottom: 0.1rem solid $border;
     z-index: 10;
-    .headroom--pinned &, .open & {
+    .headroom--pinned &,
+    .open & {
         background-color: rgba(255, 255, 255, 0.98);
     }
 }
@@ -24,7 +26,7 @@
     height: 100%;
 }
 .header--logo {
-    background-image: url('#{$images}/logo-wordmark.svg');
+    background-image: url("#{$images}/logo-wordmark.svg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position-y: center;
@@ -45,7 +47,8 @@
 .menu--toggle.menu--link a {
     font-size: 2.5rem;
 }
-.header--menu li a, .menu--link a {
+.header--menu li a,
+.menu--link a {
     font-size: 1.4rem;
     font-weight: 500;
     color: $dark-grey;
@@ -58,8 +61,8 @@
 .menu--link a:hover {
     opacity: 1;
 }
-.menu--link a[target="_blank"]::after { 
-    content: '\2192';
+.menu--link a[target="_blank"]::after {
+    content: "\2192";
     display: inline-block;
     width: 0;
     overflow: hidden;
@@ -67,18 +70,18 @@
     left: calc(100% + 0.5rem);
     transition: width 0.4s $cubic-bezier;
 }
-.menu--link a[target="_blank"]:hover::after { 
+.menu--link a[target="_blank"]:hover::after {
     width: 100%;
 }
 .header--menu .menu--link {
     display: none;
-    @media(min-width: $min-md) {
+    @media (min-width: $min-md) {
         display: initial;
     }
 }
 .header--menu .menu--toggle {
     display: initial;
-    @media(min-width: $min-md) {
+    @media (min-width: $min-md) {
         display: none;
     }
 }
@@ -87,19 +90,19 @@
     left: 0;
     right: 0;
     z-index: 10;
-  }
-  .headroom--unfixed {
+}
+.headroom--unfixed {
     position: relative;
     transform: translateY(0);
-  }
-  .headroom--scrolled {
+}
+.headroom--scrolled {
     transition: transform 200ms ease-in-out;
-  }
-  .closed .headroom--unpinned {
+}
+.closed .headroom--unpinned {
     position: fixed;
     transform: translateY(-100%);
-  }
-  .headroom--pinned {
+}
+.headroom--pinned {
     position: fixed;
     transform: translateY(0%);
 }
