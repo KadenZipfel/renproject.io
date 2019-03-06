@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 
 import ContentBlock from "./ContentBlock";
+import { REN_URLS } from "../lib/constants";
 
 interface FeaturedProps {
     title?: string;
@@ -24,7 +25,7 @@ class Featured extends React.Component<FeaturedProps, FeaturedState> {
                                 <p>Transfer tokens in zero-knowledge, trustlessly swap between blockchains, trade on a dark pool, build any privacy preserving application. Never reveal anything.</p>
                                 <div className="content--links">
                                     <a className="content--link litepaper" href="litepaper.pdf" target="_blank" rel="noopener referrer"><img src={litepaper} />Read the Litepaper</a>
-                                    <a className="content--link twitter" href="https://twitter.com/renprotocol" target="_blank" rel="noopener referrer"><span className="twitter--icon"><FontAwesomeIcon icon={faTwitter} /></span><span className="twitter--text">Follow us on Twitter</span></a>
+                                    <a className="content--link twitter" href={REN_URLS.twitter} target="_blank" rel="noopener referrer"><span className="twitter--icon"><FontAwesomeIcon icon={faTwitter} /></span><span className="twitter--text">Follow us on Twitter</span></a>
                                 </div>
                             </ContentBlock>
                         </div>

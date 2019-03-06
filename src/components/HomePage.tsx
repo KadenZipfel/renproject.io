@@ -14,6 +14,7 @@ import GridItem from "./GridItem";
 import Header from "./Header";
 import ListItem from "./ListItem";
 import { MediumBannerInstance } from "./MediumBanner";
+import { REN_URLS } from "../lib/constants";
 
 class HomePage extends React.Component {
     public render(): JSX.Element {
@@ -74,7 +75,7 @@ class HomePage extends React.Component {
                                     <p>RenEx is an officially supported dark pool exchange for trading digital assets in secret, built on Ren. Trade now without revealing your orders, free from front-running and counterparty risk.</p>
                                     <div className="content--buttons">
                                         <div>
-                                            <a className="button" href="https://ren.exchange" target="_blank" rel="noopener noreferrer">Trade on RenEx</a>
+                                            <a className="button" href={REN_URLS.renEx} target="_blank" rel="noopener noreferrer">Trade on RenEx</a>
                                         </div>
                                         <a className="content--link" href="https://republicprotocol.zendesk.com/hc/en-us/categories/360000458534-Trading-on-RenEx">More about RenEx</a>
                                     </div>
@@ -168,7 +169,7 @@ class HomePage extends React.Component {
                             </div>
                         </div>
                         <div className="renex-banner--buttons">
-                            <a className="button" href="https://ren.exchange" target="_blank" rel="noopener noreferrer">Trade on RenEx</a>
+                            <a className="button" href={REN_URLS.renEx} target="_blank" rel="noopener noreferrer">Trade on RenEx</a>
                         </div>
                     </div>
                 </div>

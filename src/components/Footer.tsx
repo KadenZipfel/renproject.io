@@ -4,6 +4,8 @@ import { faFacebookF, faGithub, faRedditAlien, faTelegramPlane, faTwitter } from
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { NavLink } from "react-router-dom";
 
+import { REN_URLS } from "../lib/constants";
+
 class Footer extends React.Component {
     public render(): JSX.Element {
         return (
@@ -60,7 +62,7 @@ class Footer extends React.Component {
 
 export const CopySocial = <ul className="copy--social">
     <li><a title="Facebook" href="https://facebook.com/renproject" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faFacebookF} /></a></li>
-    <li><a title="Twitter" href="https://twitter.com/renprotocol" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faTwitter} /></a></li>
+    <li><a title="Twitter" href={REN_URLS.twitter} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faTwitter} /></a></li>
     <li><a title="Github" href="https://github.com/renproject" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faGithub} /></a></li>
     <li><a title="Telegram" href="https://t.me/renproject" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faTelegramPlane} /></a></li>
     <li><a title="Reddit" href="https://www.reddit.com/r/renproject" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faRedditAlien} /></a></li>
