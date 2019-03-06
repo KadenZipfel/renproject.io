@@ -34,7 +34,7 @@ class Footer extends React.Component {
                         <div className="footer--links">
                             <p>Blog</p>
                             <ul>
-                                <li><a href="https://medium.com/renproject" target="_blank" rel="noopener noreferrer">Medium</a></li>
+                                <li><a href={REN_URLS.medium} target="_blank" rel="noopener noreferrer">Medium</a></li>
                             </ul>
                         </div>
                         <div className="footer--links">

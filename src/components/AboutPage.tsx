@@ -9,6 +9,7 @@ import Footer from "./Footer";
 import Header from "./Header";
 import { MediumBannerInstance } from "./MediumBanner";
 import TeamItem from "./TeamItem";
+import { REN_URLS } from "../lib/constants";
 
 class AboutPage extends React.Component {
     public render(): JSX.Element {
@@ -92,7 +93,7 @@ class AboutPage extends React.Component {
                     <div className="container">
                         <div className="banner--content">
                             <p>Updates and news posted through the blog.</p>
-                            <a className="button button--alt" href="https://medium.com/renproject"><FontAwesomeIcon icon={faMediumM} pull="left" />Visit the Blog</a>
+                            <a className="button button--alt" href={REN_URLS.medium}><FontAwesomeIcon icon={faMediumM} pull="left" />Visit the Blog</a>
                         </div>
                     </div>
                 </div>
