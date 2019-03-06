@@ -20,7 +20,7 @@ class Menu extends React.Component<MenuProps, MenuState> {
                 <li className="menu--link"><NavLink onClick={this.handleOnClick} to="/about" activeClassName="active">About</NavLink></li>
                 {/* <li className="menu--link"><a href="#" target="_blank" rel="noopener noreferrer">Docs</a></li> */}
                <li className="menu--link"><a onClick={this.handleOnClick} href={REN_URLS.medium} target="_blank" rel="noopener noreferrer">Blog</a></li>
-                <li className="menu--link"><a onClick={this.handleOnClick} href="https://republicprotocol.zendesk.com" target="_blank" rel="noopener noreferrer">Help</a></li>
+                <li className="menu--link"><a onClick={this.handleOnClick} href={REN_URLS.zendesk} target="_blank" rel="noopener noreferrer">Help</a></li>
             </>
         );
     }

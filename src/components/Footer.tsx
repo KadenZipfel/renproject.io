@@ -21,7 +21,7 @@ class Footer extends React.Component {
                                 <li><a href={REN_URLS.telegramAnnouncements} target="_blank" rel="noopener noreferrer">Telegram Announcements</a></li>
                                 <li><a href={REN_URLS.telegram} target="_blank" rel="noopener noreferrer">Telegram Community (EN)</a></li>
                                 <li><a href={REN_URLS.telegramKorea} target="_blank" rel="noopener noreferrer">Telegram Community (KR)</a></li>
-                                <li><a href="https://republicprotocol.zendesk.com" target="_blank" rel="noopener noreferrer">Help</a></li>
+                                <li><a href={REN_URLS.zendesk} target="_blank" rel="noopener noreferrer">Help</a></li>
                             </ul>
                         </div>
                         <div className="footer--links">
