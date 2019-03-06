@@ -41,8 +41,8 @@ class Footer extends React.Component {
                             <p>Ren</p>
                             <ul>
                                 <li><NavLink to="/about">About</NavLink></li>
-                                <li><a href="whitepaper_1.0.0.pdf" target="_blank" rel="noopener referrer">Whitepaper</a></li>
-                                <li><a href="litepaper.pdf" target="_blank" rel="noopener referrer">Litepaper</a></li>
+                                <li><a href="whitepaper_1.0.0.pdf" target="_blank" rel="noopener referrer">Whitepaper (2017)</a></li>
+                                <li><a href="litepaper.pdf" target="_blank" rel="noopener referrer">Litepaper (2019)</a></li>
                                 {/* <li><a href="#">Terms of Service</a></li>
                                 <li><a href="#">Privacy Policy</a></li> */}
                             </ul>
