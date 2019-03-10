@@ -1,4 +1,4 @@
-# Republic Protocol Website
+# Ren Website
 
 ## Build
 
