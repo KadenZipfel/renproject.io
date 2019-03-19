@@ -25,10 +25,13 @@ export default App;
 const ScrollToTop = withRouter(
     class ScrollToTopWithoutRouter extends React.Component<RouteComponentProps<any>> {
         public componentDidUpdate(prevProps: Readonly<RouteComponentProps<any>>): void {
-            if (this.props.location.pathname !== prevProps.location.pathname) {
+            const { pathname } = this.props.location;
+            if (pathname !== prevProps.location.pathname) {
                 window.scrollTo(0, 0);
                 // Re-enable scrolling if location was changed from mobile menu
                 (document.documentElement as HTMLElement).classList.remove("noscroll");
+                // Get Google Analytics to track the different pages
+                gtag("config", GA_MEASUREMENT_ID, {"page_path": pathname});
             }
         }
 

@@ -1,3 +1,8 @@
+declare global {
+    const gtag: (...args: any) => void;
+    const GA_MEASUREMENT_ID: string;
+}
+
 export interface MediumPost {
     id: string;
     versionId: string;
