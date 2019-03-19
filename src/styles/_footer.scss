@@ -78,6 +78,9 @@
 }
 .copy--social {
     @include flex();
+    a {
+        color: #A9A9A9;
+    }
 }
 .copy--social li + li {
     margin-left: 2rem;

@@ -52,7 +52,7 @@ class Footer extends React.Component {
                 <div className="copy">
                     <div className="container">
                         <p>Copyright &copy; 2018 Ren.</p>
-                        {CopySocial}
+                        <CopySocial />
                     </div>
                 </div>
             </>
@@ -60,12 +60,16 @@ class Footer extends React.Component {
     }
 }
 
-export const CopySocial = <ul className="copy--social">
-    <li><a title="Facebook" href={REN_URLS.facebook} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faFacebookF} /></a></li>
-    <li><a title="Twitter" href={REN_URLS.twitter} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faTwitter} /></a></li>
-    <li><a title="Github" href={REN_URLS.github} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faGithub} /></a></li>
-    <li><a title="Telegram" href={REN_URLS.telegram} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faTelegramPlane} /></a></li>
-    <li><a title="Reddit" href={REN_URLS.reddit} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faRedditAlien} /></a></li>
-</ul>;
+export const CopySocial = () => {
+    return (
+        <ul className="copy--social">
+            <li><a title="Facebook" href={REN_URLS.facebook} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faFacebookF} /></a></li>
+            <li><a title="Twitter" href={REN_URLS.twitter} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faTwitter} /></a></li>
+            <li><a title="Github" href={REN_URLS.github} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faGithub} /></a></li>
+            <li><a title="Telegram" href={REN_URLS.telegram} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faTelegramPlane} /></a></li>
+            <li><a title="Reddit" href={REN_URLS.reddit} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faRedditAlien} /></a></li>
+        </ul>
+    );
+};
 
 export default Footer;

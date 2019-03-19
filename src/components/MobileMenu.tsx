@@ -21,7 +21,7 @@ class MobileMenu extends React.Component<MobileMenuProps, MobileMenuState> {
                     <Menu postClick={postClick} />
                 </ul >
                 <div className="mobile--menu--footer">
-                    {CopySocial}
+                    <CopySocial />
                 </div>
             </div >
         );

@@ -81,17 +81,20 @@
 .featured .button--alt:before {
     background-color: white;
 }
-.featured .content--links {
+.featured .bottom--links {
     width: 100%;
     margin-top: 8rem;
     float: left;
 }
-.featured .content--links a {
+.featured .bottom--links a {
     display: flex;
     margin-left: 0;
     img {
         padding-right: 1rem;
     }
+}
+.featured .bottom--links .copy--social {
+    padding-left: 5rem;
 }
 .featured .content--link.social {
     color: white;
