@@ -5,6 +5,7 @@ const Fade = require("react-reveal/Fade");
 interface ContentBlockProps {
     title?: string;
     subtitle: string;
+    logo?: any;
 }
 
 interface ContentBlockState {
@@ -12,10 +13,13 @@ interface ContentBlockState {
 
 class ContentBlock extends React.Component<ContentBlockProps, ContentBlockState> {
     public render(): JSX.Element {
-        const { title, subtitle, children } = this.props;
+        const { logo, title, subtitle, children } = this.props;
         return (
             <Fade up distance="50px" delay={100}>
                 <>
+                    {logo && <div className="content--logo">
+                        <img src={logo} />
+                    </div>}
                     <div className="content--heading">
                         {title &&
                             <h4>{title}</h4>

@@ -1,3 +1,10 @@
+.content--logo {
+    padding-bottom: 2rem;
+    img {
+        height: 5rem;
+    }
+}
+
 .content--heading h4 + h1 {
     margin-top: 3rem;
     @media(min-width: $min-md) {

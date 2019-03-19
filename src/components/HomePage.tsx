@@ -19,6 +19,7 @@ import { REN_URLS } from "../lib/constants";
 class HomePage extends React.Component {
     public render(): JSX.Element {
         const whiteRenLogo = require("../styles/images/logo-white.svg");
+        const renexLogo = require("../styles/images/renex-logo.svg");
         const techStackImage = require("../styles/images/illustration-tech-stack-2.svg");
         const codeImage = require("../styles/images/icons/rp-icon-code.svg");
         const codeImageHover = require("../styles/images/icons/rp-icon-code-hvr.svg");
@@ -71,7 +72,7 @@ class HomePage extends React.Component {
                     <div className="container">
                         <div className="row">
                             <div className="section--content">
-                                <ContentBlock subtitle="Dark pool trading of digital assets with privacy protecting settlement.">
+                                <ContentBlock logo={renexLogo} subtitle="Dark pool trading of digital assets with privacy protecting settlement.">
                                     <p>RenEx is an officially supported dark pool exchange for trading digital assets in secret, built on Ren. Trade now without revealing your orders, free from front-running and counterparty risk.</p>
                                     <div className="content--buttons">
                                         <div>
