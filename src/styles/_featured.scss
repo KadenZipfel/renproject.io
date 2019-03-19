@@ -19,6 +19,9 @@
         content: "";
         position: absolute;
         right: 0;
+        @media(max-width: $min-md) {
+            bottom: -6rem;
+        }
     }
 }
 .featured .row {
