@@ -93,9 +93,9 @@
         padding-right: 1rem;
     }
 }
-.featured .content--link.twitter {
+.featured .content--link.social {
     color: white;
-    background-color: #1CA1F2;
+    background-color: black;
     display: block;
     width: fit-content;
     border-radius: 1.6rem;
@@ -104,22 +104,38 @@
     span {
         line-height: 3.2rem;
     }
-    span.twitter--text {
+    span.social--text {
         padding-left: 2rem;
     }
-    span.twitter--icon {
+    span.social--icon {
         padding-left: 1rem;
         padding-right: 0.6rem;
         &::after {
             content: ' ';
             height: 3.2rem;
             position: absolute;
-            border-right: solid 0.2rem #8DCFF8;
+            border-right-width: 0.2rem;
+            border-right-style: solid;
+            border-color: grey;
             margin-left: 1rem;
         }
     }
     &::after {
         margin-right: 1.2rem;
+    }
+}
+
+.featured .content--link.social.twitter {
+    background-color: #1CA1F2;
+    span.social--icon::after {
+        border-color: #8DCFF8;
+    }
+}
+
+.featured .content--link.social.reddit {
+    background-color: #FF4500;
+    span.social--icon::after {
+        border-color: #FF6A33;
     }
 }
 
