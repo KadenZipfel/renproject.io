@@ -113,3 +113,9 @@
         display: none;
     }
 }
+
+.header--menu .copy--social {
+    @media (max-width: $min-md) {
+        display: none;
+    }
+}
