@@ -6,6 +6,7 @@ import { faTwitter, faRedditAlien } from "@fortawesome/free-brands-svg-icons";
 import ContentBlock from "./ContentBlock";
 import { REN_URLS } from "../lib/constants";
 import { CopySocial } from "./Footer";
+import { ExternalLink } from "./ExternalLink";
 
 interface FeaturedProps {
     title?: string;
@@ -25,9 +26,9 @@ class Featured extends React.Component<FeaturedProps, FeaturedState> {
                             <ContentBlock subtitle="Unstoppable Privacy">
                                 <p>Transfer tokens in zero-knowledge, trustlessly swap between blockchains, trade on a dark pool, build any privacy preserving application. Never reveal anything.</p>
                                 <div className="bottom--links">
-                                    <a className="content--link litepaper" href="litepaper.pdf" target="_blank" rel="noopener referrer"><img src={litepaper} />Read the Litepaper</a>
-                                    <a className="content--link social twitter" href={REN_URLS.twitter} target="_blank" rel="noopener referrer"><span className="social--icon"><FontAwesomeIcon icon={faTwitter} /></span><span className="social--text">Follow us on Twitter</span></a>
-                                    <a className="content--link social reddit" href={REN_URLS.reddit} target="_blank" rel="noopener referrer"><span className="social--icon"><FontAwesomeIcon icon={faRedditAlien} /></span><span className="social--text">Follow us on Reddit</span></a>
+                                    <ExternalLink className="content--link litepaper" href="litepaper.pdf"><img src={litepaper} />Read the Litepaper</ExternalLink>
+                                    <ExternalLink className="content--link social twitter" href={REN_URLS.twitter}><span className="social--icon"><FontAwesomeIcon icon={faTwitter} /></span><span className="social--text">Follow us on Twitter</span></ExternalLink>
+                                    <ExternalLink className="content--link social reddit" href={REN_URLS.reddit}><span className="social--icon"><FontAwesomeIcon icon={faRedditAlien} /></span><span className="social--text">Follow us on Reddit</span></ExternalLink>
                                     <CopySocial />
                                 </div>
                             </ContentBlock>

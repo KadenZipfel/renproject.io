@@ -1,4 +1,5 @@
 import * as React from "react";
+import { ExternalLink } from "./ExternalLink";
 
 interface GridItemProps {
     type: string;
@@ -43,9 +44,9 @@ class GridItem extends React.Component<GridItemProps, GridItemState> {
         };
         return (
             <div className={`logos--image ${type}--image`} style={{ filter: `brightness(${brightness}%) grayscale(100%)` }}>
-                <a href={link ? link : ""} target="_blank" rel="noopener noreferrer">
+                <ExternalLink href={link ? link : ""} doNotTrack={true}>
                     <div style={imageStyle} onMouseOver={this.handleHover} onMouseOut={this.handleHover} />
-                </a>
+                </ExternalLink>
             </div>
         );
     }

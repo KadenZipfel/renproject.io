@@ -15,6 +15,7 @@ import Header from "./Header";
 import ListItem from "./ListItem";
 import { MediumBannerInstance } from "./MediumBanner";
 import { REN_URLS } from "../lib/constants";
+import { ExternalLink } from "./ExternalLink";
 
 class HomePage extends React.Component {
     public render(): JSX.Element {
@@ -76,7 +77,7 @@ class HomePage extends React.Component {
                                     <p>RenEx is an officially supported dark pool exchange for trading digital assets in secret, built on Ren. Trade now without revealing your orders, free from front-running and counterparty risk.</p>
                                     <div className="content--buttons">
                                         <div>
-                                            <a className="button" href={REN_URLS.renEx} target="_blank" rel="noopener noreferrer">Trade on RenEx</a>
+                                            <ExternalLink className="button" href={REN_URLS.renEx}>Trade on RenEx</ExternalLink>
                                         </div>
                                         <a className="content--link" href="https://republicprotocol.zendesk.com/hc/en-us/categories/360000458534-Trading-on-RenEx">More about RenEx</a>
                                     </div>
@@ -141,7 +142,7 @@ class HomePage extends React.Component {
                                     <p>Build a Dark Pool or utilize our other privacy preserving layers to create financial applications. Get in touch if you have a project idea you’d like to discuss with the Ren team.</p>
                                     <div className="content--buttons">
                                         <div>
-                                            <a className="button" href={REN_URLS.github} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faGithub} pull="left" />Go to Github</a>
+                                            <ExternalLink className="button" href={REN_URLS.github}><FontAwesomeIcon icon={faGithub} pull="left" />Go to Github</ExternalLink>
                                         </div>
                                         <a className="content--link" href="mailto:build@renproject.io">build@renproject.io</a>
                                     </div>
@@ -170,7 +171,7 @@ class HomePage extends React.Component {
                             </div>
                         </div>
                         <div className="renex-banner--buttons">
-                            <a className="button" href={REN_URLS.renEx} target="_blank" rel="noopener noreferrer">Trade on RenEx</a>
+                            <ExternalLink className="button" href={REN_URLS.renEx}>Trade on RenEx</ExternalLink>
                         </div>
                     </div>
                 </div>

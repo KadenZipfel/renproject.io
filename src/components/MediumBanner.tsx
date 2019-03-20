@@ -4,6 +4,7 @@ import axios from "axios";
 import Slider from "react-slick";
 
 import { MediumPost } from "../lib/types";
+import { ExternalLink } from "./ExternalLink";
 
 interface MediumBannerProps {
     /** The username of the medium account */
@@ -74,9 +75,9 @@ export class MediumBanner extends React.Component<MediumBannerProps, MediumBanne
     private generateLink(post: MediumPost): JSX.Element {
         return (
             <div className="medium-banner--link content--links" key={post.id}>
-                <a href={this.mediumUrl + post.uniqueSlug} target="_blank" rel="noopener noreferrer">
+                <ExternalLink href={this.mediumUrl + post.uniqueSlug}>
                     <span className={this.isNew(post.firstPublishedAt) ? "new" : ""}>{post.title}</span>
-                </a>
+                </ExternalLink>
             </div>
         );
     }

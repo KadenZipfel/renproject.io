@@ -2,6 +2,7 @@ import * as React from "react";
 
 import { faGithub, faLinkedin, faMediumM, faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { ExternalLink } from "./ExternalLink";
 
 interface TeamItemProps {
     name: string;
@@ -24,16 +25,16 @@ class TeamItem extends React.Component<TeamItemProps, TeamItemState> {
                 <p>{position}</p>
                 <ul className="team--links">
                     {github &&
-                        <li><a href={`https://github.com/${github}`} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faGithub} /></a></li>
+                        <li><ExternalLink href={`https://github.com/${github}`} doNotTrack={true}><FontAwesomeIcon icon={faGithub} /></ExternalLink></li>
                     }
                     {twitter &&
-                        <li><a href={`https://twitter.com/${twitter}`} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faTwitter} /></a></li>
+                        <li><ExternalLink href={`https://twitter.com/${twitter}`} doNotTrack={true}><FontAwesomeIcon icon={faTwitter} /></ExternalLink></li>
                     }
                     {linkedin &&
-                        <li><a href={`https://www.linkedin.com/in/${linkedin}`} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faLinkedin} /></a></li>
+                        <li><ExternalLink href={`https://www.linkedin.com/in/${linkedin}`} doNotTrack={true}><FontAwesomeIcon icon={faLinkedin} /></ExternalLink></li>
                     }
                     {medium &&
-                        <li><a href={`https://medium.com/${medium}`} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faMediumM} /></a></li>
+                        <li><ExternalLink href={`https://medium.com/${medium}`} doNotTrack={true}><FontAwesomeIcon icon={faMediumM} /></ExternalLink></li>
                     }
                 </ul>
             </div>

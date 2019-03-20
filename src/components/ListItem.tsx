@@ -1,4 +1,5 @@
 import * as React from "react";
+import { ExternalLink } from "./ExternalLink";
 
 interface ListItemProps {
     title: string;
@@ -27,12 +28,11 @@ class ListItem extends React.Component<ListItemProps, ListItemState> {
     public render(): JSX.Element {
         const { title, description, link, disabled } = this.props;
         return (
-            <a className={`list--item ${disabled ? "disabled" : ""}`}
+            <ExternalLink className={`list--item ${disabled ? "disabled" : ""}`}
                 onMouseOver={this.handleHover}
                 onMouseOut={this.handleHover}
                 href={link}
-                target="_blank"
-                rel="noopener noreferrer"
+                doNotTrack={true}
             >
                 <div className="list--image">
                     <img src={this.state.imageURL} />
@@ -41,7 +41,7 @@ class ListItem extends React.Component<ListItemProps, ListItemState> {
                     <p className="list--title">{title}</p>
                     {description && <p>{description}</p>}
                 </div>
-            </a>
+            </ExternalLink>
         );
     }
 
