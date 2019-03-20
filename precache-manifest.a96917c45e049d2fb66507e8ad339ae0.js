@@ -1,19 +1,19 @@
 self.__precacheManifest = [
   {
-    "revision": "fcc96b5e0474a1593a98fe8c7b374d1c",
-    "url": "/static/media/blockasset-alt.fcc96b5e.png"
+    "revision": "c0c4552bf71babdecfe46fdd8e4c0386",
+    "url": "/static/media/binaryfin.c0c4552b.png"
   },
   {
-    "revision": "8b301ffcecf2078da75f",
-    "url": "/static/css/main.b34681ad.chunk.css"
+    "revision": "bfda1bc7db352cb96185",
+    "url": "/static/css/main.fee83279.chunk.css"
   },
   {
-    "revision": "fdfcfda2d9b1bf31db52",
-    "url": "/static/js/runtime~main.fdfcfda2.js"
+    "revision": "42ac5946195a7306e2a5",
+    "url": "/static/js/runtime~main.a8a9905a.js"
   },
   {
-    "revision": "33e2c2f15e31d011fcfc",
-    "url": "/static/js/2.33e2c2f1.chunk.js"
+    "revision": "c215179972463bd95722",
+    "url": "/static/js/2.08ddfa0c.chunk.js"
   },
   {
     "revision": "56a959a7fe6d8153fe4860271565ef65",
@@ -66,6 +66,10 @@ self.__precacheManifest = [
   {
     "revision": "608e78b608cde460326b524d597c1577",
     "url": "/static/media/logo-white.608e78b6.svg"
+  },
+  {
+    "revision": "35f62d2a0217b9cdb836a21ff3e3df5a",
+    "url": "/static/media/renex-logo.35f62d2a.svg"
   },
   {
     "revision": "f169802047bc2202a8bbc66cc5cc02ee",
@@ -192,12 +196,12 @@ self.__precacheManifest = [
     "url": "/static/media/binaryfin-alt.f81d0843.png"
   },
   {
-    "revision": "c0c4552bf71babdecfe46fdd8e4c0386",
-    "url": "/static/media/binaryfin.c0c4552b.png"
+    "revision": "bfda1bc7db352cb96185",
+    "url": "/static/js/main.12583492.chunk.js"
   },
   {
-    "revision": "8b301ffcecf2078da75f",
-    "url": "/static/js/main.8b301ffc.chunk.js"
+    "revision": "fcc96b5e0474a1593a98fe8c7b374d1c",
+    "url": "/static/media/blockasset-alt.fcc96b5e.png"
   },
   {
     "revision": "ce72b72f6a37a3e4a410d8a795849cc6",
@@ -328,12 +332,12 @@ self.__precacheManifest = [
     "url": "/static/media/BankGothicBold.7524f9da.woff"
   },
   {
-    "revision": "690c85db7c0bfecdd6dc02677991890d",
-    "url": "/static/media/BankGothicBold.690c85db.eot"
-  },
-  {
     "revision": "93fa84a9b6f7340f070f544f2e7ba62d",
     "url": "/static/media/BankGothicBold.93fa84a9.ttf"
+  },
+  {
+    "revision": "690c85db7c0bfecdd6dc02677991890d",
+    "url": "/static/media/BankGothicBold.690c85db.eot"
   },
   {
     "revision": "5c0e89697ee7c013b639a55822075e62",
@@ -368,12 +372,12 @@ self.__precacheManifest = [
     "url": "/static/media/PingFangSC.e616106e.ttf"
   },
   {
-    "revision": "17f5979cdc7bbc9b12d8640b743c6594",
-    "url": "/static/media/PingFangSC-Medium.17f5979c.eot"
-  },
-  {
     "revision": "8fdd5a9ccc6b0f8fe01701d751dd25c9",
     "url": "/static/media/PingFangSC-Medium.8fdd5a9c.woff"
+  },
+  {
+    "revision": "17f5979cdc7bbc9b12d8640b743c6594",
+    "url": "/static/media/PingFangSC-Medium.17f5979c.eot"
   },
   {
     "revision": "d95166fcbd14f327473f49b56917dc1f",
@@ -388,7 +392,7 @@ self.__precacheManifest = [
     "url": "/static/media/PingFangSC-Medium.e9da78e4.svg"
   },
   {
-    "revision": "79072b06edafbc3638e91ab020962dab",
+    "revision": "cf38f329b2a0dc8753183be556fa4567",
     "url": "/index.html"
   }
 ];
