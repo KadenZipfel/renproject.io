@@ -21,7 +21,7 @@ class Menu extends React.Component<MenuProps, MenuState> {
                 <li className="menu--link"><NavLink onClick={this.handleOnClick} to="/about" activeClassName="active">About</NavLink></li>
                 {/* <li className="menu--link"><ExternalLink href="#">Docs</ExternalLink></li> */}
                <li className="menu--link"><ExternalLink onClick={this.handleOnClick} href={REN_URLS.medium}>Blog</ExternalLink></li>
-                <li className="menu--link"><ExternalLink onClick={this.handleOnClick} href={REN_URLS.zendesk}>Help</ExternalLink></li>
+                <li className="menu--link"><ExternalLink onClick={this.handleOnClick} href={REN_URLS.zendesk}>FAQ</ExternalLink></li>
             </>
         );
     }
