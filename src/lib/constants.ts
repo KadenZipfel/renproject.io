@@ -8,5 +8,5 @@ export const REN_URLS = {
     telegram: "https://t.me/renproject",
     telegramKorea: "https://t.me/renkorea",
     telegramAnnouncements: "https://t.me/renprojectann",
-    zendesk: "https://republicprotocol.zendesk.com",
+    zendesk: "https://renproject.zendesk.com",
 }

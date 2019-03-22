@@ -79,7 +79,7 @@ class HomePage extends React.Component {
                                         <div>
                                             <ExternalLink className="button" href={REN_URLS.renEx}>Trade on RenEx</ExternalLink>
                                         </div>
-                                        <a className="content--link" href="https://republicprotocol.zendesk.com/hc/en-us/categories/360000458534-Trading-on-RenEx">More about RenEx</a>
+                                        <a className="content--link" href={`${REN_URLS.zendesk}/hc/en-us/categories/360000458534-Trading-on-RenEx`}>More about RenEx</a>
                                     </div>
                                 </ContentBlock>
                             </div>
@@ -96,10 +96,10 @@ class HomePage extends React.Component {
                                     <p>Darknodes cooperate to run secret multiparty computations, power all layers of Ren, and are capable of running any kind of application.</p>
                                     <div className="content--columns">
                                         <div className="content--links">
-                                            <a href="https://republicprotocol.zendesk.com/hc/en-us/articles/360004268853-Darknode-Quick-Summary">More about Darknodes</a>
+                                            <a href={`${REN_URLS.zendesk}/hc/en-us/articles/360004268853-Darknode-Quick-Summary`}>More about Darknodes</a>
                                         </div>
                                         <div className="content--links">
-                                            <a href="https://republicprotocol.zendesk.com/hc/en-us/categories/360000394674-Darknode-Operation">Operate a Darknode</a>
+                                            <a href={`${REN_URLS.zendesk}/hc/en-us/categories/360000394674-Darknode-Operation`}>Operate a Darknode</a>
                                         </div>
                                     </div>
                                     <p className="section--darknodes--footer">Darknode fees are calculated by the exchange. For more information, visit our ZenDesk.</p>
@@ -115,7 +115,7 @@ class HomePage extends React.Component {
                                 <ContentBlock subtitle="The REN token provides security to the network.">
                                     <p>A REN bond is needed in order to operate a Darknode.</p>
                                     <div className="content--buttons">
-                                        <a className="content--link" href="https://republicprotocol.zendesk.com/hc/en-us/articles/360004243014-Details-of-REN-Token-Crowdsale">More about REN token</a>
+                                        <a className="content--link" href={`${REN_URLS.zendesk}/hc/en-us/articles/360004243014-Details-of-REN-Token-Crowdsale`}>More about REN token</a>
                                     </div>
                                 </ContentBlock>
                             </div>
