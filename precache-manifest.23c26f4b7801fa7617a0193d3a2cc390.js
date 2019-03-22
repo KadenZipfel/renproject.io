@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/static/media/binaryfin.c0c4552b.png"
   },
   {
-    "revision": "9f041cf68e857812741a",
+    "revision": "f7e5f72a3582f945f898",
     "url": "/static/css/main.fee83279.chunk.css"
   },
   {
@@ -196,8 +196,8 @@ self.__precacheManifest = [
     "url": "/static/media/binaryfin-alt.f81d0843.png"
   },
   {
-    "revision": "9f041cf68e857812741a",
-    "url": "/static/js/main.22ad1010.chunk.js"
+    "revision": "f7e5f72a3582f945f898",
+    "url": "/static/js/main.3eeeb21d.chunk.js"
   },
   {
     "revision": "fcc96b5e0474a1593a98fe8c7b374d1c",
@@ -328,20 +328,20 @@ self.__precacheManifest = [
     "url": "/static/media/world.90f2968e.svg"
   },
   {
-    "revision": "7524f9dabea030f8563a2d6d23861536",
-    "url": "/static/media/BankGothicBold.7524f9da.woff"
-  },
-  {
-    "revision": "93fa84a9b6f7340f070f544f2e7ba62d",
-    "url": "/static/media/BankGothicBold.93fa84a9.ttf"
-  },
-  {
     "revision": "690c85db7c0bfecdd6dc02677991890d",
     "url": "/static/media/BankGothicBold.690c85db.eot"
   },
   {
+    "revision": "7524f9dabea030f8563a2d6d23861536",
+    "url": "/static/media/BankGothicBold.7524f9da.woff"
+  },
+  {
     "revision": "5c0e89697ee7c013b639a55822075e62",
     "url": "/static/media/BankGothicBold.5c0e8969.svg"
+  },
+  {
+    "revision": "93fa84a9b6f7340f070f544f2e7ba62d",
+    "url": "/static/media/BankGothicBold.93fa84a9.ttf"
   },
   {
     "revision": "6c81380d5054c0c0a62654406afafa41",
@@ -356,20 +356,20 @@ self.__precacheManifest = [
     "url": "/static/media/PingFangSC-Light.0458afab.ttf"
   },
   {
-    "revision": "877c8aab1e87b234bbbfbcdf93bbc556",
-    "url": "/static/media/PingFangSC.877c8aab.eot"
-  },
-  {
     "revision": "cbc9cb77d24975f2b43a71881d0c7326",
     "url": "/static/media/PingFangSC.cbc9cb77.woff"
   },
   {
-    "revision": "136cead5c8c0ea91b81066a8410ca35d",
-    "url": "/static/media/PingFangSC-Light.136cead5.svg"
+    "revision": "877c8aab1e87b234bbbfbcdf93bbc556",
+    "url": "/static/media/PingFangSC.877c8aab.eot"
   },
   {
     "revision": "e616106e3a7d41191470c30a96eacb1e",
     "url": "/static/media/PingFangSC.e616106e.ttf"
+  },
+  {
+    "revision": "136cead5c8c0ea91b81066a8410ca35d",
+    "url": "/static/media/PingFangSC-Light.136cead5.svg"
   },
   {
     "revision": "8fdd5a9ccc6b0f8fe01701d751dd25c9",
@@ -380,19 +380,19 @@ self.__precacheManifest = [
     "url": "/static/media/PingFangSC-Medium.17f5979c.eot"
   },
   {
-    "revision": "d95166fcbd14f327473f49b56917dc1f",
-    "url": "/static/media/PingFangSC.d95166fc.svg"
-  },
-  {
     "revision": "19efcf688d7318d884ba67e4b88973b9",
     "url": "/static/media/PingFangSC-Medium.19efcf68.ttf"
+  },
+  {
+    "revision": "d95166fcbd14f327473f49b56917dc1f",
+    "url": "/static/media/PingFangSC.d95166fc.svg"
   },
   {
     "revision": "e9da78e44b5cecc07bc942d80f7c7d8e",
     "url": "/static/media/PingFangSC-Medium.e9da78e4.svg"
   },
   {
-    "revision": "2be59ca488213684df655274a5ead726",
+    "revision": "c5a5324ccfb8f6b7b74ff9c02d9ae51f",
     "url": "/index.html"
   }
 ];
