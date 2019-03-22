@@ -153,7 +153,7 @@ class HomePage extends React.Component {
                                     <ListItem title="Republic-Go &rarr;" description="An official reference implementation of Republic Protocol, written in Go." link="https://github.com/republicprotocol/republic-go" image={codeImage} imageHover={codeImageHover} />
                                     <ListItem title="Republic-Sol &rarr;" description="An implementation of Republic Protocol smart contracts, written in Solidity." link="https://github.com/republicprotocol/republic-sol" image={codeImage} imageHover={codeImageHover} />
                                     <ListItem title="RenEx-Sol &rarr;" description="RenEx Ethereum contracts, written in Solidity." link="https://github.com/republicprotocol/renex-sol" image={codeImage} imageHover={codeImageHover} />
-                                    <ListItem title="Co-Go &rarr;" description="A high level concurrency and parallelism libary." link="https://github.com/republicprotocol/co-go" image={codeImage} imageHover={codeImageHover} />
+                                    <ListItem title="Co-Go &rarr;" description="A high level concurrency and parallelism library." link="https://github.com/republicprotocol/co-go" image={codeImage} imageHover={codeImageHover} />
                                 </div>
                             </div>
                         </div>
