@@ -23,8 +23,8 @@ class Featured extends React.Component<FeaturedProps, FeaturedState> {
                 <div className="container">
                     <div className="row">
                         <div className="featured--content">
-                            <ContentBlock subtitle="Unstoppable Privacy">
-                                <p>Transfer tokens in zero-knowledge, trustlessly swap between blockchains, trade on a dark pool, build any privacy preserving application. Never reveal anything.</p>
+                            <ContentBlock subtitle="RenVM, a trustless &amp; decentralized virtual machine.">
+                                <p>Secure multi-party computations power a privacy layer for decentralized applications, enabling private and interoperable lending, exchanges, collateralization &amp; more.</p>
                                 <div className="bottom--links">
                                     <ExternalLink className="content--link litepaper" href="litepaper.pdf"><img src={litepaper} />Read the Litepaper</ExternalLink>
                                     <ExternalLink className="content--link social twitter" href={REN_URLS.twitter}><span className="social--icon"><FontAwesomeIcon icon={faTwitter} /></span><span className="social--text">Follow us on Twitter</span></ExternalLink>
