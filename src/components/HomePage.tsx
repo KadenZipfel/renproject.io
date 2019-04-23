@@ -3,7 +3,6 @@ import * as React from "react";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import Block from "./Block";
 import ContactItem from "./ContactItem";
 import ContentBlock from "./ContentBlock";
 import { ExpandableList } from "./ExpandableList";
@@ -29,6 +28,17 @@ class HomePage extends React.Component {
                 <Header />
                 <Featured />
                 {MediumBannerInstance}
+                <div className="section section--ren">
+                    <div className="container">
+                        <div className="row">
+                            <div className="section--content">
+                                <ContentBlock title="About Ren" subtitle="Privacy and interoperability between all blockchains.">
+                                    <p>Leveraging RenVM, DEXs and dApps can take advantage of the liquidity available on all blockchains, not just Ethereum.</p>
+                                </ContentBlock>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div className="section section--renex">
                     <div className="container">
                         <div className="row">
@@ -86,27 +96,6 @@ class HomePage extends React.Component {
                         </div>
                     </div>
                     <Featurettes />
-                </div>
-                <div className="section section--darknodes">
-                    <Block />
-                    <div className="container">
-                        <div className="row">
-                            <div className="section--content">
-                                <ContentBlock subtitle="Darknodes power RenVM, earning rewards for their work.">
-                                    <p>Darknodes cooperate to run secret multiparty computations, power all layers of Ren, and are capable of running any kind of application.</p>
-                                    <div className="content--columns">
-                                        <div className="content--links">
-                                            <ExternalLink href={`${REN_URLS.zendesk}/hc/en-us/articles/360004268853-Darknode-Quick-Summary`}>More about Darknodes</ExternalLink>
-                                        </div>
-                                        <div className="content--links">
-                                            <ExternalLink href={`${REN_URLS.zendesk}/hc/en-us/categories/360000394674-Darknode-Operation`}>Operate a Darknode</ExternalLink>
-                                        </div>
-                                    </div>
-                                    <p className="section--darknodes--footer">Darknode fees are calculated by the exchange. For more information, visit our ZenDesk.</p>
-                                </ContentBlock>
-                            </div>
-                        </div>
-                    </div>
                 </div>
                 <div className="section section--token">
                     <div className="container">

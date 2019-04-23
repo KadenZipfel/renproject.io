@@ -99,22 +99,14 @@
         }
     }
 }
-.section.section--darknodes {
+.section.section--ren {
+    color: white;
     border-top: 0.1rem solid $border;
-    background: url(styles/images/world.svg) no-repeat center center;
-    background-size: cover;
+    background: url('#{$images}/illustration-chip.png') no-repeat top;
+    background-size: auto 100%;
     text-align: center;
-    .container {
-        padding-top: 10rem;
-        padding-bottom: 10rem;
-        @media(min-width: $min-xl) {
-            padding-top: 20rem;
-            padding-bottom: 20rem;
-        }
-    }
-    .block--item {
-        @include offset-md-4();
-        background-color: white;
+    .content--heading h1 {
+        color: white;
     }
     .content--body {
         width: 100%;
@@ -125,16 +117,6 @@
         @include offset-md-2;
         @include col-lg-6;
         @include offset-lg-3;
-    }
-    .section--darknodes--footer {
-        margin-top: 5rem;
-        font-size: 1.2rem;
-        @media(min-width: $min-md) {
-            margin-top: 10rem;
-        }
-        @media(min-width: $min-lg) {
-            margin-top: 15rem;
-        }
     }
 }
 .section.section--token {
