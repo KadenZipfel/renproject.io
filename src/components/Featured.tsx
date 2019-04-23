@@ -5,7 +5,6 @@ import { faTwitter, faRedditAlien } from "@fortawesome/free-brands-svg-icons";
 
 import ContentBlock from "./ContentBlock";
 import { REN_URLS } from "../lib/constants";
-import { CopySocial } from "./Footer";
 import { ExternalLink } from "./ExternalLink";
 
 interface FeaturedProps {
@@ -15,9 +14,19 @@ interface FeaturedProps {
 interface FeaturedState {
 }
 
+interface FeaturedButtonProps extends Readonly<{ children?: React.ReactNode }> {
+    href: string;
+    title: string;
+    className?: string;
+}
+
+const FeaturedButton = (props: FeaturedButtonProps) => {
+    return <ExternalLink className={`featured--button ${props.className ? props.className : ""}`} title={props.title} href={props.href}>{props.title}{props.children && <span className="button--icon">{props.children}</span>}</ExternalLink>;
+};
+
 class Featured extends React.Component<FeaturedProps, FeaturedState> {
     public render(): JSX.Element {
-        const litepaper = require("../styles/images/icons/icon-litepaper.svg");
+        const litepaper = require("../styles/images/icons/icon-litepaper-alt.svg");
         return (
             <div className="featured">
                 <div className="container">
@@ -25,12 +34,11 @@ class Featured extends React.Component<FeaturedProps, FeaturedState> {
                         <div className="featured--content">
                             <ContentBlock subtitle="RenVM, a trustless &amp; decentralized virtual machine.">
                                 <p>Secure multi-party computations power a privacy layer for decentralized applications, enabling private and interoperable lending, exchanges, collateralization &amp; more.</p>
-                                <div className="bottom--links">
-                                    <ExternalLink className="content--link litepaper" href="litepaper.pdf"><img src={litepaper} />Read the Litepaper</ExternalLink>
-                                    <ExternalLink className="content--link social twitter" href={REN_URLS.twitter}><span className="social--icon"><FontAwesomeIcon icon={faTwitter} /></span><span className="social--text">Follow us on Twitter</span></ExternalLink>
-                                    <ExternalLink className="content--link social reddit" href={REN_URLS.reddit}><span className="social--icon"><FontAwesomeIcon icon={faRedditAlien} /></span><span className="social--text">Follow us on Reddit</span></ExternalLink>
-                                    <CopySocial />
+                                <div className="social--links">
+                                    <FeaturedButton className="social" href={REN_URLS.twitter} title="Follow us on Twitter"><FontAwesomeIcon icon={faTwitter} /></FeaturedButton>
+                                    <FeaturedButton className="social" href={REN_URLS.reddit} title="Follow us on Reddit"><FontAwesomeIcon icon={faRedditAlien} /></FeaturedButton>
                                 </div>
+                                <FeaturedButton href="litepaper.pdf" title="Read the Litepaper"><img src={litepaper} /></FeaturedButton>
                             </ContentBlock>
                         </div>
                     </div>

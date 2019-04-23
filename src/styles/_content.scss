@@ -56,10 +56,6 @@ a.content--link,
 .content--links a {
     font-size: 1.6rem;
     font-weight: 500;
-    &::after {
-        content: "→";
-        margin-left: 1.5rem;
-    }
 }
 .content--links a + a {
     margin-left: 2rem;

@@ -87,21 +87,6 @@
 .featured .button--alt:before {
     background-color: white;
 }
-.featured .bottom--links {
-    width: 100%;
-    margin-top: 8rem;
-    float: left;
-}
-.featured .bottom--links a {
-    display: flex;
-    margin-left: 0;
-    img {
-        padding-right: 1rem;
-    }
-}
-.featured .bottom--links .copy--social {
-    padding-left: 5rem;
-}
 .featured .content--link.social {
     color: white;
     background-color: black;
@@ -134,20 +119,32 @@
     }
 }
 
-.featured .content--link.social.twitter {
-    background-color: #1CA1F2;
-    span.social--icon::after {
-        border-color: #8DCFF8;
-    }
-}
-
-.featured .content--link.social.reddit {
-    background-color: #FF4500;
-    span.social--icon::after {
-        border-color: #FF6A33;
-    }
-}
-
 .featured .content--link.litepaper {
-    padding-left: 2rem;    
+    padding-left: 2rem;
+}
+
+.featured .featured--button {
+    padding: 0.5rem 2rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+    border-radius: 0.4rem;
+
+    &.social {
+        border: solid 0.1rem #0066D6;
+        color: #006FE8;
+        background-color: #EBF4FE;
+
+        & + .featured--button {
+            margin-left: 1rem;
+        }
+    }
+
+    & .button--icon {
+        margin-left: 1.5rem;
+    }
+}
+
+.featured .social--links {
+    margin-top: 6rem;
+    margin-bottom: 6rem;
 }
