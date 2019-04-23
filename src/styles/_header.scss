@@ -111,4 +111,13 @@
     @media (max-width: $min-lg) {
         display: none;
     }
+    margin-left: 4rem;
+
+    &::before {
+        content: ' ';
+        border-left: solid 0.1rem #D8D8D8;
+        position: absolute;
+        height: 2.5rem;
+        margin-top: -0.5rem;
+    }
 }
