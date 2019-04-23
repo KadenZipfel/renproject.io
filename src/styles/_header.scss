@@ -107,13 +107,6 @@
     transform: translateY(0%);
 }
 
-.header--renex.button {
-    margin-left: 4rem;
-    @media (max-width: $min-md) {
-        display: none;
-    }
-}
-
 .header--menu .copy--social {
     @media (max-width: $min-lg) {
         display: none;
