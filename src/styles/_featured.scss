@@ -7,7 +7,6 @@
     @media(min-width: $min-md) {
         height: 70rem;
     }
-    background-color: #FEFEFE;
     &::after {
         background-image: url('#{$images}/illustration-header.svg');
         background-repeat: no-repeat;
@@ -32,7 +31,7 @@
 }
 .featured--content {
     @include col-xs-12();
-    @include col-md-7();
+    @include col-md-6();
     overflow: hidden;
     padding: 10rem 2rem;
     text-align: center;
@@ -62,6 +61,10 @@
 }
 .featured .content--heading h1 {
     color: $dark-grey;
+}
+.featured .content--body p {
+    color: $light-grey;
+    font-size: 1.8rem;
 }
 .featured .content--body > *:first-child:not(.content--links) {
     margin-top: 4rem;
