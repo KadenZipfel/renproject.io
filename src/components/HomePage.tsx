@@ -34,7 +34,9 @@ class HomePage extends React.Component {
                             <div className="section--content">
                                 <ContentBlock subtitle="Cross-chain liquidity that's 100x faster than atomic swaps.">
                                     <p>Access tokens from any blockchain using your existing smart contracts without having to worry about wrapping or unwrapping tokens.</p>
-                                    <a href="" className="content--link" >How it works &rarr;</a>
+                                    <div className="content--buttons">
+                                        <ExternalLink href="" className="content--link" >How it works &rarr;</ExternalLink>
+                                    </div>
                                 </ContentBlock>
                             </div>
                         </div>

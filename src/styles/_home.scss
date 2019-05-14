@@ -100,16 +100,9 @@
     }
 }
 .section.section--cross-chain {
-    // color: white;
-    // border-top: 0.1rem solid $border;
-    // background: url('#{$images}/illustration-chip.png') no-repeat top;
-    // background-size: auto 100%;
     text-align: center;
     .content--body {
         width: 100%;
-        a.content--link {
-            margin-top: 2rem;
-        }
     }
     .section--content {
         @include col-xs-12;
