@@ -1,14 +1,25 @@
 .featurettes {
     position: relative;
-    background-color: #001B3A;
-    color: #F5F5F5;
+    font-weight: 500;
     padding-bottom: 10rem;
+    color: #3F3F48;
+    &::after {
+        background: url('#{$images}/grey-oval.svg') no-repeat top;
+        background-size: 100% auto;
+        position: absolute;
+        content: ' ';
+        height: 100%;
+        width: 100%;
+        top: 2rem;
+        z-index: -1;
+    }
 }
 .featurettes--items {
     @include row();
-    @media (min-width: $min-md) {
-        text-align: left;
-    }
+    text-align: center;
+    // @media (min-width: $min-md) {
+    //     text-align: left;
+    // }
 }
 .featurettes--items > div {
     @include col-xs-12();
@@ -26,16 +37,22 @@
 }
 .featurettes--items img {
     max-width: 7rem;
-    margin-right: 2rem;
+    margin-bottom: 2rem;
 }
 .featurettes--items .featurettes--item {
     @include flex();
-    align-items: flex-start;
+    align-items: center;
+    flex-direction: column;
 }
 .featurettes--items h2.featurette--title {
     color: #F5F5F5;
     font-weight: bold;
     font-size: 2.4rem;
+}
+.featurettes--items p {
+    max-width: 19rem;
+    line-height: 2.5rem;
+    font-size: 1.8rem;
 }
 .featurettes--items img + p {
     margin-top: 1.5rem;

@@ -40,6 +40,7 @@ class HomePage extends React.Component {
                         </div>
                     </div>
                 </div>
+                <Featurettes />
                 <div className="section section--ren">
                     <div className="container">
                         <div className="row">
@@ -107,7 +108,6 @@ class HomePage extends React.Component {
                             </div>
                         </div>
                     </div>
-                    <Featurettes />
                 </div>
                 <div className="section section--token">
                     <div className="container">
