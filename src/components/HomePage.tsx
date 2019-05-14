@@ -26,8 +26,8 @@ class HomePage extends React.Component {
         return (
             <div className="home">
                 <Header />
-                <Featured />
                 {MediumBannerInstance}
+                <Featured />
                 <div className="section section--ren">
                     <div className="container">
                         <div className="row">

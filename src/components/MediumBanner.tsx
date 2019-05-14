@@ -76,7 +76,7 @@ export class MediumBanner extends React.Component<MediumBannerProps, MediumBanne
         return (
             <div className="medium-banner--link content--links" key={post.id}>
                 <ExternalLink href={this.mediumUrl + post.uniqueSlug}>
-                    <span className={this.isNew(post.firstPublishedAt) ? "new" : ""}>{post.title}</span>
+                    <span className={this.isNew(post.firstPublishedAt) ? "new" : ""}>{post.title} &rarr;</span>
                 </ExternalLink>
             </div>
         );
