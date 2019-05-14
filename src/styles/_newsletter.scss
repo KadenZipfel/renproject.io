@@ -1,15 +1,22 @@
+.newsletter--container {
+	padding: 2rem;
+	margin-top: -4rem;
+	@media(min-width: $min-sm) {
+		padding: 0;
+    }
+}
+
 .newsletter {
 	@include flex();
 	flex-direction: column;
 	align-items: center;
-	width: 50rem;
+	max-width: 50rem;
+	margin: auto auto;
 	padding: 3rem 2rem 2rem 2rem;
 	background: #FFFFFF;
 	border: 0.1rem solid #DBE0E8;
 	border-radius: 0.6rem;
 	text-align: center;
-	margin: auto auto;
-	margin-top: -4rem;
 
 	h2 {
 		font-size: 2rem;
