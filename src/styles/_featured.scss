@@ -3,6 +3,10 @@
     background-repeat: no-repeat;
     background-position: top right;
     background-size: 60%;
+
+    &.section .container {
+        padding-bottom: 20rem;
+    }
 }
 
 .featured .row {
