@@ -105,11 +105,6 @@
     // background: url('#{$images}/illustration-chip.png') no-repeat top;
     // background-size: auto 100%;
     text-align: center;
-    .content--heading h1 {
-        @media(min-width: $min-lg) {
-            font-size: 3.8rem;
-        }
-    }
     .content--body {
         width: 100%;
         a.content--link {
@@ -145,12 +140,13 @@
     }
 }
 .section.section--token {
+    background-color: #FCFCFD;
     &:before {
         @media(min-width: $min-md) {
             content: '';
             background-image: url('#{$images}/illustration-ren_token.svg');
             background-repeat: no-repeat;
-            background-position: top right;
+            background-position: center right;
             background-size: unset;
             position: absolute;
             top: 0;
@@ -167,7 +163,6 @@
             padding: 25rem 0;
         }
     }
-    border-top: 0.1rem solid $border;
     .block--item {
         @include offset-md-4();
         background-color: white;

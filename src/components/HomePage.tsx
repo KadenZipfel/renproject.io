@@ -41,6 +41,20 @@ class HomePage extends React.Component {
                     </div>
                 </div>
                 <Featurettes />
+                <div className="section section--token">
+                    <div className="container">
+                        <div className="row">
+                            <div className="section--content">
+                                <ContentBlock subtitle="Infrastructure for connecting the unconnected">
+                                    <p>Using RenVM to expand the capability of existing dApps or create entirely new business cases within the decentralized world.</p>
+                                    <div className="content--buttons">
+                                        <ExternalLink className="featured--button secondary" href="">Get Started</ExternalLink>
+                                    </div>
+                                </ContentBlock>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div className="section section--ren">
                     <div className="container">
                         <div className="row">
@@ -103,20 +117,6 @@ class HomePage extends React.Component {
                                             <ExternalLink className="button" href={REN_URLS.renEx}>Trade on RenEx</ExternalLink>
                                         </div>
                                         <ExternalLink className="content--link" href={`${REN_URLS.zendesk}/hc/en-us/categories/360000458534-Trading-on-RenEx`}>More about RenEx</ExternalLink>
-                                    </div>
-                                </ContentBlock>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="section section--token">
-                    <div className="container">
-                        <div className="row">
-                            <div className="section--content">
-                                <ContentBlock subtitle="The REN token provides security to the network.">
-                                    <p>A REN bond is needed in order to operate a Darknode.</p>
-                                    <div className="content--buttons">
-                                        <ExternalLink className="content--link" href={`${REN_URLS.zendesk}/hc/en-us/articles/360004243014-Details-of-REN-Token-Crowdsale`}>More about REN token</ExternalLink>
                                     </div>
                                 </ContentBlock>
                             </div>
