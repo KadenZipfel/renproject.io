@@ -21,24 +21,27 @@ interface FeaturedButtonProps extends Readonly<{ children?: React.ReactNode }> {
 }
 
 const FeaturedButton = (props: FeaturedButtonProps) => {
-    return <ExternalLink className={`featured--button ${props.className ? props.className : ""}`} title={props.title} href={props.href}>{props.title}{props.children && <span className="button--icon">{props.children}</span>}</ExternalLink>;
+    return <ExternalLink className={`featured--button ${props.className ? props.className : ""}`} title={props.title} href={props.href}>{props.children && <span className="button--icon">{props.children}</span>}{props.title}</ExternalLink>;
 };
 
 class Featured extends React.Component<FeaturedProps, FeaturedState> {
     public render(): JSX.Element {
-        const litepaper = require("../styles/images/icons/icon-litepaper-alt.svg");
         return (
-            <div className="featured">
+            <div className="section featured">
                 <div className="container">
                     <div className="row">
                         <div className="featured--content">
-                            <ContentBlock subtitle="RenVM, a trustless &amp; decentralized virtual machine.">
-                                <p>Secure multi-party computations power a privacy layer for decentralized applications, enabling private and interoperable lending, exchanges, collateralization &amp; more.</p>
-                                <div className="social--links">
-                                    <FeaturedButton className="social" href={REN_URLS.twitter} title="Follow us on Twitter"><FontAwesomeIcon icon={faTwitter} /></FeaturedButton>
-                                    <FeaturedButton className="social" href={REN_URLS.reddit} title="Follow us on Reddit"><FontAwesomeIcon icon={faRedditAlien} /></FeaturedButton>
+                            <ContentBlock subtitle="Liquidity, unchained.">
+                                <p>The first and only open protocol that provides access to inter-blockchain liquidity for all decentralized applications.</p>
+
+                                <div className="featured--buttons">
+                                    <FeaturedButton className="primary" href="" title="Learn More"></FeaturedButton>
+                                    <FeaturedButton className="secondary" href="" title="Get Started"></FeaturedButton>
+                                    <div className="social--links">
+                                        <ExternalLink className="social" href={REN_URLS.twitter}><span className="social--icon"><FontAwesomeIcon icon={faTwitter} /></span>Follow us on Twitter</ExternalLink>
+                                        <ExternalLink className="social" href={REN_URLS.reddit}><span className="social--icon"><FontAwesomeIcon icon={faRedditAlien} /></span>Subscribe on Reddit</ExternalLink>
+                                    </div>
                                 </div>
-                                <FeaturedButton href="litepaper.pdf" title="Read the Litepaper"><img src={litepaper} /></FeaturedButton>
                             </ContentBlock>
                         </div>
                     </div>
