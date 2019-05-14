@@ -1,28 +1,28 @@
 import * as React from "react";
 
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faGithub } from "@fortawesome/free-brands-svg-icons";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import ContactItem from "./ContactItem";
+// import ContactItem from "./ContactItem";
 import ContentBlock from "./ContentBlock";
-import { ExpandableList } from "./ExpandableList";
+// import { ExpandableList } from "./ExpandableList";
 import Featured from "./Featured";
 import Featurettes from "./Featurettes";
 import Footer from "./Footer";
-import GridItem from "./GridItem";
+// import GridItem from "./GridItem";
 import Header from "./Header";
-import ListItem from "./ListItem";
+// import ListItem from "./ListItem";
 import { MediumBannerInstance } from "./MediumBanner";
-import { REN_URLS } from "../lib/constants";
+// import { REN_URLS } from "../lib/constants";
 import { ExternalLink } from "./ExternalLink";
 
 class HomePage extends React.Component {
     public render(): JSX.Element {
-        const whiteRenLogo = require("../styles/images/logo-white.svg");
-        const renexLogo = require("../styles/images/renex-logo.svg");
-        const techStackImage = require("../styles/images/illustration-tech-stack-2.svg");
-        const codeImage = require("../styles/images/icons/rp-icon-code.svg");
-        const codeImageHover = require("../styles/images/icons/rp-icon-code-hvr.svg");
+        // const whiteRenLogo = require("../styles/images/logo-white.svg");
+        // const renexLogo = require("../styles/images/renex-logo.svg");
+        // const techStackImage = require("../styles/images/illustration-tech-stack-2.svg");
+        // const codeImage = require("../styles/images/icons/rp-icon-code.svg");
+        // const codeImageHover = require("../styles/images/icons/rp-icon-code-hvr.svg");
         return (
             <div className="home">
                 <Header />
@@ -71,6 +71,7 @@ class HomePage extends React.Component {
                         </div>
                     </div>
                 </div>
+                {/*
                 <div className="section section--renex">
                     <div className="container">
                         <div className="row">
@@ -188,6 +189,7 @@ class HomePage extends React.Component {
                         <ContactItem name="Technical Support" email="technical@republicprotocol.com" />
                     </div>
                 </div>
+                */}
                 <Footer />
             </div >
         );
