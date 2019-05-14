@@ -16,11 +16,12 @@ import { MediumBannerInstance } from "./MediumBanner";
 // import { REN_URLS } from "../lib/constants";
 import { ExternalLink } from "./ExternalLink";
 import { Newsletter } from "./Newsletter";
+import HelpBlock from "./HelpBlock";
 
 class HomePage extends React.Component {
     public render(): JSX.Element {
-        // const whiteRenLogo = require("../styles/images/logo-white.svg");
-        // const renexLogo = require("../styles/images/renex-logo.svg");
+        const questionsIcon = require("../styles/images/icons/more-questions-icon.svg");
+        const helpIcon = require("../styles/images/icons/looking-for-help-icon.svg");
         // const techStackImage = require("../styles/images/illustration-tech-stack-2.svg");
         // const codeImage = require("../styles/images/icons/rp-icon-code.svg");
         // const codeImageHover = require("../styles/images/icons/rp-icon-code-hvr.svg");
@@ -73,6 +74,16 @@ class HomePage extends React.Component {
                     </div>
                 </div>
                 <Newsletter />
+                <div className="section--helpblocks">
+                    <div className="container">
+                        <div className="row">
+                            <div className="content">
+                                <HelpBlock title="More questions?" subtitle="Read more about RenVM" icon={questionsIcon} /> 
+                                <HelpBlock title="Looking for help?" subtitle="Submit a support ticket on ZenDesk" icon={helpIcon} /> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 {/*
                 <div className="section section--renex">
                     <div className="container">
