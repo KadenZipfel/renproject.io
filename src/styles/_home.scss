@@ -115,8 +115,16 @@
 .section.section--ren {
     color: white;
     border-top: 0.1rem solid $border;
-    background: url('#{$images}/illustration-chip.png') no-repeat top;
-    background-size: auto 100%;
+    &::before {
+        position: absolute;
+        content: ' ';
+        background: url('#{$images}/illustration-chip.png') no-repeat top;
+        background-size: auto 100%;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        z-index: -1;
+    }
     text-align: center;
     .content--heading h1 {
         color: white;
