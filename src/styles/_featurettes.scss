@@ -6,7 +6,6 @@
     overflow: hidden;
     &::after {
         background: url('#{$images}/grey-oval.svg') no-repeat top;
-        background-size: 100% auto;
         position: absolute;
         content: ' ';
         height: 100%;
