@@ -2,7 +2,7 @@
     .container {
         padding: 0;
         @media(min-width: $min-md) {
-            padding-top: 2rem;
+            padding: 2rem 0;
         }
     }
 
