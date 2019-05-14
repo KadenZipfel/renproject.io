@@ -28,6 +28,18 @@ class HomePage extends React.Component {
                 <Header />
                 {MediumBannerInstance}
                 <Featured />
+                <div className="section section--cross-chain">
+                    <div className="container">
+                        <div className="row">
+                            <div className="section--content">
+                                <ContentBlock subtitle="Cross-chain liquidity that's 100x faster than atomic swaps.">
+                                    <p>Access tokens from any blockchain using your existing smart contracts without having to worry about wrapping or unwrapping tokens.</p>
+                                    <a href="" className="content--link" >How it works &rarr;</a>
+                                </ContentBlock>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div className="section section--ren">
                     <div className="container">
                         <div className="row">

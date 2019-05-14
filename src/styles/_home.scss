@@ -99,6 +99,31 @@
         }
     }
 }
+.section.section--cross-chain {
+    // color: white;
+    // border-top: 0.1rem solid $border;
+    // background: url('#{$images}/illustration-chip.png') no-repeat top;
+    // background-size: auto 100%;
+    text-align: center;
+    .content--heading h1 {
+        @media(min-width: $min-lg) {
+            font-size: 3.8rem;
+        }
+    }
+    .content--body {
+        width: 100%;
+        a.content--link {
+            margin-top: 2rem;
+        }
+    }
+    .section--content {
+        @include col-xs-12;
+        @include col-md-8;
+        @include offset-md-2;
+        @include col-lg-6;
+        @include offset-lg-3;
+    }
+}
 .section.section--ren {
     color: white;
     border-top: 0.1rem solid $border;
