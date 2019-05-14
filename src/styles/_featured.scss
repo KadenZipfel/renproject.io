@@ -70,18 +70,19 @@
     padding-left: 2rem;
 }
 
-.content--body .featured--button {
-    font-weight: 500;
-    font-size: 1.4rem;
+.featured--button {
+    .content--body & {
+        font-weight: 500;
+        font-size: 1.4rem;
+        width: 20rem;
+        height: 4rem;
+        line-height: 4rem;
+        margin-right: 2rem;
+        margin-bottom: 1rem;
+    }
     border-radius: 0.6rem;
-    width: 20rem;
-    height: 4rem;
     text-align: center;
     vertical-align: middle;
-    line-height: 4rem;
-    margin-right: 2rem;
-    margin-bottom: 1rem;
-
 
     &.primary {
         background-image: linear-gradient(-181deg, #00A8F5 0%, #006FE8 100%);
@@ -90,7 +91,7 @@
 
     &.secondary {
         color: #006FE8;
-        border: 1px solid #006FE8;
+        border: 0.1rem solid #006FE8;
     }
 
     & .button--icon {

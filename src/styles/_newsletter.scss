@@ -1,0 +1,50 @@
+.newsletter {
+	@include flex();
+	flex-direction: column;
+	align-items: center;
+	width: 50rem;
+	padding: 3rem 2rem 2rem 2rem;
+	background: #FFFFFF;
+	border: 0.1rem solid #DBE0E8;
+	border-radius: 0.6rem;
+	text-align: center;
+
+	h2 {
+		font-size: 2rem;
+		margin-bottom: 1rem;
+	}
+
+	p {
+		max-width: 75%;
+		font-size: 1.2rem;
+		line-height: 2rem;
+		margin-bottom: 4rem;
+
+		a {
+			font-weight: 500;
+		}
+	}
+
+	input, button {
+		font-size: 1.4rem;
+		width: 100%;
+		height: 4rem;
+	}
+
+	input {
+		&::placeholder {
+			color: #979797;
+		}
+
+		background: #FDFDFD;
+		border: 1px solid #E1E1E1;
+		box-shadow: 0 1px 2px 0 rgba(0,27,58,0.05);
+		border-radius: 6px;
+		padding: 0.5rem 1rem;
+		margin-bottom: 2rem;
+	}
+
+	button {
+		font-weight: 500;
+	}
+}

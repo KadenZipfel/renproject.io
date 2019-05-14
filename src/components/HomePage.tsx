@@ -15,6 +15,7 @@ import Header from "./Header";
 import { MediumBannerInstance } from "./MediumBanner";
 // import { REN_URLS } from "../lib/constants";
 import { ExternalLink } from "./ExternalLink";
+import { Newsletter } from "./Newsletter";
 
 class HomePage extends React.Component {
     public render(): JSX.Element {
@@ -71,6 +72,7 @@ class HomePage extends React.Component {
                         </div>
                     </div>
                 </div>
+                <Newsletter />
                 {/*
                 <div className="section section--renex">
                     <div className="container">
