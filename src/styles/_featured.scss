@@ -2,10 +2,16 @@
     background-image: url('#{$images}/illustration-header.svg');
     background-repeat: no-repeat;
     background-position: top right;
-    background-size: 60%;
+    background-size: cover;
+    @media(min-width: $min-md) {
+        background-size: 60%;
+    }
 
     &.section .container {
-        padding-bottom: 20rem;
+        padding-bottom: 0;
+        @media(min-width: $min-xl) {
+            padding-bottom: 20rem;
+        }
     }
 }
 
