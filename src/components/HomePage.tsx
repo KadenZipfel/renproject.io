@@ -61,8 +61,11 @@ class HomePage extends React.Component {
                     <div className="container">
                         <div className="row">
                             <div className="section--content">
-                                <ContentBlock title="About Ren" subtitle="Privacy and interoperability between all blockchains.">
-                                    <p>Leveraging RenVM, DEXs and dApps can take advantage of the liquidity available on all blockchains, not just Ethereum.</p>
+                                <ContentBlock title="Darknodes" subtitle="Privacy and interoperability between all blockchains.">
+                                    <p>Darknodes all around the world run the applications built on RenVM in complete secrecy. Darknodes are incentivized to work by capturing a percentage of volume transacted through RenVM.</p>
+                                    <div className="content--buttons">
+                                        <ExternalLink href="" className="content--link" >More about Darknodes &rarr;</ExternalLink>
+                                    </div>
                                 </ContentBlock>
                             </div>
                         </div>
