@@ -9,6 +9,7 @@ interface GithubStatsProps {
 interface GithubStatsState {
     repos: GithubRepo[];
     ready: boolean;
+    error: boolean;
 }
 
 export class GithubStats extends React.Component<GithubStatsProps, GithubStatsState> {
@@ -17,34 +18,45 @@ export class GithubStats extends React.Component<GithubStatsProps, GithubStatsSt
         this.state = {
             repos: [],
             ready: false,
+            error: false,
         };
     }
 
     public async componentDidMount(): Promise<void> {
+        console.log("start did mount");
+        await this.updateRepos();
+        console.log("finished did mount");
+    }
+
+    public render(): JSX.Element {
+        const { error, ready, repos } = this.state;
+        return (
+            <>
+                {!ready ? "Loading..." : error ? "an error occurred. try again later." : <div>
+                    {repos.map(repo => <GithubBlock key={repo.id} repo={repo} />)}
+                </div>}
+            </>
+        );
+    }
+
+    private updateRepos = async (): Promise<void> => {
         const { usernames } = this.props;
 
         // Only show the Github repos which were updated within the last month
         const filterDate = new Date();
         filterDate.setMonth(filterDate.getMonth() - 1);
 
-        let repos = this.state.repos;
-        for (const username of usernames) {
-            repos = repos.concat(await fetchRepos(username, { date: filterDate }));
+        try {
+            let repos: GithubRepo[] = [];
+            for (const username of usernames) {
+                repos = repos.concat(await fetchRepos(username, { date: filterDate }));
+            }
+            console.log(repos);
+            this.setState({ repos, ready: true });
+        } catch (err) {
+            console.error(err);
+            this.setState({ error: true });
         }
-
-        console.log(repos);
-        this.setState({ repos, ready: true });
-    }
-
-    public render(): JSX.Element {
-        const { ready, repos } = this.state;
-        return (
-            <>
-                {!ready ? "Loading..." : <div>
-                    {repos.map(repo => <GithubBlock key={repo.id} repo={repo} />)}
-                </div>}
-            </>
-        );
     }
 
 }
