@@ -41,7 +41,7 @@ export class GithubStats extends React.Component<GithubStatsProps, GithubStatsSt
         return (
             <>
                 {!ready ? "Loading..." : <div>
-                    {repos.map(repo => <GithubBlock repo={repo} />)}
+                    {repos.map(repo => <GithubBlock key={repo.id} repo={repo} />)}
                 </div>}
             </>
         );

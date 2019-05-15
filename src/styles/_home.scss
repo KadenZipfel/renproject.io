@@ -214,7 +214,7 @@
 
         .infrastructure--list--item {
             @include flex();
-            align-items: start;
+            align-items: flex-start;
             margin-bottom: 2rem;
 
             @media(min-width: $min-lg) {
