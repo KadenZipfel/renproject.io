@@ -152,7 +152,7 @@
             position: absolute;
             top: 0;
             right: 0;
-            width: 55%;
+            width: 50%;
             height: 100%;
         }
     }
@@ -169,7 +169,7 @@
         background-color: white;
     }
     .section--content {
-        @include col-md-5();
+        @include col-md-7();
     }
     .section--logos {
         @include col-md-5();
@@ -192,6 +192,43 @@
     .section--logos > div + div {
         @media(min-width: $min-xl) {
             margin-top: 6rem;
+        }
+    }
+    .content--body {
+        p {
+            color: #87888C;
+        }
+    }
+    .infrastructure--list {
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+        @media(min-width: $min-lg) {
+            margin-top: 10rem;
+        }
+
+        .infrastructure--list--item {
+            @include flex();
+            align-items: start;
+            margin-bottom: 2rem;
+
+            @media(min-width: $min-lg) {
+                margin-bottom: 7rem;
+            }
+
+            h2 {
+                font-size: 2.2rem;
+            }
+
+            p {
+                color: #87888C;
+                font-size: 1.6rem;
+            }
+
+            img {
+                width: 4.5rem;
+                margin-top: 1rem;
+                margin-right: 2.5rem;
+            }
         }
     }
 }
