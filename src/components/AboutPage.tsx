@@ -3,7 +3,7 @@ import * as React from "react";
 import { faMediumM } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import ContactItem from "./ContactItem";
+// import ContactItem from "./ContactItem";
 import ContentBlock from "./ContentBlock";
 import Footer from "./Footer";
 import Header from "./Header";
@@ -92,18 +92,18 @@ class AboutPage extends React.Component {
                 <div className="medium--banner">
                     <div className="container">
                         <div className="banner--content">
-                            <p>Updates and news posted through the blog.</p>
+                            <p>Stay up to date with updates and news posted through the blog.</p>
                             <a className="button button--alt" href={REN_URLS.medium}><FontAwesomeIcon icon={faMediumM} pull="left" />Visit the Blog</a>
                         </div>
                     </div>
                 </div>
-                <div className="contact">
+                {/*<div className="contact">
                     <div className="container">
                         <ContactItem name="Partnerships" email="partnerships@republicprotocol.com" />
                         <ContactItem name="Community Initiatives" email="community@republicprotocol.com" />
                         <ContactItem name="Technical Support" email="technical@republicprotocol.com" />
                     </div>
-                </div>
+                </div>*/}
                 <Footer />
             </div>
         );
