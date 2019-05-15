@@ -143,7 +143,7 @@
 .section.section--token {
     background-color: #FCFCFD;
     &:before {
-        @media(min-width: $min-md) {
+        @media(min-width: $min-lg) {
             content: '';
             background-image: url('#{$images}/illustration-ren_token.svg');
             background-repeat: no-repeat;
@@ -157,11 +157,10 @@
         }
     }
     .container {
-        @media(min-width: $min-xl) {
-            padding: 5rem 0;
-        }
-        @media(min-width: $min-xxl) {
-            padding: 10rem 0;
+        padding-top: 5rem;
+        padding-bottom: 10rem;
+        @media(min-width: $min-md) {
+            padding-top: 10rem;
         }
     }
     .block--item {
@@ -169,7 +168,10 @@
         background-color: white;
     }
     .section--content {
-        @include col-md-7();
+        @include col-xs-12();
+        @media(min-width: $min-lg) {
+            @include col-md-7();
+        }
     }
     .section--logos {
         @include col-md-5();
