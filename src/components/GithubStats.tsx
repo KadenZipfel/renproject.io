@@ -32,7 +32,7 @@ export class GithubStats extends React.Component<GithubStatsProps, GithubStatsSt
         const { error, ready, repos } = this.state;
         return (
             <>
-                {!ready ? "Loading..." : error ? "an error occurred. try again later." : <div>
+                {error ? "an error occurred. try again later." : !ready ? "Loading..." : <div>
                     {repos.map(repo => <GithubBlock key={repo.id} repo={repo} />)}
                 </div>}
             </>
