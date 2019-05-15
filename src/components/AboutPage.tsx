@@ -68,7 +68,6 @@ class AboutPage extends React.Component {
                             <TeamItem name="Divya Mary" position="Software Developer" github="divyakoshy" linkedin="divya-mary-5a5969104" />
                             <TeamItem name="Vincent Au" position="Software Developer" github="vinceau" linkedin="vinceau" />
                             <TeamItem name="Ross Pure" position="Researcher" github="ross-pure" />
-                            <TeamItem name="Hugh Greethead" position="Community" linkedin="hugh-greethead" />
                             <TeamItem name="Darren Toh" position="Legal &amp; Communications" linkedin="darren-toh-2a29885" />
                             <TeamItem name="Michael Burgess" position="Liquidity" linkedin="michaelwburgess" />
                             <TeamItem name="Vincent Ward" position="Design" twitter="thevward" />
