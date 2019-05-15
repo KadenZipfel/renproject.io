@@ -1,4 +1,4 @@
-.section.section--banner {
+.about .section.section--banner {
     background-color: #006FE8;
     text-align: center;
     padding: 2rem;
@@ -27,7 +27,7 @@
         padding: 0;
     }
 }
-.section.section--story {
+.about .section.section--story {
     text-align: center;
 
     background-image: url('#{$images}/city2.svg');
