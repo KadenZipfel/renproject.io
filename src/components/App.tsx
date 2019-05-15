@@ -4,6 +4,7 @@ import { BrowserRouter, Route, RouteComponentProps, withRouter } from "react-rou
 
 import AboutPage from "./AboutPage";
 import HomePage from "./HomePage";
+import RoadmapPage from "./RoadmapPage";
 
 class App extends React.Component {
     public render(): JSX.Element {
@@ -13,6 +14,7 @@ class App extends React.Component {
                     <ScrollToTop />
                     <Route path="/" exact component={HomePage} />
                     <Route path="/about" component={AboutPage} />
+                    <Route path="/roadmap" component={RoadmapPage} />
                 </>
             </BrowserRouter>
         );
