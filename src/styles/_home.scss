@@ -131,6 +131,10 @@
     }
     .content--body {
         width: 100%;
+        margin-bottom: 6rem;
+        @media(min-width: $min-md) {
+            margin-bottom: 0;
+        }
     }
     .section--content {
         @include col-xs-12;
