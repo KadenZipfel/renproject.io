@@ -30,10 +30,10 @@
 .section.section--story {
     text-align: center;
 
-    background-image: url('#{$images}/city.svg');
+    background-image: url('#{$images}/city2.svg');
     background-repeat: no-repeat;
-    background-position: bottom right;
-    background-size: cover;
+    background-position: bottom;
+    background-size: 100% auto;
     .container {
         padding-top: 6rem;
         padding-bottom: 6rem;
