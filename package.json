@@ -9,6 +9,7 @@
         "@fortawesome/react-fontawesome": "0.1.0-11",
         "@renex/react-components": "^1.0.20",
         "axios": "^0.18.0",
+        "github-colors": "^2.2.18",
         "inflection": "^1.12.0",
         "react": "^16.4.2",
         "react-dom": "^16.4.2",

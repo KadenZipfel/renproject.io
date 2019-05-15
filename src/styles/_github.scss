@@ -1,0 +1,16 @@
+.github--block {
+  .repo--lang {
+    @include flex();
+
+    .repo--lang--dot {
+      width: 1rem;
+      position: relative;
+
+      svg {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+}
