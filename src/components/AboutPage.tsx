@@ -20,7 +20,7 @@ class AboutPage extends React.Component {
                     <div className="container">
                         <div className="row">
                             <div className="section--content">
-                                <ContentBlock subtitle="Building a fair and private means of exchange for the currency of the future." />
+                                <ContentBlock subtitle="Powering the free movement of value between blockchains in zero-knowledge." />
                             </div>
                         </div>
                     </div>
