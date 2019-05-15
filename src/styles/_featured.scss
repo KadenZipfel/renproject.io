@@ -20,7 +20,8 @@
 }
 .featured--content {
     @include col-xs-12();
-    @include col-md-6();
+    @include col-md-10();
+    @include col-lg-6();
     overflow: hidden;
     padding: 10rem 2rem;
     text-align: center;
