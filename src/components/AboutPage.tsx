@@ -10,6 +10,7 @@ import Header from "./Header";
 import { MediumBannerInstance } from "./MediumBanner";
 import TeamItem from "./TeamItem";
 import { REN_URLS } from "../lib/constants";
+import { ExternalLink } from "./ExternalLink";
 
 class AboutPage extends React.Component {
     public render(): JSX.Element {
@@ -30,15 +31,11 @@ class AboutPage extends React.Component {
                     <div className="container">
                         <div className="row">
                             <div className="section--content">
-                                <ContentBlock subtitle="In a world where traditional assets are becoming increasingly tokenized, a platform to facilitate their fair and private exchange is essential.">
-                                    <div className="content--columns">
-                                        <div>
-                                            <p>Ren is powered by a decentralized network of Darknodes that use secure multiparty computation to run privacy preserving applications. Using it, we are building hidden order books and privacy preserving settlement layers.</p>
-                                        </div>
-                                        <div>
-                                            <p>Dark pools built on Ren are the first in the history of financial markets that are mathematically provable to be fair.</p>
-                                        </div>
-                                    </div>
+                                <ContentBlock subtitle="Working towards a private and interoperable world of decentralized finance.">
+                                    <p>Ren allows the free movement of value between all blockchains and transfer of tokens in zero-knowledge. Unlocking new liquidity and resources to power a new wave of value in the open finance movement.</p>
+                                    <p>With Ren all decentralized applications can run in secret, preserving the privacy of all users and data.</p>
+                                    <ExternalLink className={`featured--button primary`}>RenVM Overview</ExternalLink>
+                                    <ExternalLink className={`featured--button secondary`}>Get in touch</ExternalLink>
                                 </ContentBlock>
                             </div>
                             {/* <div className="section--stats">
