@@ -34,8 +34,10 @@ class AboutPage extends React.Component {
                                 <ContentBlock subtitle="Working towards a private and interoperable world of decentralized finance.">
                                     <p>Ren allows the free movement of value between all blockchains and transfer of tokens in zero-knowledge. Unlocking new liquidity and resources to power a new wave of value in the open finance movement.</p>
                                     <p>With Ren all decentralized applications can run in secret, preserving the privacy of all users and data.</p>
-                                    <ExternalLink className={`featured--button primary`}>RenVM Overview</ExternalLink>
-                                    <ExternalLink className={`featured--button secondary`}>Get in touch</ExternalLink>
+                                    <div className="content--buttons">
+                                        <ExternalLink className={`featured--button primary`}>RenVM Overview</ExternalLink>
+                                        <ExternalLink className={`featured--button secondary`}>Get in touch</ExternalLink>
+                                    </div>
                                 </ContentBlock>
                             </div>
                             {/* <div className="section--stats">
