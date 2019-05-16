@@ -37,6 +37,7 @@ export class GithubStats extends React.Component<GithubStatsProps, GithubStatsSt
     }
 
     public render(): JSX.Element {
+        const { limit } = this.props;
         const { stats, error, ready, repos } = this.state;
         if (!stats) {
             return <>Error</>;
@@ -72,7 +73,7 @@ export class GithubStats extends React.Component<GithubStatsProps, GithubStatsSt
                         </TabPanel>
                         <TabPanel>
                             <div className="github--top--repos">
-                                {repos.map(repo => <GithubBlock key={repo.id} repo={repo} />)}
+                                {repos.slice(0, limit).map(repo => <GithubBlock key={repo.id} repo={repo} />)}
                             </div>
                         </TabPanel>
                     </Tabs>}
@@ -81,7 +82,7 @@ export class GithubStats extends React.Component<GithubStatsProps, GithubStatsSt
     }
 
     private updateRepos = async (): Promise<void> => {
-        const { limit, usernames } = this.props;
+        const { usernames } = this.props;
 
         try {
             let repos: GithubRepo[] = [];
@@ -102,9 +103,6 @@ export class GithubStats extends React.Component<GithubStatsProps, GithubStatsSt
             // sort by stars
             repos = repos.sort((a, b) => b.stargazers_count - a.stargazers_count);
 
-            if (limit && limit > 0) {
-                repos = repos.slice(0, limit);
-            }
             console.log(repos);
             this.setState({ repos, stats, ready: true, error: false });
         } catch (err) {
