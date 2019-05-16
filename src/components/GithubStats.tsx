@@ -52,6 +52,9 @@ export class GithubStats extends React.Component<GithubStatsProps, GithubStatsSt
             for (const username of usernames) {
                 repos = repos.concat(await fetchRepos(username, { date: filterDate }));
             }
+            // sort by stars
+            repos = repos.sort((a, b) => b.stargazers_count - a.stargazers_count);
+
             if (limit && limit > 0) {
                 repos = repos.slice(0, limit);
             }
