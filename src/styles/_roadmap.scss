@@ -1,0 +1,12 @@
+.roadmap .section.section--banner {
+    &::before {
+        background-image: url('#{$images}/roadmap-banner.svg');
+        background-repeat: no-repeat;
+        background-position: center top;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        content: "";
+        position: absolute;
+    }
+}

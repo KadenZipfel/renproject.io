@@ -1,6 +1,5 @@
 import * as React from "react";
 
-import ContentBlock from "./ContentBlock";
 import Footer from "./Footer";
 import Header from "./Header";
 import { MediumBannerInstance } from "./MediumBanner";
@@ -12,13 +11,7 @@ class RoadmapPage extends React.Component {
             <div className="roadmap">
                 <Header />
                 <div className="section section--banner">
-                    <div className="container">
-                        <div className="row">
-                            <div className="section--content">
-                                <ContentBlock subtitle="Powering the free movement of value between blockchains in zero-knowledge." />
-                            </div>
-                        </div>
-                    </div>
+                    <div className="container" />
                 </div>
                 {MediumBannerInstance}
                 <div className="section section--story">
