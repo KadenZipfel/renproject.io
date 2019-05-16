@@ -43,15 +43,17 @@ export class GithubStats extends React.Component<GithubStatsProps, GithubStatsSt
     private updateRepos = async (): Promise<void> => {
         const { limit, usernames } = this.props;
 
-        // Only show the Github repos which were updated within the last month
-        const filterDate = new Date();
-        filterDate.setMonth(filterDate.getMonth() - 1);
-
         try {
             let repos: GithubRepo[] = [];
             for (const username of usernames) {
-                repos = repos.concat(await fetchRepos(username, { date: filterDate }));
+                repos = repos.concat(await fetchRepos(username));
             }
+
+            // Only show the Github repos which were updated within the last month
+            const filterDate = new Date();
+            filterDate.setMonth(filterDate.getMonth() - 1);
+            repos = repos.filter(repo => repo.updated_at > filterDate);
+
             // sort by stars
             repos = repos.sort((a, b) => b.stargazers_count - a.stargazers_count);
 

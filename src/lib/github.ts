@@ -109,11 +109,7 @@ export interface GithubRepo extends Omit<Omit<Omit<InternalGithubRepo, "pushed_a
     pushed_at: Date;
 }
 
-export interface Filter {
-    date?: Date;
-}
-
-export const fetchRepos = async (username: string, filter?: Filter): Promise<GithubRepo[]> => {
+export const fetchRepos = async (username: string): Promise<GithubRepo[]> => {
     let repos: GithubRepo[] = [];
     const resp = await axios.get(`https://api.github.com/users/${username}/repos`);
     for (const repo of resp.data as InternalGithubRepo[]) {
@@ -122,9 +118,6 @@ export const fetchRepos = async (username: string, filter?: Filter): Promise<Git
         newRepo["updated_at"] = new Date(updated_at);
         newRepo["pushed_at"] = new Date(pushed_at);
         repos.push(newRepo as GithubRepo);
-    }
-    if (filter && filter.date) {
-        repos = repos.filter(repo => repo.updated_at > filter.date!);
     }
     return repos;
 }
