@@ -33,18 +33,6 @@
 
   .repo--lang {
     @include flex();
-
-    .repo--lang--dot {
-      width: 1.2rem;
-      position: relative;
-      margin-top: -50%;
-
-      svg {
-        position: absolute;
-        top: 0;
-        left: 0;
-      }
-    }
   }
 
   .gh--footer {
@@ -73,5 +61,17 @@
     font-weight: 500;
     font-size: 1.4rem;
     color: #CBCBCB;
+  }
+}
+
+.repo--lang--dot {
+  width: 1.2rem;
+  height: 1.2rem;
+  position: relative;
+
+  svg {
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 }

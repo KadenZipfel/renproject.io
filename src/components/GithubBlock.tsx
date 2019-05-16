@@ -12,6 +12,13 @@ interface GithubBlockProps {
 interface GithubBlockState {
 }
 
+export const GithubLanguageDot = (props: { language: string }) =>
+    <div className="repo--lang--dot">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+            <circle cx="50" cy="50" r="50" fill={colours.get(props.language).color} />
+        </svg>
+    </div>;
+
 export class GithubBlock extends React.Component<GithubBlockProps, GithubBlockState> {
     constructor(props: GithubBlockProps) {
         super(props);
@@ -30,13 +37,7 @@ export class GithubBlock extends React.Component<GithubBlockProps, GithubBlockSt
                 <div className="gh--footer">
                     <div className="repo--stats">
                         {repo.language && <div className="repo--lang">
-                            <span className="repo--stat--icon">
-                                <div className="repo--lang--dot">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-                                        <circle cx="50" cy="50" r="50" fill={colours.get(repo.language).color} />
-                                    </svg>
-                                </div>
-                            </span>
+                            <span className="repo--stat--icon"><GithubLanguageDot language={repo.language} /></span>
                             <span>{repo.language}</span>
                         </div>}
                         <div className="repo--stars"><span className="repo--stat--icon"><img src={ghStar} /></span>{repo.stargazers_count}</div>
