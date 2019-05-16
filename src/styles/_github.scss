@@ -5,10 +5,16 @@
 }
 
 
-.github--block {
+.gh--block {
   @include col-xs-12();
   @include col-md-6();
   @include col-lg-4();
+  @include flex();
+  justify-content: space-between;
+  flex-direction: column;
+
+  margin-bottom: 5rem;
+  border-bottom: 0.1rem solid #DBE0E8;
 
   h2 {
     font-size: 1.6rem;
@@ -39,6 +45,27 @@
         top: 0;
         left: 0;
       }
+    }
+  }
+
+  .gh--footer {
+    @include flex();
+    justify-content: space-between;
+    margin-top: 3rem;
+  }
+
+  .repo--stats {
+    @include flex();
+    align-items: center;
+    margin-bottom: 2.5rem;
+
+    & > div {
+      @include flex();
+      align-items: center;
+      font-size: 1.4rem;
+      font-weight: 500;
+      color: #3F3F48;
+      margin-right: 2rem;
     }
   }
 

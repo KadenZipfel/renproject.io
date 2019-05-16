@@ -22,10 +22,12 @@ export class GithubBlock extends React.Component<GithubBlockProps, GithubBlockSt
         const ghStar = require("../styles/images/icons/gh-icon-star.svg");
         const ghLaw = require("../styles/images/icons/gh-icon-law.svg");
         return (
-            <div className="github--block">
-                <h2><ExternalLink href={repo.html_url}>{repo.name} &rarr;</ExternalLink></h2>
-                <p>{repo.description}</p>
-                <div className="github--block--footer">
+            <div className="gh--block">
+                <div className="gh--content">
+                    <h2><ExternalLink href={repo.html_url}>{repo.name} &rarr;</ExternalLink></h2>
+                    <p>{repo.description}</p>
+                </div>
+                <div className="gh--footer">
                     <div className="repo--stats">
                         <div className="repo--lang">
                             <span className="repo--stat--icon">
