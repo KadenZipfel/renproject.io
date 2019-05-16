@@ -12,9 +12,7 @@
   @include flex();
   justify-content: space-between;
   flex-direction: column;
-
-  margin-bottom: 5rem;
-  border-bottom: 0.1rem solid #DBE0E8;
+  padding: 2rem;
 
   h2 {
     font-size: 1.6rem;
@@ -52,6 +50,7 @@
     @include flex();
     justify-content: space-between;
     margin-top: 3rem;
+    border-bottom: 0.1rem solid #DBE0E8;
   }
 
   .repo--stats {
