@@ -24,7 +24,7 @@ class RoadmapPage extends React.Component {
                 <div className="section section--story">
                     <div className="container">
                         <div className="row">
-                            <GithubStats usernames={["renproject", "republicprotocol"]} />
+                            <GithubStats limit={6} usernames={["renproject", "republicprotocol"]} />
                         </div>
                     </div>
                 </div>

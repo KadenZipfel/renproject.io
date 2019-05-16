@@ -4,6 +4,7 @@ import { GithubBlock } from "./GithubBlock";
 
 interface GithubStatsProps {
     usernames: string[];
+    limit?: number;
 }
 
 interface GithubStatsState {
@@ -40,7 +41,7 @@ export class GithubStats extends React.Component<GithubStatsProps, GithubStatsSt
     }
 
     private updateRepos = async (): Promise<void> => {
-        const { usernames } = this.props;
+        const { limit, usernames } = this.props;
 
         // Only show the Github repos which were updated within the last month
         const filterDate = new Date();
@@ -50,6 +51,9 @@ export class GithubStats extends React.Component<GithubStatsProps, GithubStatsSt
             let repos: GithubRepo[] = [];
             for (const username of usernames) {
                 repos = repos.concat(await fetchRepos(username, { date: filterDate }));
+            }
+            if (limit && limit > 0) {
+                repos = repos.slice(0, limit);
             }
             console.log(repos);
             this.setState({ repos, ready: true });
