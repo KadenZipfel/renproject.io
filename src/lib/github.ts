@@ -150,5 +150,6 @@ export const calculateStats = (repos: GithubRepo[]): GithubStatistics => {
         lastUpdated,
         languages,
     };
+    console.log(stats);
     return stats as GithubStatistics;
 }

@@ -49,7 +49,7 @@ export class GithubBlock extends React.Component<GithubBlockProps, GithubBlockSt
                         <GithubStar count={repo.stargazers_count}/>
                         {repo.license && <div className="repo--stat repo--license"><span className="repo--stat--icon"><img src={ghLaw} /></span>{repo.license.spdx_id}</div>}
                     </div>
-                    <div className="repo--timeago">Updated {naturalTime(repo.updated_at.getTime() / 1000, { message: "something", suffix: "ago", countDown: false })}</div>
+                    <div className="repo--timeago">Updated {naturalTime(repo.updated_at.getTime() / 1000, { message: "A moment ago", suffix: "ago", countDown: false })}</div>
                 </div>
             </div>
         );
