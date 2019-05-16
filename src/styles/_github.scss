@@ -1,9 +1,48 @@
+.gh--stats {
+  width: 100%;
+
+  /*** STYLES FOR REACT-TABS ***/
+
+  .react-tabs__tab-list {
+    border-bottom: 0.2rem solid #E1E1E1;
+    margin: 0 0 1rem;
+    padding: 0;
+  }
+
+  .react-tabs__tab {
+    display: inline-block;
+    border-bottom: 0.2rem solid transparent;
+    bottom: -0.2rem;
+    position: relative;
+    list-style: none;
+    padding: 1rem 1.5rem;
+    color: #CBCBCB;
+    font-size: 1.4rem;
+    font-weight: 500;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .react-tabs__tab--selected {
+    border-color: #006FE8;
+    color: #006FE8;
+  }
+
+  .react-tabs__tab-panel {
+    display: none;
+  }
+
+  .react-tabs__tab-panel--selected {
+    display: block;
+  }
+
+}
+
 .github--top--repos {
   @include flex();
   width: 100%;
   flex-flow: row wrap;
 }
-
 
 .gh--block {
   @include col-xs-12();
@@ -74,4 +113,7 @@
     top: 0;
     left: 0;
   }
+}
+.gh--stats--overview {
+  @include flex();
 }

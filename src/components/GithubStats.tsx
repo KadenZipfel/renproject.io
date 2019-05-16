@@ -1,6 +1,9 @@
 import * as React from "react";
+
+import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+
 import { fetchRepos, GithubRepo, GithubStatistics, calculateStats } from "../lib/github";
-import { GithubBlock } from "./GithubBlock";
+import { GithubBlock, GithubLanguageDot } from "./GithubBlock";
 import { naturalTime } from "@renex/react-components";
 
 interface GithubStatsProps {
@@ -35,13 +38,27 @@ export class GithubStats extends React.Component<GithubStatsProps, GithubStatsSt
     public render(): JSX.Element {
         const { stats, error, ready, repos } = this.state;
         return (
-            <div className="gh-stats">
-                <p>{stats && stats.totalStars}</p>
-                <p>{stats && JSON.stringify(stats.languages)}</p>
-                <p>{stats && naturalTime(stats.lastUpdated.getTime() / 1000, { message: "", suffix: "ago", countDown: false })}</p>
-                {error ? "an error occurred. try again later." : !ready ? "Loading..." : <div className="github--top--repos">
-                    {repos.map(repo => <GithubBlock key={repo.id} repo={repo} />)}
-                </div>}
+            <div className="gh--stats">
+                {error ? "an error occurred. try again later." : !ready ? "Loading..." : 
+                <Tabs>
+                    <TabList>
+                        <Tab>Overview</Tab>
+                        <Tab>Top Repos</Tab>
+                    </TabList>
+
+                    <TabPanel>
+                        <div className="gh--stats--overview">
+                            <p>{stats && stats.totalStars}</p>
+                            <div>{stats && stats.languages.map(lang => <GithubLanguageDot key={lang} language={lang} />)}</div>
+                            <p>{stats && naturalTime(stats.lastUpdated.getTime() / 1000, { message: "", suffix: "ago", countDown: false })}</p>
+                        </div>
+                    </TabPanel>
+                    <TabPanel>
+                        <div className="github--top--repos">
+                            {repos.map(repo => <GithubBlock key={repo.id} repo={repo} />)}
+                        </div>
+                    </TabPanel>
+                </Tabs>}
             </div>
         );
     }
@@ -54,6 +71,9 @@ export class GithubStats extends React.Component<GithubStatsProps, GithubStatsSt
             for (const username of usernames) {
                 repos = repos.concat(await fetchRepos(username));
             }
+            console.log(repos);
+            console.log(repos.map(r => r.node_id).sort());
+            console.log(Array.from(new Set(repos.map(r => r.node_id))));
             // calculate stats from all repos
             const stats = calculateStats(repos);
 
