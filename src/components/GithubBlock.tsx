@@ -29,7 +29,7 @@ export class GithubBlock extends React.Component<GithubBlockProps, GithubBlockSt
                 </div>
                 <div className="gh--footer">
                     <div className="repo--stats">
-                        <div className="repo--lang">
+                        {repo.language && <div className="repo--lang">
                             <span className="repo--stat--icon">
                                 <div className="repo--lang--dot">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
@@ -38,7 +38,7 @@ export class GithubBlock extends React.Component<GithubBlockProps, GithubBlockSt
                                 </div>
                             </span>
                             <span>{repo.language}</span>
-                        </div>
+                        </div>}
                         <div className="repo--stars"><span className="repo--stat--icon"><img src={ghStar} /></span>{repo.stargazers_count}</div>
                         {repo.license && <div className="repo--license"><span className="repo--stat--icon"><img src={ghLaw} /></span>{repo.license.spdx_id}</div>}
                     </div>
