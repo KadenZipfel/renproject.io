@@ -109,6 +109,12 @@ export interface GithubRepo extends Omit<Omit<Omit<InternalGithubRepo, "pushed_a
     pushed_at: Date;
 }
 
+export interface GithubStatistics {
+    totalStars: number;
+    lastUpdated: Date;
+    languages: string[];
+}
+
 export const fetchRepos = async (username: string): Promise<GithubRepo[]> => {
     let repos: GithubRepo[] = [];
     const resp = await axios.get(`https://api.github.com/users/${username}/repos`);
@@ -120,4 +126,29 @@ export const fetchRepos = async (username: string): Promise<GithubRepo[]> => {
         repos.push(newRepo as GithubRepo);
     }
     return repos;
+}
+
+export const calculateStats = (repos: GithubRepo[]): GithubStatistics => {
+    let lastUpdated = null;
+    let totalStars = 0;
+    let languageCount = new Map<string, number>();
+    for (const repo of repos) {
+        totalStars += repo.stargazers_count;
+        if (repo.language !== null) {
+            console.log(repo.language);
+            const count = languageCount.get(repo.language) || 0;
+            languageCount.set(repo.language, count + 1);
+        }
+        if (lastUpdated === null || repo.updated_at > lastUpdated) {
+            lastUpdated = repo.updated_at;
+        }
+    }
+
+    const languages = Array.from(languageCount.keys()).sort((lang1, lang2) => (languageCount.get(lang2) || 0) - (languageCount.get(lang1) || 0));
+    const stats = {
+        totalStars,
+        lastUpdated,
+        languages,
+    };
+    return stats as GithubStatistics;
 }

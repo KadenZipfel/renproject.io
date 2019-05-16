@@ -1,6 +1,7 @@
 import * as React from "react";
-import { fetchRepos, GithubRepo } from "../lib/github";
+import { fetchRepos, GithubRepo, GithubStatistics, calculateStats } from "../lib/github";
 import { GithubBlock } from "./GithubBlock";
+import { naturalTime } from "@renex/react-components";
 
 interface GithubStatsProps {
     usernames: string[];
@@ -9,6 +10,7 @@ interface GithubStatsProps {
 
 interface GithubStatsState {
     repos: GithubRepo[];
+    stats: null | GithubStatistics;
     ready: boolean;
     error: boolean;
 }
@@ -18,6 +20,7 @@ export class GithubStats extends React.Component<GithubStatsProps, GithubStatsSt
         super(props);
         this.state = {
             repos: [],
+            stats: null,
             ready: false,
             error: false,
         };
@@ -30,13 +33,16 @@ export class GithubStats extends React.Component<GithubStatsProps, GithubStatsSt
     }
 
     public render(): JSX.Element {
-        const { error, ready, repos } = this.state;
+        const { stats, error, ready, repos } = this.state;
         return (
-            <>
+            <div className="gh-stats">
+                <p>{stats && stats.totalStars}</p>
+                <p>{stats && JSON.stringify(stats.languages)}</p>
+                <p>{stats && naturalTime(stats.lastUpdated.getTime() / 1000, { message: "", suffix: "ago", countDown: false })}</p>
                 {error ? "an error occurred. try again later." : !ready ? "Loading..." : <div className="github--top--repos">
                     {repos.map(repo => <GithubBlock key={repo.id} repo={repo} />)}
                 </div>}
-            </>
+            </div>
         );
     }
 
@@ -48,6 +54,8 @@ export class GithubStats extends React.Component<GithubStatsProps, GithubStatsSt
             for (const username of usernames) {
                 repos = repos.concat(await fetchRepos(username));
             }
+            // calculate stats from all repos
+            const stats = calculateStats(repos);
 
             // Only show the Github repos which were updated within the last month
             const filterDate = new Date();
@@ -61,7 +69,7 @@ export class GithubStats extends React.Component<GithubStatsProps, GithubStatsSt
                 repos = repos.slice(0, limit);
             }
             console.log(repos);
-            this.setState({ repos, ready: true, error: false });
+            this.setState({ repos, stats, ready: true, error: false });
         } catch (err) {
             console.error(err);
             this.setState({ error: true });
