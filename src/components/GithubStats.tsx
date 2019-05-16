@@ -56,7 +56,7 @@ export class GithubStats extends React.Component<GithubStatsProps, GithubStatsSt
                 repos = repos.slice(0, limit);
             }
             console.log(repos);
-            this.setState({ repos, ready: true });
+            this.setState({ repos, ready: true, error: false });
         } catch (err) {
             console.error(err);
             this.setState({ error: true });
