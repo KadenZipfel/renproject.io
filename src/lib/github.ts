@@ -115,6 +115,16 @@ export interface GithubStatistics {
     languages: string[];
 }
 
+export interface GithubActivity {
+    all: number[];
+    owner: number[];
+}
+
+export const fetchActivity = async (username: string, repo: string): Promise<GithubActivity> => {
+    const resp = await axios.get(`https://api.github.com/repos/${username}/${repo}/stats/participation`);
+    return resp.data as GithubActivity;
+}
+
 export const fetchRepos = async (username: string): Promise<GithubRepo[]> => {
     let repos: GithubRepo[] = [];
     const resp = await axios.get(`https://api.github.com/users/${username}/repos`);
@@ -152,4 +162,22 @@ export const calculateStats = (repos: GithubRepo[]): GithubStatistics => {
     };
     console.log(stats);
     return stats as GithubStatistics;
+}
+
+export const calculateTotalActivity = async (repos: GithubRepo[]): Promise<number[]> => {
+    const promises = repos.map(r => fetchActivity(r.owner.login, r.name)
+        .then(stats => stats.all)
+        .catch((err) => {
+            console.error(err);
+            return [] as number[];
+        })
+    );
+    return Promise.all(promises).then(allActivity => {
+        return allActivity.reduce((runningTally, current) => {
+            if (runningTally.length === 0) {
+                return current;
+            }
+            return runningTally.map((num, idx) => num + current[idx]);
+        });
+    });
 }

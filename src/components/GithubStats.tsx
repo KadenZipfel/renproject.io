@@ -5,6 +5,7 @@ import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import { fetchRepos, GithubRepo, GithubStatistics, calculateStats } from "../lib/github";
 import { GithubBlock, GithubLanguage, GithubStar } from "./GithubBlock";
 import { naturalTime } from "@renex/react-components";
+import { GithubActivity } from "./GithubActivity";
 
 interface GithubStatsProps {
     usernames: string[];
@@ -51,6 +52,10 @@ export class GithubStats extends React.Component<GithubStatsProps, GithubStatsSt
 
                         <TabPanel>
                             <div className="gh--stats--overview">
+                                <div>
+                                    <h2>Activity</h2>
+                                    <GithubActivity repos={repos} />
+                                </div>
                                 <div>
                                     <h2>Last Commit</h2>
                                     <p>{naturalTime(stats.lastUpdated.getTime() / 1000, { message: "A few seconds ago", suffix: "ago", countDown: false })}</p>
