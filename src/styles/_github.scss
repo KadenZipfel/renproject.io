@@ -149,3 +149,22 @@
 
   }
 }
+
+
+/* GITHUB ACTIVITY CHART */
+
+@import "chartist/dist/scss/chartist.scss";
+
+/* Use this selector to override the line style on a given series */
+.ct-series-a .ct-line {
+  /* Set the colour of this series line */
+  stroke: #006FE8;
+  /* Control the thikness of your lines */
+  stroke-width: 0.3rem;
+}
+
+/* This selector overrides the points style on line charts. Points on line charts are actually just very short strokes. This allows you to customize even the point size in CSS */
+.ct-series-a .ct-point {
+  /* Size of your points */
+  stroke-width: 0;
+}
