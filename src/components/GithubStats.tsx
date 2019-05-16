@@ -3,7 +3,7 @@ import * as React from "react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 
 import { fetchRepos, GithubRepo, GithubStatistics, calculateStats } from "../lib/github";
-import { GithubBlock, GithubLanguageDot } from "./GithubBlock";
+import { GithubBlock, GithubLanguage, GithubStar } from "./GithubBlock";
 import { naturalTime } from "@renex/react-components";
 
 interface GithubStatsProps {
@@ -37,28 +37,40 @@ export class GithubStats extends React.Component<GithubStatsProps, GithubStatsSt
 
     public render(): JSX.Element {
         const { stats, error, ready, repos } = this.state;
+        if (!stats) {
+            return <>Error</>;
+        }
         return (
             <div className="gh--stats">
-                {error ? "an error occurred. try again later." : !ready ? "Loading..." : 
-                <Tabs>
-                    <TabList>
-                        <Tab>Overview</Tab>
-                        <Tab>Top Repos</Tab>
-                    </TabList>
+                {error ? "an error occurred. try again later." : !ready ? "Loading..." :
+                    <Tabs>
+                        <TabList>
+                            <Tab>Overview</Tab>
+                            <Tab>Top Repos</Tab>
+                        </TabList>
 
-                    <TabPanel>
-                        <div className="gh--stats--overview">
-                            <p>{stats && stats.totalStars}</p>
-                            <div>{stats && stats.languages.map(lang => <GithubLanguageDot key={lang} language={lang} />)}</div>
-                            <p>{stats && naturalTime(stats.lastUpdated.getTime() / 1000, { message: "", suffix: "ago", countDown: false })}</p>
-                        </div>
-                    </TabPanel>
-                    <TabPanel>
-                        <div className="github--top--repos">
-                            {repos.map(repo => <GithubBlock key={repo.id} repo={repo} />)}
-                        </div>
-                    </TabPanel>
-                </Tabs>}
+                        <TabPanel>
+                            <div className="gh--stats--overview">
+                                <div>
+                                    <h2>Last Commit</h2>
+                                    <p>{naturalTime(stats.lastUpdated.getTime() / 1000, { message: "", suffix: "ago", countDown: false })}</p>
+                                </div>
+                                <div>
+                                    <h2>Stars</h2>
+                                    <GithubStar count={stats.totalStars} />
+                                </div>
+                                <div>
+                                    <h2>Languages</h2>
+                                    <div className="gh--stats--lang">{stats.languages.map(lang => <GithubLanguage key={lang} language={lang} />)}</div>
+                                </div>
+                            </div>
+                        </TabPanel>
+                        <TabPanel>
+                            <div className="github--top--repos">
+                                {repos.map(repo => <GithubBlock key={repo.id} repo={repo} />)}
+                            </div>
+                        </TabPanel>
+                    </Tabs>}
             </div>
         );
     }
