@@ -53,7 +53,7 @@ export class GithubStats extends React.Component<GithubStatsProps, GithubStatsSt
                             <div className="gh--stats--overview">
                                 <div>
                                     <h2>Last Commit</h2>
-                                    <p>{naturalTime(stats.lastUpdated.getTime() / 1000, { message: "A moment ago", suffix: "ago", countDown: false })}</p>
+                                    <p>{naturalTime(stats.lastUpdated.getTime() / 1000, { message: "A few seconds ago", suffix: "ago", countDown: false })}</p>
                                 </div>
                                 <div>
                                     <h2>Stars</h2>
