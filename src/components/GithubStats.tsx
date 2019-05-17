@@ -44,6 +44,7 @@ export class GithubStats extends React.Component<GithubStatsProps, GithubStatsSt
         }
         return (
             <div className="gh--stats">
+                <h1>Github</h1>
                 {error ? "an error occurred. try again later." : !ready ? "Loading..." :
                     <Tabs forceRenderTabPanel={true}>
                         <TabList>
