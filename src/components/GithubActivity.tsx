@@ -55,10 +55,8 @@ export class GithubActivity extends React.Component<GithubActivityProps, GithubA
                 offset: 0
             },
         }
-        const start = data[0];
-        const end = data.reduce((total, num) => total + num, 0);
-        const commitChanges = end - start;
-        const percentChange = start === 0 ? 0 : Math.round(commitChanges / start * 100);
+        const commitChanges = data[data.length - 1] - data[0];
+        const percentChange = data[0] === 0 ? 0 : Math.round(commitChanges / data[0] * 100);
         return (
             <div className="gh--activity">
                 {activity.length === 0 ?
