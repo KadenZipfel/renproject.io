@@ -39,8 +39,8 @@ export class GithubActivity extends React.Component<GithubActivityProps, GithubA
             series: [data],
         }
         const lineChartOptions = {
-            height: 150,
-            width: 300,
+            height: 200,
+            width: 400,
             low: Math.min(...data),
             high: Math.max(...data),
             chartPadding: 0,
@@ -61,7 +61,7 @@ export class GithubActivity extends React.Component<GithubActivityProps, GithubA
             <div className="gh--activity">
                 {activity.length === 0 ?
                     "Loading..." :
-                    <>
+                    <div className="gh--activity--chart">
                         <div className="gh--activity--changes">
                             <span>{`${commitChanges > 0 ? "+" : ""}${commitChanges}`}</span>
                             <span>{`${percentChange > 0 ? "+" : percentChange === 0 ? "±" : ""}${percentChange}%`}</span>
@@ -74,7 +74,7 @@ export class GithubActivity extends React.Component<GithubActivityProps, GithubA
                             <li className={`four ${selected === "1Y" ? "selected" : ""}`}><a onClick={() => { this.updateSelected("1Y") }}>1Y</a></li>
                             <hr />
                         </ul>
-                    </>
+                    </div>
                 }
             </div>
         );

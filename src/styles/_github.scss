@@ -116,9 +116,18 @@
     }
 }
 
+.gh--activity--chart {
+  width: 400px;
+}
+
 .gh--stats--overview {
     @include flex();
+    flex-direction: column;
     justify-content: space-between;
+    padding: 1rem;
+    @media(min-width: $min-lg) {
+      flex-direction: row;
+    }
 
     p {
         font-size: 1.4rem;
@@ -127,6 +136,7 @@
     }
 
     & > div {
+      padding: 1rem;
         h2 {
             font-size: 1.8rem;
             font-weight: 500;
@@ -137,8 +147,11 @@
 
     .gh--stats--lang {
         @include flex();
-        max-width: 20rem;
         flex-flow: row wrap;
+        @media(min-width: $min-lg) {
+          max-width: 20rem;
+        }
+
 
         .repo--lang {
             margin-right: 2rem;
