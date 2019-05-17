@@ -2,7 +2,7 @@ import * as React from "react";
 
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 
-import { fetchRepos, GithubRepo, GithubStatistics, calculateStats } from "../lib/github";
+import { fetchRepos, GithubRepo, calculateStats } from "../lib/github";
 import { GithubBlock, GithubLanguage, GithubStar } from "./GithubBlock";
 import { naturalTime } from "@renex/react-components";
 import { GithubActivity } from "./GithubActivity";
@@ -16,7 +16,6 @@ interface GithubStatsProps {
 
 interface GithubStatsState {
     repos: GithubRepo[];
-    stats: null | GithubStatistics;
     ready: boolean;
     error: boolean;
 }
@@ -26,7 +25,6 @@ export class GithubStats extends React.Component<GithubStatsProps, GithubStatsSt
         super(props);
         this.state = {
             repos: [],
-            stats: null,
             ready: false,
             error: false,
         };
@@ -40,13 +38,14 @@ export class GithubStats extends React.Component<GithubStatsProps, GithubStatsSt
 
     public render(): JSX.Element {
         const { limit } = this.props;
-        const { stats, error, ready, repos } = this.state;
+        const { error, ready, repos } = this.state;
+        const stats = calculateStats(repos);
         const fetchError = <p>Failed to fetch information from Github. Please try again later.</p>;
         const loadingMessage = <p>Fetching data from Github...</p>;
         return (
             <div className="gh--stats">
                 <h1>Github</h1>
-                {error ? fetchError : !ready || !stats ? loadingMessage :
+                {error ? fetchError : !ready ? loadingMessage :
                     <Tabs forceRenderTabPanel={true}>
                         <TabList>
                             <Tab>Overview</Tab>
@@ -94,11 +93,6 @@ export class GithubStats extends React.Component<GithubStatsProps, GithubStatsSt
             for (const username of usernames) {
                 repos = repos.concat(await fetchRepos(username));
             }
-            console.log(repos);
-            console.log(repos.map(r => r.node_id).sort());
-            console.log(Array.from(new Set(repos.map(r => r.node_id))));
-            // calculate stats from all repos
-            const stats = calculateStats(repos);
 
             // Only show the Github repos which were updated within the last month
             const filterDate = new Date();
@@ -108,8 +102,7 @@ export class GithubStats extends React.Component<GithubStatsProps, GithubStatsSt
             // sort by stars
             repos = repos.sort((a, b) => b.stargazers_count - a.stargazers_count);
 
-            console.log(repos);
-            this.setState({ repos, stats, ready: true, error: false });
+            this.setState({ repos, ready: true, error: false });
         } catch (err) {
             console.error(err);
             this.setState({ error: true });
