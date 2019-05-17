@@ -55,11 +55,17 @@ export class GithubActivity extends React.Component<GithubActivityProps, GithubA
                 offset: 0
             },
         }
+        const commitChanges = data[data.length - 1] - data[0];
+        const percentChange = data[0] === 0 ? 0 : Math.round(commitChanges / data[0] * 100);
         return (
             <div className="gh--activity">
                 {activity.length === 0 ?
                     "Loading..." :
                     <>
+                        <div className="gh--activity--changes">
+                            <span>{`${commitChanges > 0 ? "+" : ""}${commitChanges}`}</span>
+                            <span>{`${percentChange > 0 ? "+" : percentChange === 0 ? "±" : ""}${percentChange}%`}</span>
+                        </div>
                         <ChartistGraph data={lineChartData} options={lineChartOptions} type={"Line"} />
                         <ul>
                             <li className={`one ${selected === "1M" ? "selected" : ""}`}><a onClick={() => { this.updateSelected("1M") }}>1M</a></li>
