@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios, { AxiosRequestConfig } from "axios";
 
 type Omit<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>
 
@@ -121,13 +121,13 @@ export interface GithubActivity {
 }
 
 export const fetchActivity = async (username: string, repo: string): Promise<GithubActivity> => {
-    const resp = await axios.get(`https://api.github.com/repos/${username}/${repo}/stats/participation`);
+    const resp = await ghGet(`https://api.github.com/repos/${username}/${repo}/stats/participation`);
     return resp.data as GithubActivity;
 }
 
 export const fetchRepos = async (username: string): Promise<GithubRepo[]> => {
     let repos: GithubRepo[] = [];
-    const resp = await axios.get(`https://api.github.com/users/${username}/repos`);
+    const resp = await ghGet(`https://api.github.com/users/${username}/repos`);
     for (const repo of resp.data as InternalGithubRepo[]) {
         const { created_at, updated_at, pushed_at, ...newRepo } = repo;
         newRepo["created_at"] = new Date(created_at);
@@ -181,3 +181,13 @@ export const calculateTotalActivity = async (repos: GithubRepo[]): Promise<numbe
         });
     });
 }
+
+const ghGet = (url: string) => {
+    let config: AxiosRequestConfig | undefined = undefined;
+    if (process.env.REACT_APP_GITHUB_TOKEN) {
+        config = {
+            headers: {"Authorization": `token ${process.env.REACT_APP_GITHUB_TOKEN}`},
+        };
+    }
+    return axios.get(url, config)
+};
