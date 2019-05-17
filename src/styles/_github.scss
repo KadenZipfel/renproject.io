@@ -225,6 +225,13 @@
     }
 }
 
+.gh--stats--footer {
+    width: 100%;
+    text-align: right;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
 /* GITHUB ACTIVITY CHART */
 
 @import "chartist/dist/scss/chartist.scss";

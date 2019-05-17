@@ -6,6 +6,8 @@ import { fetchRepos, GithubRepo, GithubStatistics, calculateStats } from "../lib
 import { GithubBlock, GithubLanguage, GithubStar } from "./GithubBlock";
 import { naturalTime } from "@renex/react-components";
 import { GithubActivity } from "./GithubActivity";
+import { ExternalLink } from "./ExternalLink";
+import { REN_URLS } from "../lib/constants";
 
 interface GithubStatsProps {
     usernames: string[];
@@ -70,6 +72,9 @@ export class GithubStats extends React.Component<GithubStatsProps, GithubStatsSt
                                     <h2>Languages</h2>
                                     <div className="gh--stats--lang">{stats.languages.map(lang => <GithubLanguage key={lang} language={lang} />)}</div>
                                 </div>
+                            </div>
+                            <div className="gh--stats--footer">
+                                <ExternalLink href={REN_URLS.github}>View on Github &rarr;</ExternalLink>
                             </div>
                         </TabPanel>
                         <TabPanel>
