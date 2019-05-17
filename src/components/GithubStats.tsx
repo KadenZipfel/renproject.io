@@ -31,9 +31,7 @@ export class GithubStats extends React.Component<GithubStatsProps, GithubStatsSt
     }
 
     public async componentDidMount(): Promise<void> {
-        console.log("start did mount");
         await this.updateRepos();
-        console.log("finished did mount");
     }
 
     public render(): JSX.Element {

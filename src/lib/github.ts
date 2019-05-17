@@ -145,7 +145,6 @@ export const calculateStats = (repos: GithubRepo[]): GithubStatistics => {
     for (const repo of repos) {
         totalStars += repo.stargazers_count;
         if (repo.language !== null) {
-            console.log(repo.language);
             const count = languageCount.get(repo.language) || 0;
             languageCount.set(repo.language, count + 1);
         }
