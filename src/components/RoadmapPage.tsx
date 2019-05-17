@@ -5,6 +5,9 @@ import Header from "./Header";
 import { MediumBannerInstance } from "./MediumBanner";
 import { GithubStats } from "./GithubStats";
 import ContentBlock from "./ContentBlock";
+import { faTelegramPlane } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { REN_URLS } from "../lib/constants";
 
 class RoadmapPage extends React.Component {
     public render(): JSX.Element {
@@ -30,6 +33,17 @@ class RoadmapPage extends React.Component {
                     <div className="container">
                         <div className="row">
                             <GithubStats limit={6} usernames={["renproject", "republicprotocol"]} />
+                        </div>
+                    </div>
+                </div>
+                <div className="telegram--banner">
+                    <div className="container">
+                        <div className="banner--content">
+                            <div>
+                                <h2>Have your say.</h2>
+                                <p>Provide input and feedback through our Telegram channel</p>
+                            </div>
+                            <a className="button button--alt" href={REN_URLS.telegram}><FontAwesomeIcon icon={faTelegramPlane} pull="left" />Open Telegram</a>
                         </div>
                     </div>
                 </div>

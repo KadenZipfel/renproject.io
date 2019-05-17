@@ -29,3 +29,48 @@
         }
     }
 }
+
+.telegram--banner {
+    background-color: #001E38;
+    position: relative;
+    z-index: 0;
+    font-weight: 500;
+    color: white;
+
+    h2 {
+        color: white;
+    }
+
+    .banner--content {
+        @include row();
+        justify-content: space-around;
+        flex-direction: column;
+        align-items: center;
+        min-height: 11rem;
+        padding: 4rem 0;
+        position: relative;
+        @media(min-width: $min-md) {
+            flex-direction: row;
+        }
+    }
+    .banner--content .button--alt {
+        color: white;
+        width: auto;
+        margin-top: 1rem;
+        background-color: #33AAD8;
+        border: none;
+
+        &:hover {
+            color: #FAFAFA;
+        }
+        @media(min-width: $min-md) {
+            margin-top: 0;
+        }
+    }
+    .banner--content img {
+        margin-right: 1rem;
+    }
+    .banner--content p {
+        font-size: 1.6rem;
+    }
+}
