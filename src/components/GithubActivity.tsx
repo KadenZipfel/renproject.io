@@ -60,7 +60,7 @@ export class GithubActivity extends React.Component<GithubActivityProps, GithubA
         return (
             <div className="gh--activity">
                 {activity.length === 0 ?
-                    "Loading..." :
+                    <p>Generating activity graph...</p> :
                     <div className="gh--activity--chart">
                         <div className="gh--activity--changes">
                             <span>{`${commitChanges > 0 ? "+" : ""}${commitChanges}`}</span>

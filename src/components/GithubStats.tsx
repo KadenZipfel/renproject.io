@@ -41,13 +41,12 @@ export class GithubStats extends React.Component<GithubStatsProps, GithubStatsSt
     public render(): JSX.Element {
         const { limit } = this.props;
         const { stats, error, ready, repos } = this.state;
-        if (!stats) {
-            return <>Error</>;
-        }
+        const fetchError = <p>Failed to fetch information from Github. Please try again later.</p>;
+        const loadingMessage = <p>Fetching data from Github...</p>;
         return (
             <div className="gh--stats">
                 <h1>Github</h1>
-                {error ? "an error occurred. try again later." : !ready ? "Loading..." :
+                {error ? fetchError : !ready || !stats ? loadingMessage :
                     <Tabs forceRenderTabPanel={true}>
                         <TabList>
                             <Tab>Overview</Tab>
