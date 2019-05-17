@@ -10,6 +10,7 @@ interface GithubActivityProps {
 
 interface GithubActivityState {
     activity: number[];
+    selected: string;
 }
 
 
@@ -17,7 +18,8 @@ export class GithubActivity extends React.Component<GithubActivityProps, GithubA
     constructor(props: GithubActivityProps) {
         super(props);
         this.state = {
-            activity: []
+            activity: [],
+            selected: "1Y",
         };
     }
 
@@ -29,33 +31,64 @@ export class GithubActivity extends React.Component<GithubActivityProps, GithubA
     }
 
     public render(): JSX.Element {
-        const { activity } = this.state;
+        const { selected, activity } = this.state;
+        const limit = this.getLimit(selected);
+        const data = limit > 0 ? activity.slice(limit) : activity;
         const lineChartData = {
             labels: [],
-            series: [activity],
+            series: [data],
         }
         const lineChartOptions = {
-            low: Math.min(...activity),
-            high: Math.max(...activity),
+            height: 150,
+            width: 300,
+            low: Math.min(...data),
+            high: Math.max(...data),
+            chartPadding: 0,
             axisX: {
                 showGrid: false,
                 showLabel: false,
                 offset: 0
-              },
-              axisY: {
+            },
+            axisY: {
                 showGrid: false,
                 showLabel: false,
                 offset: 0
-              },
+            },
         }
         return (
             <div className="gh--activity">
                 {activity.length === 0 ?
                     "Loading..." :
-                    <ChartistGraph data={lineChartData} options={lineChartOptions} type={"Line"} />
+                    <>
+                        <ChartistGraph data={lineChartData} options={lineChartOptions} type={"Line"} />
+                        <ul>
+                            <li className={`one ${selected === "1M" ? "selected" : ""}`}><a onClick={() => { this.updateSelected("1M") }}>1M</a></li>
+                            <li className={`two ${selected === "4M" ? "selected" : ""}`}><a onClick={() => { this.updateSelected("4M") }}>4M</a></li>
+                            <li className={`three ${selected === "6M" ? "selected" : ""}`}><a onClick={() => { this.updateSelected("6M") }}>6M</a></li>
+                            <li className={`four ${selected === "1Y" ? "selected" : ""}`}><a onClick={() => { this.updateSelected("1Y") }}>1Y</a></li>
+                            <hr />
+                        </ul>
+                    </>
                 }
             </div>
         );
+    }
+
+    private updateSelected = (selected: string) => {
+        this.setState({ selected });
+    }
+
+    private getLimit = (selected: string) => {
+        switch (selected) {
+            case "1M":
+                return 52 - 4;
+            case "4M":
+                return 52 - 16;
+            case "6M":
+                return 52 - 26;
+            default:
+                return 0;
+        }
     }
 
 }

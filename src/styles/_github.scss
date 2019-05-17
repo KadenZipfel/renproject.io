@@ -1,155 +1,201 @@
 .gh--stats {
-  width: 100%;
+    width: 100%;
 
-  /*** STYLES FOR REACT-TABS ***/
+    /*** STYLES FOR REACT-TABS ***/
 
-  .react-tabs__tab-list {
-    border-bottom: 0.2rem solid #E1E1E1;
-    margin: 0 0 1rem;
-    padding: 0;
-  }
+    .react-tabs__tab-list {
+        border-bottom: 0.2rem solid #e1e1e1;
+        margin: 0 0 1rem;
+        padding: 0;
+    }
 
-  .react-tabs__tab {
-    display: inline-block;
-    border-bottom: 0.2rem solid transparent;
-    bottom: -0.2rem;
-    position: relative;
-    list-style: none;
-    padding: 1rem 1.5rem;
-    color: #CBCBCB;
-    font-size: 1.4rem;
-    font-weight: 500;
-    cursor: pointer;
-    user-select: none;
-  }
+    .react-tabs__tab {
+        display: inline-block;
+        border-bottom: 0.2rem solid transparent;
+        bottom: -0.2rem;
+        position: relative;
+        list-style: none;
+        padding: 1rem 1.5rem;
+        color: #cbcbcb;
+        font-size: 1.4rem;
+        font-weight: 500;
+        cursor: pointer;
+        user-select: none;
+    }
 
-  .react-tabs__tab--selected {
-    border-color: #006FE8;
-    color: #006FE8;
-  }
+    .react-tabs__tab--selected {
+        border-color: #006fe8;
+        color: #006fe8;
+    }
 
-  .react-tabs__tab-panel {
-    display: none;
-  }
+    .react-tabs__tab-panel {
+        display: none;
+    }
 
-  .react-tabs__tab-panel--selected {
-    display: block;
-  }
-
+    .react-tabs__tab-panel--selected {
+        display: block;
+    }
 }
 
 .repo--lang {
-  @include flex();
+    @include flex();
 
-  .repo--lang--dot {
-    width: 1.2rem;
-    height: 1.2rem;
-    position: relative;
+    .repo--lang--dot {
+        width: 1.2rem;
+        height: 1.2rem;
+        position: relative;
 
-    svg {
-      position: absolute;
-      top: 0;
-      left: 0;
+        svg {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
     }
-  }
 }
 
 .repo--stat {
-  @include flex();
-  align-items: center;
-  font-size: 1.4rem;
-  font-weight: 500;
-  color: #3F3F48;
+    @include flex();
+    align-items: center;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #3f3f48;
 
-  .repo--stat--icon {
-    margin-right: 0.5rem;
-  }
+    .repo--stat--icon {
+        margin-right: 0.5rem;
+    }
 }
 
 .github--top--repos {
-  @include flex();
-  width: 100%;
-  flex-flow: row wrap;
+    @include flex();
+    width: 100%;
+    flex-flow: row wrap;
 }
 
 .gh--block {
-  @include col-xs-12();
-  @include col-md-6();
-  @include col-lg-4();
-  @include flex();
-  justify-content: space-between;
-  flex-direction: column;
-  padding: 2rem;
-
-  h2 {
-    font-size: 1.6rem;
-    font-weight: 500;
-    margin-bottom: 0.5rem;
-  }
-
-  p {
-    font-size: 1.6rem;
-    line-height: 2.2rem;
-    color: #87888C;
-  }
-
-
-  .gh--footer {
+    @include col-xs-12();
+    @include col-md-6();
+    @include col-lg-4();
     @include flex();
     justify-content: space-between;
-    margin-top: 3rem;
-    border-bottom: 0.1rem solid #DBE0E8;
-  }
+    flex-direction: column;
+    padding: 2rem;
 
-  .repo--stats {
-    @include flex();
-    align-items: center;
-    margin-bottom: 2.5rem;
-  }
+    h2 {
+        font-size: 1.6rem;
+        font-weight: 500;
+        margin-bottom: 0.5rem;
+    }
 
-  .repo--timeago {
-    font-weight: 500;
-    font-size: 1.4rem;
-    color: #CBCBCB;
-  }
+    p {
+        font-size: 1.6rem;
+        line-height: 2.2rem;
+        color: #87888c;
+    }
 
-  .repo--stat {
-    margin-right: 2rem;
-  }
+    .gh--footer {
+        @include flex();
+        justify-content: space-between;
+        margin-top: 3rem;
+        border-bottom: 0.1rem solid #dbe0e8;
+    }
+
+    .repo--stats {
+        @include flex();
+        align-items: center;
+        margin-bottom: 2.5rem;
+    }
+
+    .repo--timeago {
+        font-weight: 500;
+        font-size: 1.4rem;
+        color: #cbcbcb;
+    }
+
+    .repo--stat {
+        margin-right: 2rem;
+    }
 }
 
 .gh--stats--overview {
-  @include flex();
-  justify-content: space-between;
-
-  p {
-    font-size: 1.4rem;
-    font-weight: 500;
-    color: #3F3F48;
-  }
-
-  & > div {
-    h2 {
-      font-size: 1.8rem;
-      font-weight: 500;
-      color: #87888C;
-      margin-bottom: 2rem;
-    }
-  }
-
-  .gh--stats--lang {
     @include flex();
-    max-width: 20rem;
-    flex-flow: row wrap;
+    justify-content: space-between;
 
-    .repo--lang {
-      margin-right: 2rem;
-      margin-bottom: 2.5rem;
+    p {
+        font-size: 1.4rem;
+        font-weight: 500;
+        color: #3f3f48;
     }
 
-  }
+    & > div {
+        h2 {
+            font-size: 1.8rem;
+            font-weight: 500;
+            color: #87888c;
+            margin-bottom: 2rem;
+        }
+    }
+
+    .gh--stats--lang {
+        @include flex();
+        max-width: 20rem;
+        flex-flow: row wrap;
+
+        .repo--lang {
+            margin-right: 2rem;
+            margin-bottom: 2.5rem;
+        }
+    }
 }
 
+.gh--activity {
+    ul {
+        border-bottom: solid 0.4rem #cbcbcb;
+        li {
+            a {
+                font-size: 1.2rem;
+                color: #cbcbcb;
+            }
+            &.selected a {
+                color: #006fe8;
+                font-weight: 600;
+            }
+            display: inline;
+            text-align: center;
+        }
+    }
+
+    a {
+        display: inline-block;
+        width: 25%;
+        padding: 0.75rem 0;
+        margin: 0;
+        text-decoration: none;
+        color: #333;
+        cursor: pointer;
+    }
+
+    .two.selected ~ hr {
+        margin-left: 25%;
+    }
+
+    .three.selected ~ hr {
+        margin-left: 50%;
+    }
+
+    .four.selected ~ hr {
+        margin-left: 75%;
+    }
+
+    hr {
+        background: #006fe8;
+        transition: 0.2s ease-in-out;
+        width: 25%;
+        margin: 0;
+        margin-bottom: -0.4rem;
+        height: 0.4rem;
+        border: none;
+    }
+}
 
 /* GITHUB ACTIVITY CHART */
 
@@ -157,14 +203,14 @@
 
 /* Use this selector to override the line style on a given series */
 .ct-series-a .ct-line {
-  /* Set the colour of this series line */
-  stroke: #006FE8;
-  /* Control the thikness of your lines */
-  stroke-width: 0.3rem;
+    /* Set the colour of this series line */
+    stroke: #006fe8;
+    /* Control the thikness of your lines */
+    stroke-width: 0.3rem;
 }
 
 /* This selector overrides the points style on line charts. Points on line charts are actually just very short strokes. This allows you to customize even the point size in CSS */
 .ct-series-a .ct-point {
-  /* Size of your points */
-  stroke-width: 0;
+    /* Size of your points */
+    stroke-width: 0;
 }
