@@ -64,7 +64,7 @@ export class GithubActivity extends React.Component<GithubActivityProps, GithubA
                     <div className="gh--activity--chart">
                         <div className="gh--activity--changes">
                             <span>{`${commitChanges > 0 ? "+" : ""}${commitChanges}`}</span>
-                            <span>{`${percentChange > 0 ? "+" : percentChange === 0 ? "±" : ""}${percentChange}%`}</span>
+                            <span>{`${commitChanges === 0 ? "±0%" : percentChange === 0 ? "+∞%" : `${percentChange > 0 ? "+" : ""}${percentChange}%`}`}</span>
                         </div>
                         <ChartistGraph data={lineChartData} options={lineChartOptions} type={"Line"} />
                         <ul>
