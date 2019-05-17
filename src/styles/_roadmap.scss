@@ -10,3 +10,22 @@
         position: absolute;
     }
 }
+
+.roadmap .section.section--ecosystem {
+    .section--content {
+        @include offset-md-2;
+        text-align: center;
+    }
+    .content--heading {
+        h1 {
+            font-size: 3.2rem;
+        }
+    }
+    .content--body {
+        margin: auto;
+        p {
+            font-size: 1.8rem;
+            color: #87888C;
+        }
+    }
+}
