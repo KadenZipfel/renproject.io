@@ -37,7 +37,6 @@ export class GithubStats extends React.Component<GithubStatsProps, GithubStatsSt
     }
 
     public render(): JSX.Element {
-        const { limit } = this.props;
         const { error, ready, repos } = this.state;
         const stats = calculateStats(repos);
         const fetchError = <p>Failed to fetch information from Github. Please try again later.</p>;
@@ -77,7 +76,7 @@ export class GithubStats extends React.Component<GithubStatsProps, GithubStatsSt
                         </TabPanel>
                         <TabPanel>
                             <div className="github--top--repos">
-                                {repos.slice(0, limit).map(repo => <GithubBlock key={repo.id} repo={repo} />)}
+                                {this.filterRepos().map(repo => <GithubBlock key={repo.id} repo={repo} />)}
                             </div>
                         </TabPanel>
                     </Tabs>}
@@ -85,23 +84,29 @@ export class GithubStats extends React.Component<GithubStatsProps, GithubStatsSt
         );
     }
 
+    private filterRepos = (): GithubRepo[] => {
+        const { limit } = this.props;
+        // Only show the Github repos which were updated within the last month
+        const filterDate = new Date();
+        filterDate.setMonth(filterDate.getMonth() - 1);
+        let repos = this.state.repos.filter(repo => repo.updated_at > filterDate);
+
+        // sort by stars
+        repos = repos.sort((a, b) => b.stargazers_count - a.stargazers_count);
+
+        if (limit && limit > 0) {
+            repos = repos.slice(0, limit);
+        }
+        return repos;
+    }
+
     private updateRepos = async (): Promise<void> => {
         const { usernames } = this.props;
-
         try {
             let repos: GithubRepo[] = [];
             for (const username of usernames) {
                 repos = repos.concat(await fetchRepos(username));
             }
-
-            // Only show the Github repos which were updated within the last month
-            const filterDate = new Date();
-            filterDate.setMonth(filterDate.getMonth() - 1);
-            repos = repos.filter(repo => repo.updated_at > filterDate);
-
-            // sort by stars
-            repos = repos.sort((a, b) => b.stargazers_count - a.stargazers_count);
-
             this.setState({ repos, ready: true, error: false });
         } catch (err) {
             console.error(err);
