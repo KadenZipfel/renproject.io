@@ -90,7 +90,7 @@ class AboutPage extends React.Component {
                     <div className="container">
                         <div className="banner--content">
                             <p>Stay up to date with updates and news posted through the blog.</p>
-                            <a className="button button--alt" href={REN_URLS.medium}><FontAwesomeIcon icon={faMediumM} pull="left" />Visit the Blog</a>
+                            <ExternalLink className="button button--alt" href={REN_URLS.medium}><FontAwesomeIcon icon={faMediumM} pull="left" />Visit the Blog</ExternalLink>
                         </div>
                     </div>
                 </div>
