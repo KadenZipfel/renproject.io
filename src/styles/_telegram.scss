@@ -1,3 +1,8 @@
+.telegram--button {
+    position: relative;
+    width: 25rem;
+}
+
 .telegram--banner {
     background-color: #001E38;
     position: relative;
@@ -44,10 +49,24 @@
 }
 
 .telegram--select {
+    position: absolute;
+    bottom: -2rem;
+
+    &::before {
+        content: "Change ▾";
+        position: absolute;
+        right: 0;
+        font-size: 1.2rem;
+        pointer-events: none;
+        font-weight: bold;
+    }
+
     select {
         color: white;
-        border: none;
         background: transparent;
+        width: 25rem;
+        border: none;
+        appearance: none;
     }
     
     select:focus {
