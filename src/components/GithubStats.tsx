@@ -4,10 +4,10 @@ import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 
 import { fetchRepos, GithubRepo, calculateStats } from "../lib/github";
 import { GithubBlock, GithubLanguage, GithubStar } from "./GithubBlock";
-import { naturalTime } from "@renex/react-components";
 import { GithubActivity } from "./GithubActivity";
 import { ExternalLink } from "./ExternalLink";
 import { REN_URLS } from "../lib/constants";
+import { naturalTime } from "../lib/conversions";
 
 interface GithubStatsProps {
     usernames: string[];

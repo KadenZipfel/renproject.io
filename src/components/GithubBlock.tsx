@@ -1,9 +1,9 @@
 import * as React from "react";
 import { GithubRepo } from "../lib/github";
 import { ExternalLink } from "./ExternalLink";
-import { naturalTime } from "@renex/react-components";
 
 import colours from "github-colors";
+import { naturalTime } from "../lib/conversions";
 
 interface GithubBlockProps {
     repo: GithubRepo;
