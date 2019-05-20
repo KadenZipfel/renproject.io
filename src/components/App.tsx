@@ -8,13 +8,14 @@ import RoadmapPage from "./RoadmapPage";
 
 class App extends React.Component {
     public render(): JSX.Element {
+        const basename = process.env.PUBLIC_URL;
         return (
-            <BrowserRouter>
+            <BrowserRouter basename={basename ? basename : undefined}>
                 <>
                     <ScrollToTop />
-                    <Route path="/" exact component={HomePage} />
-                    <Route path="/about" component={AboutPage} />
-                    <Route path="/roadmap" component={RoadmapPage} />
+                    <Route path={`${basename}/`} exact component={HomePage} />
+                    <Route path={`${basename}/about`} component={AboutPage} />
+                    <Route path={`${basename}/roadmap`} component={RoadmapPage} />
                 </>
             </BrowserRouter>
         );
