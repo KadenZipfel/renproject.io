@@ -57,6 +57,10 @@
     position: absolute;
     bottom: -2rem;
 
+    * {
+        cursor: pointer;
+    }
+
     &::before {
         content: "Change ▾";
         position: absolute;
