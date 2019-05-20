@@ -8,9 +8,8 @@ import RoadmapPage from "./RoadmapPage";
 
 class App extends React.Component {
     public render(): JSX.Element {
-        const basename = process.env.PUBLIC_URL ? process.env.PUBLIC_URL : undefined;
         return (
-            <BrowserRouter basename={basename}>
+            <BrowserRouter basename={process.env.PUBLIC_URL}>
                 <>
                     <ScrollToTop />
                     <Route path="/" exact component={HomePage} />
