@@ -5,10 +5,8 @@ import Header from "./Header";
 import { MediumBannerInstance } from "./MediumBanner";
 import { GithubStats } from "./GithubStats";
 import ContentBlock from "./ContentBlock";
-import { faTelegramPlane } from "@fortawesome/free-brands-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { REN_URLS } from "../lib/constants";
-import { ExternalLink } from "./ExternalLink";
+import { TelegramSelector } from "./TelegramSelector";
 
 class RoadmapPage extends React.Component {
     public render(): JSX.Element {
@@ -44,7 +42,11 @@ class RoadmapPage extends React.Component {
                                 <h2>Have your say.</h2>
                                 <p>Provide input and feedback through our Telegram channel</p>
                             </div>
-                            <ExternalLink className="button button--alt" href={REN_URLS.telegram}><FontAwesomeIcon icon={faTelegramPlane} pull="left" />Open Telegram</ExternalLink>
+                            <TelegramSelector links={[
+                                { name: "Telegram Community (EN)", url: REN_URLS.telegram },
+                                { name: "Telegram Community (KR)", url: REN_URLS.telegramKorea },
+                                { name: "Telegram Announcements", url: REN_URLS.telegramAnnouncements },
+                                ]}/>
                         </div>
                     </div>
                 </div>

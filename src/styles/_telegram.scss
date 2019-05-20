@@ -1,0 +1,11 @@
+.telegram--select {
+    select {
+        color: white;
+        border: none;
+        background: transparent;
+    }
+    
+    select:focus {
+        outline: none;
+    }
+}
