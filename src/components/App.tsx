@@ -9,6 +9,11 @@ import RoadmapPage from "./RoadmapPage";
 class App extends React.Component {
     public render(): JSX.Element {
         const basename = process.env.PUBLIC_URL;
+        console.log(basename);
+        console.log(basename ? basename : undefined);
+        console.log(`${basename}/`);
+        console.log(`${basename}/about`);
+        console.log(`${basename}/roadmap`);
         return (
             <BrowserRouter basename={basename ? basename : undefined}>
                 <>
