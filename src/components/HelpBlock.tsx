@@ -15,13 +15,13 @@ class HelpBlock extends React.Component<HelpBlockProps, HelpBlockState> {
     public render(): JSX.Element {
         const { title, subtitle, icon } = this.props;
         return (
-            <div className="help--block">
+            <ExternalLink href="" className="help--block">
                 <div className="help--block--content">
                     <img src={icon} />
                     <h2>{title}</h2>
-                    <ExternalLink href="">{subtitle} &rarr;</ExternalLink>
+                    <span>{subtitle} &rarr;</span>
                 </div>
-            </div>
+            </ExternalLink>
         );
     }
 }
