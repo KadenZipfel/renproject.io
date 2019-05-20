@@ -29,7 +29,7 @@ export class TelegramSelector extends React.Component<TelegramSelectorProps, Tel
         return (
             <div className="telegram--button">
                 <div className="telegram--button--container">
-                    <ExternalLink className="button button--alt" href={value}><FontAwesomeIcon icon={faTelegramPlane} pull="left" />Open Telegram</ExternalLink>
+                    <ExternalLink className="button" href={value}><FontAwesomeIcon icon={faTelegramPlane} pull="left" />Open Telegram</ExternalLink>
                     <div className="telegram--select">
                         <select value={value} onChange={this.handleChange}>
                             {links.map((l, index) => <option key={`telegram-select-${index}-${l.name}`} value={l.url}>{l.name}</option>)}

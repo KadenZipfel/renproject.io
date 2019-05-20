@@ -31,11 +31,11 @@
             flex-direction: row;
         }
     }
-    .banner--content .button--alt {
+    .banner--content .button {
         color: white;
         width: 100%;
         margin-top: 1rem;
-        background-color: #33AAD8;
+        background: #33AAD8;
         border: none;
 
         &:hover {
