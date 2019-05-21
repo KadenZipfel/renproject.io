@@ -1,0 +1,8 @@
+.milestones {
+    width: 100%;
+
+
+    .milestone--block {
+        @include flex();
+    }
+}

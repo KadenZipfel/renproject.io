@@ -1,0 +1,58 @@
+{
+    "milestones": [
+        {
+            "title": "Whitepaper",
+            "description": "Whitepaper released",
+            "achieved": true,
+            "date": "2019-01-01",
+            "tags": [
+                "research"
+            ]
+        },
+        {
+            "title": "ICO",
+            "description": "ICO happened",
+            "achieved": true,
+            "date": "2019-01-02",
+            "tags": [
+                "business"
+            ]
+        },
+        {
+            "title": "RenEx Mainnet",
+            "description": "We released RenEx on Mainnet",
+            "achieved": true,
+            "date": "2019-01-03",
+            "tags": [
+                "development"
+            ]
+        },
+        {
+            "title": "WBTC Partnership",
+            "description": "We partnered with WBTC",
+            "achieved": true,
+            "date": "2019-01-04",
+            "tags": [
+                "business"
+            ]
+        },
+        {
+            "title": "Darknode: Public Participation Rollout",
+            "description": "Darknodes, rollout!",
+            "achieved": true,
+            "date": "2019-01-05",
+            "tags": [
+                "development"
+            ]
+        },
+        {
+            "title": "Make money",
+            "description": "We need to make some money",
+            "achieved": false,
+            "tags": [
+                "business",
+                "other"
+            ]
+        }
+    ]
+}

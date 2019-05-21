@@ -7,6 +7,8 @@ import { GithubStats } from "./GithubStats";
 import ContentBlock from "./ContentBlock";
 import { REN_URLS } from "../lib/constants";
 import { TelegramSelector } from "./TelegramSelector";
+import { Milestones } from "./Milestones";
+import { getMilestones } from "../lib/milestone";
 
 class RoadmapPage extends React.Component {
     public render(): JSX.Element {
@@ -28,10 +30,17 @@ class RoadmapPage extends React.Component {
                         </div>
                     </div>
                 </div>
-                <div className="section section--story">
+                <div className="section">
                     <div className="container">
                         <div className="row">
                             <GithubStats limit={6} usernames={["renproject", "republicprotocol"]} />
+                        </div>
+                    </div>
+                </div>
+                <div className="section">
+                    <div className="container">
+                        <div className="row">
+                            <Milestones milestones={getMilestones()} />
                         </div>
                     </div>
                 </div>
