@@ -1,8 +1,59 @@
 .milestones {
     width: 100%;
 
+    .milestone--block--title {
+        @include col-xs-6();
+    }
 
-    .milestone--block {
-        @include flex();
+    .milestone--block--date {
+        @include col-xs-2();
+    }
+
+    .milestone--block--tags {
+        @include col-xs-3();
+    }
+}
+
+.milestone--block--tag {
+    color: white;
+    background-color: #979797;
+    padding: 0.2rem 1rem;
+    border-radius: 1rem;
+    margin-right: 1.5rem;
+    
+    &.development {
+        background-color: #55B1E7;
+    }
+
+    &.business {
+        background-color: #946CF6;
+    }
+
+    &.research {
+        background-color: #DE73B3;
+    }
+}
+
+.milestone--block {
+    @include flex();
+    padding: 2rem 0;
+    border-top: solid 0.1rem #DBE0E8;
+
+    .milestone--block--title {
+        font-size: 1.8rem;
+    }
+
+    .milestone--block--date {
+        font-size: 1.6rem;
+        color: #87888C;
+    }
+
+    .milestone--block--tags {
+        font-size: 1.2rem;
+    }
+
+    &.achieved .milestone--block--title {
+        color: #3F3F48;
+        font-weight: 500;
     }
 }

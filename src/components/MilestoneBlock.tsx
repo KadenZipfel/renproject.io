@@ -22,15 +22,14 @@ export class MilestoneBlock extends React.Component<MilestoneBlockProps, Milesto
     }
 
     public render(): JSX.Element {
-        const { title, date, tags } = this.props.milestone;
+        const { title, date, tags, achieved } = this.props.milestone;
         return (
-            <div className="milestone--block">
+            <div className={`milestone--block ${achieved ? "achieved" : ""}`}>
                 <div className="milestone--block--title">{title}</div>
                 <div className="milestone--block--date">{date ? new Date(date).toLocaleDateString() : "-"}</div>
                 <div className="milestone--block--tags">
                     {tags.map(t => <MilestoneTag key={`${title}--${t}`} tag={t} />)}
                 </div>
-                <div className="milestone--block--title">{title}</div>
             </div>
         );
     }
