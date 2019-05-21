@@ -47,8 +47,24 @@
     }
 }
 
-.milestone--block {
+.milestone--block, .milestones--header {
     @include flex();
+    justify-content: space-between;
+
+    &::after {
+        content: '+';
+        color: #006FE8;
+        font-size: 2.2rem;
+        font-weight: 500;
+    }
+
+    .open &::after {
+        content: '-';
+    }
+
+}
+
+.milestone--block {
     padding: 2rem 0;
     border-top: solid 0.1rem #DBE0E8;
     cursor: pointer;
@@ -74,11 +90,14 @@
 }
 
 .milestones--header {
-    @include flex();
     font-size: 1.8rem;
     font-weight: 500;
     color: #87888C;
     padding-bottom: 1.5rem;
+
+    &::after {
+        opacity: 0;
+    }
 }
 
 .milestones--filter {
