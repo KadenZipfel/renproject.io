@@ -1,5 +1,8 @@
 .renvm .section.section--renvm {
+    background-image: url('#{$images}/renvm-circle-lines.svg');
     background-color: #FCFCFD;
+    background-repeat: no-repeat;
+    background-position: center right;
 
     .featured--content p {
         font-size: 1.8rem;
