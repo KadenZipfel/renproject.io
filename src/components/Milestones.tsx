@@ -1,13 +1,14 @@
 import * as React from "react";
 
 import { Milestone, sortMilestones } from "../lib/milestone";
-import { MilestoneBlock } from "./MilestoneBlock";
+import { MilestoneBlock, MilestoneTag } from "./MilestoneBlock";
 
 interface MilestonesProps {
     milestones: Milestone[];
 }
 
 interface MilestonesState {
+    allTags: Set<string>;
     tagsFilter: Set<string>;
 }
 
@@ -15,12 +16,18 @@ interface MilestonesState {
 export class Milestones extends React.Component<MilestonesProps, MilestonesState> {
     public constructor(props: MilestonesProps) {
         super(props);
+        let allTags: string[] = [];
+        props.milestones.forEach(m => {
+            allTags = allTags.concat(m.tags);
+        });
         this.state = {
-            tagsFilter: new Set<string>(),
+            allTags: new Set(allTags),
+            tagsFilter: new Set<string>(allTags),
         };
     }
 
     public render(): JSX.Element {
+        const { allTags, tagsFilter } = this.state;
         const { milestones } = this.props;
         const completedMilestones: Milestone[] = [];
         const incompleteMilestones: Milestone[] = [];
@@ -36,6 +43,21 @@ export class Milestones extends React.Component<MilestonesProps, MilestonesState
         return (
             <div className="milestones">
                 <h1>Milestones</h1>
+                <div className="milestones--filter">
+                    <h2>Filter by tags</h2>
+                    <div>
+                        {Array.from(allTags).sort().map(t => {
+                            return <MilestoneTag
+                                className={tagsFilter.has(t) ? "" : "filtered"}
+                                onClick={() => {
+                                    this.toggleTag(t);
+                                }}
+                                key={`milestone--filter--${t}`}
+                                tag={t}
+                            />;
+                        })}
+                    </div>
+                </div>
                 <div className="milestones--list">
                     {
                         completedMilestones.sort(sortMilestones).concat(incompleteMilestones).map(m => {
@@ -47,11 +69,18 @@ export class Milestones extends React.Component<MilestonesProps, MilestonesState
         );
     }
 
+    private toggleTag = (t: string) => {
+        const { tagsFilter } = this.state;
+        if (tagsFilter.size > 0 && tagsFilter.has(t)) {
+            tagsFilter.delete(t);
+            this.setState({ tagsFilter });
+        } else {
+            this.setState({ tagsFilter: tagsFilter.add(t) })
+        }
+    }
+
     private showMilestone = (m: Milestone): boolean => {
         const { tagsFilter } = this.state;
-        if (tagsFilter.size == 0) {
-            return true;
-        }
         const intersection = new Set([...m.tags].filter(x => tagsFilter.has(x)));
         return intersection.size > 0;
     }

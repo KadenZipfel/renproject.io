@@ -9,9 +9,14 @@ interface MilestoneBlockState {
     open: boolean;
 }
 
-export const MilestoneTag = (props: { tag: string }) => (
-    <span className={`milestone--block--tag ${props.tag}`}>{props.tag}</span>
-);
+export const MilestoneTag = (props: { tag: string, onClick?: () => void, className?: string }) => {
+    return <span
+        className={`milestone--block--tag ${props.tag} ${props.className ? props.className : ""}`}
+        onClick={props.onClick ? props.onClick : undefined}
+    >
+        {props.tag}
+    </span>;
+};
 
 export class MilestoneBlock extends React.Component<MilestoneBlockProps, MilestoneBlockState> {
     public constructor(props: MilestoneBlockProps) {

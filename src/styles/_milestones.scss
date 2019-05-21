@@ -59,3 +59,20 @@
         font-weight: 500;
     }
 }
+
+.milestones--filter {
+    h2 {
+        font-size: 1.4rem;
+        font-weight: 500;
+        color: #979797;
+    }
+
+    .milestone--block--tag {
+        cursor: pointer;
+        user-select: none;
+
+        &.filtered {
+            opacity: 0.5;
+        }
+    }
+}
