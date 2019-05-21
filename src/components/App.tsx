@@ -5,6 +5,7 @@ import { BrowserRouter, Route, RouteComponentProps, withRouter } from "react-rou
 import AboutPage from "./AboutPage";
 import HomePage from "./HomePage";
 import RoadmapPage from "./RoadmapPage";
+import RenVMPage from "./RenVMPage";
 
 class App extends React.Component {
     public render(): JSX.Element {
@@ -15,6 +16,7 @@ class App extends React.Component {
                     <Route path="/" exact component={HomePage} />
                     <Route path="/about" component={AboutPage} />
                     <Route path="/roadmap" component={RoadmapPage} />
+                    <Route path="/renvm" component={RenVMPage} />
                 </>
             </BrowserRouter>
         );
