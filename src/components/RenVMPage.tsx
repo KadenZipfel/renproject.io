@@ -18,7 +18,7 @@ class RenVMPage extends React.Component {
                                     <p>Secure multi-party computations power a privacy layer for decentralized applications, enabling private and interoperable lending, exchanges, collateralization &amp; more.</p>
 
                                     <div className="featured--buttons">
-                                        <ExternalLink className="featured--button primary" href="">Keep reading</ExternalLink>
+                                        <ExternalLink className="featured--button primary" href="">Keep reading &darr;</ExternalLink>
                                         <ExternalLink className="featured--button secondary" href="">Try RenEx, powered by RenVM</ExternalLink>
                                     </div>
                                 </ContentBlock>
