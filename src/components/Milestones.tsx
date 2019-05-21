@@ -59,6 +59,11 @@ export class Milestones extends React.Component<MilestonesProps, MilestonesState
                     </div>
                 </div>
                 <div className="milestones--list">
+                    <div className={`milestones--header`}>
+                        <div className="milestone--block--title">Item</div>
+                        <div className="milestone--block--date">Date</div>
+                        <div className="milestone--block--tags">Tags</div>
+                    </div>
                     {
                         completedMilestones.sort(sortMilestones).concat(incompleteMilestones).map(m => {
                             return <MilestoneBlock key={`milestone--block--${m.title}--${m.date}`} milestone={m} />;

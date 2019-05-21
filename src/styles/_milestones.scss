@@ -60,6 +60,14 @@
     }
 }
 
+.milestones--header {
+    @include flex();
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #87888C;
+    padding-bottom: 1.5rem;
+}
+
 .milestones--filter {
     padding-bottom: 3rem;
 
