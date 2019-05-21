@@ -5,12 +5,10 @@ import { MilestoneBlock } from "./MilestoneBlock";
 
 interface MilestonesProps {
     milestones: Milestone[];
-    tagsFilter?: string[];
 }
 
 interface MilestonesState {
-    completedMilestones: Milestone[];
-    incompleteMilestones: Milestone[];
+    tagsFilter: Set<string>;
 }
 
 
@@ -18,13 +16,23 @@ export class Milestones extends React.Component<MilestonesProps, MilestonesState
     public constructor(props: MilestonesProps) {
         super(props);
         this.state = {
-            completedMilestones: props.milestones.filter(m => m.achieved),
-            incompleteMilestones: props.milestones.filter(m => !m.achieved),
-        }
+            tagsFilter: new Set<string>(),
+        };
     }
 
     public render(): JSX.Element {
-        const { completedMilestones, incompleteMilestones } = this.state;
+        const { milestones } = this.props;
+        const completedMilestones: Milestone[] = [];
+        const incompleteMilestones: Milestone[] = [];
+        milestones.forEach(m => {
+            if (this.showMilestone(m)) {
+                if (m.achieved) {
+                    completedMilestones.push(m);
+                } else {
+                    incompleteMilestones.push(m);
+                }
+            }
+        });
         return (
             <div className="milestones">
                 <h1>Milestones</h1>
@@ -37,5 +45,14 @@ export class Milestones extends React.Component<MilestonesProps, MilestonesState
                 </div>
             </div>
         );
+    }
+
+    private showMilestone = (m: Milestone): boolean => {
+        const { tagsFilter } = this.state;
+        if (tagsFilter.size == 0) {
+            return true;
+        }
+        const intersection = new Set([...m.tags].filter(x => tagsFilter.has(x)));
+        return intersection.size > 0;
     }
 }
