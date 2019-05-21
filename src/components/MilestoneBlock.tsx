@@ -27,15 +27,29 @@ export class MilestoneBlock extends React.Component<MilestoneBlockProps, Milesto
     }
 
     public render(): JSX.Element {
-        const { title, date, tags, achieved } = this.props.milestone;
+        const { open } = this.state;
+        const { title, description, date, tags, achieved } = this.props.milestone;
         return (
-            <div className={`milestone--block ${achieved ? "achieved" : ""}`}>
-                <div className="milestone--block--title">{title}</div>
-                <div className="milestone--block--date">{date ? new Date(date).toLocaleDateString() : "-"}</div>
-                <div className="milestone--block--tags">
-                    {tags.map(t => <MilestoneTag key={`${title}--${t}`} tag={t} />)}
+            <div className={`milestone--block--container ${open ? "open" : ""}`}>
+                <div className={`milestone--block ${achieved ? "achieved" : ""}`}
+                    onClick={() => {
+                        this.toggle();
+                    }}
+                >
+                    <div className="milestone--block--title">{title}</div>
+                    <div className="milestone--block--date">{date ? new Date(date).toLocaleDateString() : "-"}</div>
+                    <div className="milestone--block--tags">
+                        {tags.map(t => <MilestoneTag key={`${title}--${t}`} tag={t} />)}
+                    </div>
+                </div>
+                <div className={`milestone--block--footer`}>
+                    <p>{description}</p>
                 </div>
             </div>
         );
+    }
+
+    private toggle = () => {
+        this.setState({ open: !this.state.open });
     }
 }

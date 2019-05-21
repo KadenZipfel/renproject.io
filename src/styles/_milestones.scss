@@ -14,6 +14,17 @@
     }
 }
 
+.milestone--block--footer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+
+    .open & {
+        max-height: 30rem;
+        transition: max-height 0.2s ease-in;
+    }
+}
+
 .milestone--block--tag {
     color: white;
     background-color: #979797;
@@ -40,6 +51,8 @@
     @include flex();
     padding: 2rem 0;
     border-top: solid 0.1rem #DBE0E8;
+    cursor: pointer;
+    user-select: none;
 
     .milestone--block--title {
         font-size: 1.8rem;
