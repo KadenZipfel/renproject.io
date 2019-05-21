@@ -4,6 +4,7 @@ import Footer from "./Footer";
 import Header from "./Header";
 import ContentBlock from "./ContentBlock";
 import { ExternalLink } from "./ExternalLink";
+import { RenVMStory } from "./RenVMStory";
 
 class RenVMPage extends React.Component {
     public render(): JSX.Element {
@@ -26,6 +27,7 @@ class RenVMPage extends React.Component {
                         </div>
                     </div>
                 </div>
+                <RenVMStory />
                 <Footer />
             </div>
         );
