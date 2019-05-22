@@ -4,11 +4,7 @@
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquam eleifend mi in nulla posuere sollicitudin. Ornare massa eget egestas purus viverra accumsan in nisl nisi. Praesent semper feugiat nibh sed pulvinar proin gravida hendrerit lectus. Malesuada fames ac turpis egestas maecenas pharetra convallis posuere. Aenean vel elit scelerisque mauris pellentesque pulvinar. Nunc sed id semper risus in hendrerit gravida. Ut tellus elementum sagittis vitae et leo duis. Interdum consectetur libero id faucibus nisl. Nunc mi ipsum faucibus vitae aliquet nec ullamcorper. Feugiat pretium nibh ipsum consequat nisl vel pretium. Eleifend mi in nulla posuere.
 
-# Introduction to RenVM
-
-Massa sed elementum tempus egestas sed. Suspendisse faucibus interdum posuere lorem ipsum dolor sit amet. Quis imperdiet massa tincidunt nunc. Nullam vehicula ipsum a arcu cursus vitae congue mauris. Nulla facilisi morbi tempus iaculis urna id volutpat lacus. Sociis natoque penatibus et magnis dis parturient montes nascetur. Cras ornare arcu dui vivamus arcu felis. Feugiat vivamus at augue eget arcu. Tellus molestie nunc non blandit. Vestibulum lectus mauris ultrices eros in cursus turpis massa. Magna eget est lorem ipsum dolor sit amet consectetur adipiscing. Velit sed ullamcorper morbi tincidunt. Lectus proin nibh nisl condimentum id venenatis a.
-
-# Why did we build RenVM
+# Why did we build RenVM?
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquam eleifend mi in nulla posuere sollicitudin. Ornare massa eget egestas purus viverra accumsan in nisl nisi. Praesent semper feugiat nibh sed pulvinar proin gravida hendrerit lectus. Malesuada fames ac turpis egestas maecenas pharetra convallis posuere. Aenean vel elit scelerisque mauris pellentesque pulvinar. Nunc sed id semper risus in hendrerit gravida. Ut tellus elementum sagittis vitae et leo duis. Interdum consectetur libero id faucibus nisl. Nunc mi ipsum faucibus vitae aliquet nec ullamcorper. Feugiat pretium nibh ipsum consequat nisl vel pretium. Eleifend mi in nulla posuere.
 
