@@ -42,7 +42,7 @@ export class RenVMStory extends React.Component<RenVMStoryProps, RenVMStoryState
             tocSelector: ".renvm--toc",
             contentSelector: ".renvm--story",
             headingSelector: "h1, h2, h3",
-            headingsOffset: -600,
+            hasInnerContainers: true,
         });
     }
 
