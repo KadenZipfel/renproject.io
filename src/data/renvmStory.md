@@ -1,4 +1,6 @@
-# Introduction to Ren
+# Introduction
+
+### Secure multi-party computations power a privacy layer for decentralized applications, enabling private and interoperable lending, exchanges, collateralization & more.
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquam eleifend mi in nulla posuere sollicitudin. Ornare massa eget egestas purus viverra accumsan in nisl nisi. Praesent semper feugiat nibh sed pulvinar proin gravida hendrerit lectus. Malesuada fames ac turpis egestas maecenas pharetra convallis posuere. Aenean vel elit scelerisque mauris pellentesque pulvinar. Nunc sed id semper risus in hendrerit gravida. Ut tellus elementum sagittis vitae et leo duis. Interdum consectetur libero id faucibus nisl. Nunc mi ipsum faucibus vitae aliquet nec ullamcorper. Feugiat pretium nibh ipsum consequat nisl vel pretium. Eleifend mi in nulla posuere.
 
