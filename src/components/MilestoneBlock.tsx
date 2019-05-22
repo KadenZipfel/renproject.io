@@ -30,8 +30,8 @@ export class MilestoneBlock extends React.Component<MilestoneBlockProps, Milesto
         const { open } = this.state;
         const { title, description, date, tags, achieved } = this.props.milestone;
         return (
-            <div className={`milestone--block--container ${open ? "open" : ""}`}>
-                <div className={`milestone--block ${achieved ? "achieved" : ""}`}
+            <div className={`milestone--block--container ${achieved ? "achieved" : ""} ${open ? "open" : ""}`}>
+                <div className={`milestone--block`}
                     onClick={() => {
                         this.toggle();
                     }}

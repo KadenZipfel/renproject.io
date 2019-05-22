@@ -72,14 +72,13 @@
     &::before {
         border: solid 0.7rem transparent;
         background-clip: padding-box;
-        background-color: #007DDF;
         position: absolute;
         border-radius: 2.5rem;
         content: ' ';
         height: 2.5rem;
         width: 2.5rem;
         left: 3.5rem;
-
+        background-color: #EBEDF2;
     }
     &::after {
         position: absolute;
@@ -89,7 +88,11 @@
         display: block;
     }
 
-    &.open::before {
+    &.achieved::before {
+        background-color: #007DDF;
+    }
+
+    &.open.achieved::before {
         border-color: #D9EBFA;
     }
 }
@@ -113,7 +116,7 @@
         font-size: 1.2rem;
     }
 
-    &.achieved .milestone--block--title {
+    .achieved & .milestone--block--title {
         color: #3F3F48;
         font-weight: 500;
     }
