@@ -9,6 +9,7 @@ interface RenVMStoryProps {
 
 interface RenVMStoryState {
     postText: string;
+    tocHidden: boolean;
 }
 
 const flatten = (text: any, child: any): any => (
@@ -32,6 +33,7 @@ export class RenVMStory extends React.Component<RenVMStoryProps, RenVMStoryState
         super(props);
         this.state = {
             postText: "",
+            tocHidden: true,
         };
     }
 
@@ -39,7 +41,7 @@ export class RenVMStory extends React.Component<RenVMStoryProps, RenVMStoryState
         const resp = await fetch(story).then(resp => resp.text());
         this.setState({ postText: resp });
         tocbot.init({
-            tocSelector: ".renvm--toc",
+            tocSelector: ".renvm--toc--contents",
             contentSelector: ".renvm--story",
             headingSelector: "h1, h2, h3",
             hasInnerContainers: true,
@@ -51,23 +53,31 @@ export class RenVMStory extends React.Component<RenVMStoryProps, RenVMStoryState
     }
 
     public render(): JSX.Element {
-        const { postText } = this.state;
+        const { tocHidden, postText } = this.state;
         return (
             <>
                 <div className="section section--story">
                     <div className="container">
                         <div className="row">
                             <div className="renvm--story">
-                                <ReactMarkdown 
-                                    source={postText} 
+                                <ReactMarkdown
+                                    source={postText}
                                     renderers={{ heading: HeadingRenderer }}
                                 />
                             </div>
                         </div>
                     </div>
                 </div>
-                <div className="renvm--toc" />
+                <div className={`renvm--toc ${tocHidden ? "hidden" : ""}`}>
+                    <h1>Table of contents</h1>
+                    <div className="renvm--toc--contents" />
+                    <div onClick={() => this.toggleTOC()} className="toc--button" />
+                </div>
             </>
         );
+    }
+
+    private toggleTOC = () => {
+        this.setState({ tocHidden: !this.state.tocHidden });
     }
 }

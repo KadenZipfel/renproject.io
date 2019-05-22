@@ -18,6 +18,36 @@
     top: 50%;
     left: 0;
     z-index: 999;
+    width: 40rem;
+    transition: all 0.3s ease-in-out;
+
+    &.hidden {
+        margin-left: -40rem;
+        .toc--button {
+            opacity: 0.5;
+            background-color: #006FE8;
+        }
+    }
+
+    .toc--button {
+        cursor: pointer;
+        position: absolute;
+        right: -5rem;
+        top: 2rem;
+        content: ' ';
+        background-image: url('#{$images}/icons/toc-icon.svg');
+        transition: all 0.3s ease-in-out;
+        height: 4rem;
+        width: 5rem;
+        background-color: #87888C;
+        background-repeat: no-repeat;
+        background-position: center center;
+        border-radius: 0.2rem;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
 }
 
 .renvm .section.section--renvm {
