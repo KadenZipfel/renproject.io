@@ -26,19 +26,25 @@
         .toc--button {
             opacity: 0.5;
             background-color: #006FE8;
+
+            &:hover {
+                @media(min-width: $min-xl) {
+                    right: -4rem;
+                }
+            }
         }
     }
 
     .toc--button {
         cursor: pointer;
         position: absolute;
-        right: -5rem;
+        height: 3rem;
+        width:  4rem;
+        right: -2rem;
         top: 2rem;
         content: ' ';
         background-image: url('#{$images}/icons/toc-icon.svg');
         transition: all 0.3s ease-in-out;
-        height: 4rem;
-        width: 5rem;
         background-color: #87888C;
         background-repeat: no-repeat;
         background-position: center center;
