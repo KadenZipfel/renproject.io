@@ -1,5 +1,4 @@
 @import '../node_modules/tocbot/src/scss/tocbot-core';
-@import '../node_modules/tocbot/src/scss/tocbot-default-theme';
 
 .renvm {
     // Fix for fixed header
@@ -165,5 +164,20 @@
         font-size: 2.2rem;
         font-weight: 500;
         color: #585861;
+    }
+}
+
+.is-active-link {
+    color: #006FE8;
+
+    &::before {
+        background-color: #006FE8;
+        content: " ";
+        display: inline-block;
+        height: 0.1rem;
+        left: 0;
+        margin-top: 0.8rem;
+        position: absolute;
+        width: 3rem;
     }
 }
