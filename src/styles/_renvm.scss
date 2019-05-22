@@ -70,3 +70,49 @@
         }
     }
 }
+
+.renvm .section.section--story .row {
+    & > div {
+        @include col-xs-12();
+        @include col-lg-6();
+    }
+}
+
+.renvm .story--sidebar {
+    @include flex();
+    text-align: center;
+    flex-direction: column-reverse;
+    @media(min-width: $min-md) {
+        flex-direction: column;
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+    .story--sidebar--buttons {
+        margin-bottom: 10rem;
+
+        & > div {
+            padding: 4rem 0;
+            border: solid 0.1rem #DBE0E8;
+            margin: auto;
+            width: 40rem;
+            border-radius: 0.6rem;
+            margin-bottom: 1rem;
+
+            h2 {
+                color: #585861;
+                font-size: 1.8rem;
+                font-weight: 500;
+                margin-bottom: 2.5rem;
+            }
+        }
+    }
+}
+
+.story--sidebar--buttons {
+    .story--in-action {
+        background-color: #FCFCFC;
+    }
+}

@@ -55,25 +55,19 @@ export class RenVMStory extends React.Component<RenVMStoryProps, RenVMStoryState
     public render(): JSX.Element {
         const { tocHidden, postText } = this.state;
         return (
-            <>
-                <div className="section section--story">
-                    <div className="container">
-                        <div className="row">
-                            <div className="renvm--story">
-                                <ReactMarkdown
-                                    source={postText}
-                                    renderers={{ heading: HeadingRenderer }}
-                                />
-                            </div>
-                        </div>
-                    </div>
+            <div>
+                <div className="renvm--story">
+                    <ReactMarkdown
+                        source={postText}
+                        renderers={{ heading: HeadingRenderer }}
+                    />
                 </div>
                 <div className={`renvm--toc ${tocHidden ? "hidden" : ""}`}>
                     <h1>Table of contents</h1>
                     <div className="renvm--toc--contents" />
                     <div onClick={() => this.toggleTOC()} className="toc--button" />
                 </div>
-            </>
+            </div>
         );
     }
 

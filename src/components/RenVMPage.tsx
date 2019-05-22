@@ -8,6 +8,7 @@ import { RenVMStory } from "./RenVMStory";
 
 class RenVMPage extends React.Component {
     public render(): JSX.Element {
+        const story = require("../styles/images/renvm-story.png");
         return (
             <div className="renvm">
                 <Header />
@@ -27,7 +28,28 @@ class RenVMPage extends React.Component {
                         </div>
                     </div>
                 </div>
-                <RenVMStory />
+                <div className="section section--story">
+                    <div className="container">
+                        <div className="row">
+                            <RenVMStory />
+                            <div className="story--sidebar">
+                                <div className="story--sidebar--buttons">
+                                    <div className="story--in-action">
+                                        <h2>Want to see it in action?</h2>
+                                        <ExternalLink className="featured--button primary" href="">View the demo</ExternalLink>
+                                    </div>
+                                    <div>
+                                        <h2>Ready to start building?</h2>
+                                        <ExternalLink className="featured--button primary" href="">View the Docs</ExternalLink>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img src={story} />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <Footer />
             </div>
         );
