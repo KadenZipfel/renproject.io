@@ -64,6 +64,36 @@
 
 }
 
+.milestones--list {
+    padding-left: 5rem;
+}
+
+.milestone--block--container {
+    &::before {
+        border: solid 0.7rem transparent;
+        background-clip: padding-box;
+        background-color: #007DDF;
+        position: absolute;
+        border-radius: 2.5rem;
+        content: ' ';
+        height: 2.5rem;
+        width: 2.5rem;
+        left: 3.5rem;
+
+    }
+    &::after {
+        position: absolute;
+        left: 0;
+        content: ' ';
+        border-left: solid 0.2rem #007DDF;
+        display: block;
+    }
+
+    &.open::before {
+        border-color: #D9EBFA;
+    }
+}
+
 .milestone--block {
     padding: 2rem 0;
     border-top: solid 0.1rem #DBE0E8;
