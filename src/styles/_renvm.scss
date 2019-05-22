@@ -17,7 +17,7 @@
 .renvm .renvm--toc {
     position: fixed;
     background: white;
-    top: 50%;
+    top: 30%;
     left: 0;
     z-index: 999;
     width: 40rem;
@@ -206,7 +206,7 @@
     a.toc-link {
         color: #585861;
         font-size: 1.4rem;
-        font-weight: 400;
+        font-weight: 500;
     }
 
     .is-collapsible {
@@ -237,5 +237,38 @@
             position: absolute;
             width: 3rem;
         }
+    }
+
+}
+
+.renvm .renvm--toc--contents {
+    padding: 2rem 0;
+}
+
+.renvm .renvm--toc--footer {
+    @include flex();
+    flex-direction: column;
+    border-top: solid 0.1rem #EBEDF2;
+    padding-top: 0.5rem;
+
+    & > div {
+        @include flex();
+        justify-content: space-between;
+
+        a.button {
+            width: 50%;
+            margin: 0.5rem;
+            background: white;
+            color: #006FE8;
+            font-size: 1.6rem;
+            font-weight: 500;
+            border: solid 0.1rem #DBE0E8;
+            border-radius: 0.4rem;
+        }
+    }
+
+    .footer--bottom {
+        padding-top: 0.5rem;
+        font-size: 1.4rem;
     }
 }

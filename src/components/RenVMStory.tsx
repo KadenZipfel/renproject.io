@@ -3,6 +3,8 @@ import ReactMarkdown from "react-markdown";
 import tocbot from "tocbot";
 
 import story from "../data/renvmStory.md";
+import { ExternalLink } from "./ExternalLink";
+import { CopySocial } from "./Footer";
 
 interface RenVMStoryProps {
 }
@@ -66,6 +68,16 @@ export class RenVMStory extends React.Component<RenVMStoryProps, RenVMStoryState
                     <h1>Table of contents</h1>
                     <div className="renvm--toc--contents" />
                     <div onClick={() => this.toggleTOC()} className="toc--button" />
+                    <div className="renvm--toc--footer">
+                        <div>
+                            <ExternalLink className="button">Docs</ExternalLink>
+                            <ExternalLink className="button">Litepaper</ExternalLink>
+                        </div>
+                        <div className="footer--bottom">
+                            <ExternalLink>Ask us a question</ExternalLink>
+                            <CopySocial />
+                        </div>
+                    </div>
                 </div>
             </div>
         );
