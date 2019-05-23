@@ -29,7 +29,7 @@ const HeadingRenderer = (props: any) => {
 
 export class RenVMStory extends React.Component<RenVMStoryProps, RenVMStoryState> {
     // private storyRef: HTMLDivElement | null = null;
-    // private tocRef: HTMLDivElement | null = null;
+    private tocRef: HTMLDivElement | null = null;
 
     constructor(props: RenVMStoryProps) {
         super(props);
@@ -37,6 +37,14 @@ export class RenVMStory extends React.Component<RenVMStoryProps, RenVMStoryState
             postText: "",
             tocHidden: true,
         };
+    }
+
+    public componentWillMount() {
+        document.addEventListener("mousedown", this.handleClick, false);
+    }
+
+    public componentWillUnmount() {
+        document.removeEventListener("mousedown", this.handleClick, false);
     }
 
     public async componentDidMount(): Promise<void> {
@@ -65,7 +73,7 @@ export class RenVMStory extends React.Component<RenVMStoryProps, RenVMStoryState
                         renderers={{ heading: HeadingRenderer }}
                     />
                 </div>
-                <div className={`renvm--toc ${tocHidden ? "hidden" : ""}`}>
+                <div className={`renvm--toc ${tocHidden ? "hidden" : ""}`} ref={node => this.tocRef = node}>
                     <h1>Table of contents</h1>
                     <div className="renvm--toc--contents" />
                     <div onClick={() => this.toggleTOC()} className="toc--button" />
@@ -82,6 +90,16 @@ export class RenVMStory extends React.Component<RenVMStoryProps, RenVMStoryState
                 </div>
             </div>
         );
+    }
+
+    private handleClick = (e: any) => {
+        // click is inside
+        if (this.tocRef === null || this.tocRef.contains(e.target)) {
+            return;
+        }
+
+        // click is outside, close TOC
+        this.setState({ tocHidden: true });
     }
 
     private toggleTOC = () => {
