@@ -72,23 +72,37 @@
     position: relative;
 
     &::before {
-        border: solid 0.7rem transparent;
-        background-clip: padding-box;
         position: absolute;
-        border-radius: 2.5rem;
         content: ' ';
+    }
+
+    &.achieved::before {
         height: 2.6rem;
         width: 2.6rem;
-        left: -9.4rem;
+        left: -9.5rem;
         top: 1.1rem;
-        background-color: #EBEDF2;
-    }
-    &.achieved::before {
+        background-color: white;
+        border: 0.8rem solid transparent;
+        border-radius: 50%;
         background-color: #007DDF;
+        background-clip: padding-box;
+        // border-color: #007DDF;
     }
 
     &.open.achieved::before {
         border-color: #D9EBFA;
+        background-clip: initial;
+        // background-color: white;
+    }
+
+    &:not(.achieved)::before {
+        height: 1.8rem;
+        width: 1.8rem;
+        left: -8.7rem;
+        top: 1.1rem;
+        background-color: white;
+        border: 0.4rem solid #EBEDF2;
+        border-radius: 50%;
     }
 
     &.open:not(.achieved)::before {
@@ -99,7 +113,7 @@
     &::after {
         position: absolute;
         left: -7.6rem;
-        top: 1.8rem;
+        top: 2rem;
         z-index: -1;
         content: '';
         border-left: solid 0.4rem #EBEDF2;
