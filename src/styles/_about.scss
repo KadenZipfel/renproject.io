@@ -90,6 +90,7 @@
     padding: 6rem 0;
     position: relative;
     background-color: white;
+    overflow-x: hidden;
     @media(min-width: $min-md) {
         padding: 10rem 0;
     }
