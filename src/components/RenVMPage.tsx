@@ -5,6 +5,9 @@ import Header from "./Header";
 import ContentBlock from "./ContentBlock";
 import { ExternalLink } from "./ExternalLink";
 import { RenVMStory } from "./RenVMStory";
+import { REN_URLS } from "../lib/constants";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTwitter, faRedditAlien } from "@fortawesome/free-brands-svg-icons";
 
 class RenVMPage extends React.Component {
     public render(): JSX.Element {
@@ -78,6 +81,19 @@ class RenVMPage extends React.Component {
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+                <div className="renvm--build--banner">
+                    <div className="ready--to--start">
+                        <h2>Ready to start building on RenVM?</h2>
+                        <ExternalLink className="button">View docs &rarr;</ExternalLink>
+                    </div>
+                    <div className="get--in--touch">
+                        <p><span>Want to discuss a project? Get in touch:</span> <ExternalLink href="mailto:build@renproject.io">build@renproject.io</ExternalLink></p>
+                    </div>
+                    <div className="social--links">
+                        <ExternalLink className="social" href={REN_URLS.twitter}><span className="social--icon"><FontAwesomeIcon icon={faTwitter} /></span>Follow us on Twitter</ExternalLink>
+                        <ExternalLink className="social" href={REN_URLS.reddit}><span className="social--icon"><FontAwesomeIcon icon={faRedditAlien} /></span>Follow us on Reddit</ExternalLink>
                     </div>
                 </div>
                 <Footer />
