@@ -14,61 +14,6 @@
     }
 }
 
-.renvm .renvm--toc {
-    position: fixed;
-    background: white;
-    top: 30%;
-    left: 0;
-    z-index: 999;
-    width: 40rem;
-    transition: all 0.3s ease-in-out;
-
-    &::after {
-        content: ' ';
-        background-color: #FCFCFD;
-        position: absolute;
-        width: 2rem;
-        height: 100%;
-        top: 0;
-        right: 0;
-    }
-
-    &.hidden {
-        margin-left: -40rem;
-        .toc--button {
-            opacity: 0.5;
-            background-color: #006fe8;
-
-            &:hover {
-                @media (min-width: $min-xl) {
-                    right: -4rem;
-                }
-            }
-        }
-    }
-
-    .toc--button {
-        cursor: pointer;
-        position: absolute;
-        height: 3rem;
-        width: 4rem;
-        right: -2rem;
-        top: 2rem;
-        content: " ";
-        background-image: url("#{$images}/icons/toc-icon.svg");
-        transition: all 0.3s ease-in-out;
-        background-color: #87888c;
-        background-repeat: no-repeat;
-        background-position: center center;
-        border-radius: 0.2rem;
-        z-index: 10;
-
-        &:hover {
-            opacity: 1;
-        }
-    }
-}
-
 .renvm .section.section--renvm {
     background-image: url("#{$images}/renvm-circle-lines.svg");
     background-color: #fcfcfd;
@@ -171,13 +116,61 @@
 }
 
 .renvm .renvm--toc {
-    padding: 3.5rem;
+    position: fixed;
+    top: 30%;
+    left: 0;
+    z-index: 999;
+    width: 40rem;
+    transition: all 0.3s ease-in-out;
     box-shadow: 0.1rem 0 0.2rem 0 rgba(0, 27, 58, 0.12);
+    padding-right: 2rem;
+
+    background: linear-gradient(#FCFCFD, #FCFCFD);
+    background-color: white;
+    background-position: right;
+    background-size: 2rem;
+    background-repeat: no-repeat;
+
+    &.hidden {
+        margin-left: -40rem;
+        .toc--button {
+            opacity: 0.5;
+            background-color: #006fe8;
+
+            &:hover {
+                @media (min-width: $min-xl) {
+                    right: -4rem;
+                }
+            }
+        }
+    }
+
+    .toc--button {
+        cursor: pointer;
+        position: absolute;
+        height: 3rem;
+        width: 4rem;
+        right: -2rem;
+        top: 2rem;
+        content: " ";
+        background-image: url("#{$images}/icons/toc-icon.svg");
+        transition: all 0.3s ease-in-out;
+        background-color: #87888c;
+        background-repeat: no-repeat;
+        background-position: center center;
+        border-radius: 0.2rem;
+        z-index: 10;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
 
     h1 {
         font-size: 2.2rem;
         font-weight: 500;
         color: #585861;
+        padding: 3rem 0 2rem 4rem;
     }
 
     /* Core Styles */
@@ -278,7 +271,9 @@
     @include flex();
     flex-direction: column;
     border-top: solid 0.1rem #EBEDF2;
-    padding-top: 0.5rem;
+    margin: 2rem 4rem;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
 
     & > div {
         @include flex();
@@ -297,7 +292,7 @@
     }
 
     .footer--bottom {
-        padding-top: 0.5rem;
+        padding-top: 1rem;
         font-size: 1.4rem;
         font-weight: 500;
     }
