@@ -10,6 +10,8 @@ import { TelegramSelector } from "./TelegramSelector";
 import { Milestones } from "./Milestones";
 import { getMilestones } from "../lib/milestone";
 
+const Fade = require("react-reveal/Fade");
+
 class RoadmapPage extends React.Component {
     public render(): JSX.Element {
         return (
@@ -30,20 +32,24 @@ class RoadmapPage extends React.Component {
                         </div>
                     </div>
                 </div>
-                <div className="section">
-                    <div className="container">
-                        <div className="row">
-                            <GithubStats limit={6} usernames={["renproject", "republicprotocol"]} />
+                <Fade up distance="50px" delay={100}>
+                    <div className="section">
+                        <div className="container">
+                            <div className="row">
+                                <GithubStats limit={6} usernames={["renproject", "republicprotocol"]} />
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div className="section">
-                    <div className="container">
-                        <div className="row">
-                            <Milestones milestones={getMilestones()} />
+                </Fade>
+                <Fade up distance="50px" delay={100}>
+                    <div className="section">
+                        <div className="container">
+                            <div className="row">
+                                <Milestones milestones={getMilestones()} />
+                            </div>
                         </div>
                     </div>
-                </div>
+                </Fade>
                 <div className="telegram--banner">
                     <div className="container">
                         <div className="banner--content">
@@ -55,7 +61,7 @@ class RoadmapPage extends React.Component {
                                 { name: "Telegram Community (EN)", url: REN_URLS.telegram },
                                 { name: "Telegram Community (KR)", url: REN_URLS.telegramKorea },
                                 { name: "Telegram Announcements", url: REN_URLS.telegramAnnouncements },
-                                ]}/>
+                            ]} />
                         </div>
                     </div>
                 </div>

@@ -12,6 +12,8 @@ import TeamItem from "./TeamItem";
 import { REN_URLS } from "../lib/constants";
 import { ExternalLink } from "./ExternalLink";
 
+const Fade = require("react-reveal/Fade");
+
 class AboutPage extends React.Component {
     public render(): JSX.Element {
         return (
@@ -54,37 +56,41 @@ class AboutPage extends React.Component {
                     </div>
                 </div>
                 <div className="team">
-                    <div className="container">
-                        <h2>The Team</h2>
-                        <div className="row">
-                            <TeamItem name="Taiyang Zhang" position="CEO" github="sixteen" linkedin="taiyangzhang" medium="@taiyangzhang" />
-                            <TeamItem name="Loong Wang" position="CTO" github="loongy" twitter="bzlwang" linkedin="bzlwang" medium="@loong" />
+                    <Fade up distance="50px" delay={100}>
+                        <div className="container">
+                            <h2>The Team</h2>
+                            <div className="row">
+                                <TeamItem name="Taiyang Zhang" position="CEO" github="sixteen" linkedin="taiyangzhang" medium="@taiyangzhang" />
+                                <TeamItem name="Loong Wang" position="CTO" github="loongy" twitter="bzlwang" linkedin="bzlwang" medium="@loong" />
+                            </div>
+                            <div className="row">
+                                <TeamItem name="Noah I" position="Blockchain Developer" github="negaex" linkedin="noahi" />
+                                <TeamItem name="Susruth Nadimpalli" position="Blockchain Developer" github="susruth" linkedin="susruth-nadimpalli" />
+                                <TeamItem name="Yunshi Sun" position="Software Developer" github="tok-kkk" linkedin="yunshi-sun" />
+                                <TeamItem name="Jaz Gulati" position="Software Developer" github="jazg" linkedin="jazg" />
+                                <TeamItem name="Divya Mary" position="Software Developer" github="divyakoshy" linkedin="divya-mary-5a5969104" />
+                                <TeamItem name="Vincent Au" position="Software Developer" github="vinceau" linkedin="vinceau" />
+                                <TeamItem name="Ross Pure" position="Researcher" github="ross-pure" />
+                                <TeamItem name="Darren Toh" position="Legal &amp; Communications" linkedin="darren-toh-2a29885" />
+                                <TeamItem name="Michael Burgess" position="Liquidity" linkedin="michaelwburgess" />
+                                <TeamItem name="Vincent Ward" position="Design" twitter="thevward" linkedin="vincent-ward-7395b4b8" />
+                            </div>
                         </div>
-                        <div className="row">
-                            <TeamItem name="Noah I" position="Blockchain Developer" github="negaex" linkedin="noahi" />
-                            <TeamItem name="Susruth Nadimpalli" position="Blockchain Developer" github="susruth" linkedin="susruth-nadimpalli" />
-                            <TeamItem name="Yunshi Sun" position="Software Developer" github="tok-kkk" linkedin="yunshi-sun" />
-                            <TeamItem name="Jaz Gulati" position="Software Developer" github="jazg" linkedin="jazg" />
-                            <TeamItem name="Divya Mary" position="Software Developer" github="divyakoshy" linkedin="divya-mary-5a5969104" />
-                            <TeamItem name="Vincent Au" position="Software Developer" github="vinceau" linkedin="vinceau" />
-                            <TeamItem name="Ross Pure" position="Researcher" github="ross-pure" />
-                            <TeamItem name="Darren Toh" position="Legal &amp; Communications" linkedin="darren-toh-2a29885" />
-                            <TeamItem name="Michael Burgess" position="Liquidity" linkedin="michaelwburgess" />
-                            <TeamItem name="Vincent Ward" position="Design" twitter="thevward" linkedin="vincent-ward-7395b4b8" />
-                        </div>
-                    </div>
+                    </Fade>
                 </div>
                 <div className="team">
-                    <div className="container">
-                        <h2>The Advisors</h2>
-                        <div className="row">
-                            <TeamItem name="Dorjee Sun" position="CEO, Perlin Network" linkedin="dorjee" />
-                            <TeamItem name="Loi Luu" position="CEO, KyberNetwork" linkedin="loiluu" />
-                            <TeamItem name="John Ng Pangilinan" position="Partner, Signum Capital" linkedin="johnngp" />
-                            <TeamItem name="Prabhakar Reddy" position="Investor, Accel Partners" linkedin="prabhakar2reddy" />
-                            <TeamItem name="Anup Malani" position="Economics, University of Chicago" linkedin="anup-malani-a1551b2" />
+                    <Fade up distance="50px" delay={100}>
+                        <div className="container">
+                            <h2>The Advisors</h2>
+                            <div className="row">
+                                <TeamItem name="Dorjee Sun" position="CEO, Perlin Network" linkedin="dorjee" />
+                                <TeamItem name="Loi Luu" position="CEO, KyberNetwork" linkedin="loiluu" />
+                                <TeamItem name="John Ng Pangilinan" position="Partner, Signum Capital" linkedin="johnngp" />
+                                <TeamItem name="Prabhakar Reddy" position="Investor, Accel Partners" linkedin="prabhakar2reddy" />
+                                <TeamItem name="Anup Malani" position="Economics, University of Chicago" linkedin="anup-malani-a1551b2" />
+                            </div>
                         </div>
-                    </div>
+                    </Fade>
                 </div>
                 <div className="medium--banner">
                     <div className="container">

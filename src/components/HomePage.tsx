@@ -18,6 +18,8 @@ import { ExternalLink } from "./ExternalLink";
 import { Newsletter } from "./Newsletter";
 import HelpBlock from "./HelpBlock";
 
+const Fade = require("react-reveal/Fade");
+
 class HomePage extends React.Component {
     public render(): JSX.Element {
         const questionsIcon = require("../styles/images/icons/more-questions-icon.svg");
@@ -97,17 +99,19 @@ class HomePage extends React.Component {
                         </div>
                     </div>
                 </div>
-                <Newsletter />
-                <div className="section--helpblocks">
-                    <div className="container">
-                        <div className="row">
-                            <div className="content">
-                                <HelpBlock title="More questions?" subtitle="Read more about RenVM" icon={questionsIcon} /> 
-                                <HelpBlock title="Looking for help?" subtitle="Submit a support ticket on ZenDesk" icon={helpIcon} /> 
+                <Fade up distance="50px" delay={100}>
+                    <Newsletter />
+                    <div className="section--helpblocks">
+                        <div className="container">
+                            <div className="row">
+                                <div className="content">
+                                    <HelpBlock title="More questions?" subtitle="Read more about RenVM" icon={questionsIcon} />
+                                    <HelpBlock title="Looking for help?" subtitle="Submit a support ticket on ZenDesk" icon={helpIcon} />
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                </Fade>
                 {/*
                 <div className="section section--renex">
                     <div className="container">
