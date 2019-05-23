@@ -90,8 +90,9 @@
     }
 
     &.open.achieved::before {
-        border-color: #D9EBFA;
-        background-clip: initial;
+        // border-color: #D9EBFA;
+        border-color: rgba(0, 111, 232, 0.15);
+        // background-clip: initial;
         // background-color: white;
     }
 
