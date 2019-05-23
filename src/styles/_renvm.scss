@@ -222,6 +222,10 @@
         &.node-name--H2, &.node-name--H3 {
             color: #9FA0A5;
         }
+
+        &.is-active-link {
+            color: #006fe8;
+        }
     }
 
     .is-collapsible {
@@ -239,19 +243,15 @@
         top: 0;
     }
 
-    a.is-active-link {
-        color: #006fe8;
-
-        &::before {
-            background-color: #006fe8;
-            content: " ";
-            display: inline-block;
-            height: 0.1rem;
-            left: 0;
-            margin-top: 0.8rem;
-            position: absolute;
-            width: 3rem;
-        }
+    a.is-active-link::before {
+        background-color: #006fe8;
+        content: " ";
+        display: inline-block;
+        height: 0.1rem;
+        left: 0;
+        margin-top: 0.8rem;
+        position: absolute;
+        width: 3rem;
     }
 
 }
