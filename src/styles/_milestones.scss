@@ -1,16 +1,18 @@
 .milestones {
     width: 100%;
 
-    .milestone--block--title {
-        @include col-xs-6();
-    }
+    @media (min-width: $min-md) {
+        .milestone--block--title {
+            @include col-xs-6();
+        }
 
-    .milestone--block--date {
-        @include col-xs-2();
-    }
+        .milestone--block--date {
+            @include col-xs-2();
+        }
 
-    .milestone--block--tags {
-        @include col-xs-3();
+        .milestone--block--tags {
+            @include col-xs-3();
+        }
     }
 }
 
@@ -56,6 +58,10 @@
         color: #006FE8;
         font-size: 2.2rem;
         font-weight: 500;
+
+        @media (max-width: $min-md) {
+            display: none;
+        }
     }
 
     .open &::after {
@@ -65,7 +71,9 @@
 }
 
 .milestones--list {
-    padding-left: 10rem;
+    @media (min-width: $min-md) {
+        padding-left: 10rem;
+    }
 }
 
 .milestone--block--container {
@@ -73,7 +81,9 @@
 
     &::before {
         position: absolute;
-        content: ' ';
+        @media (min-width: $min-md) {
+            content: ' ';
+        }
     }
 
     &.achieved::before {
@@ -116,9 +126,12 @@
         left: -7.6rem;
         top: 2rem;
         z-index: -1;
-        content: '';
         border-left: solid 0.4rem #EBEDF2;
         height: 100%;
+
+        @media (min-width: $min-md) {
+            content: ' ';
+        }
     }
 
     &.achieved::after {
@@ -133,6 +146,10 @@
     cursor: pointer;
     user-select: none;
 
+    @media (max-width: $min-md) {
+        flex-direction: column;
+    }
+
     .milestone--block--title {
         font-size: 1.8rem;
     }
@@ -140,6 +157,10 @@
     .milestone--block--date {
         font-size: 1.6rem;
         color: #87888C;
+
+        @media (max-width: $min-md) {
+            text-align: right;
+        }
     }
 
     .milestone--block--tags {
@@ -160,6 +181,10 @@
 
     &::after {
         opacity: 0;
+    }
+
+    @media (max-width: $min-md) {
+        display: none;
     }
 }
 
