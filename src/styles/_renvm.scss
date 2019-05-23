@@ -330,24 +330,45 @@
         border: 0.1rem solid #DBE0E8;
         box-shadow: 0 0.1rem 0.2rem 0 rgba(0,27,58,0.05);
         border-radius: 0.6rem;
-        padding: 3.5rem 2rem;
+        padding: 1.5rem 4rem;
         background-color: white;
+        padding-right: 2rem;
+
+        @media (max-width: $min-md) {
+            margin: 2rem;
+        }
 
         & > div {
             @include col-xs-12();
             @include col-md-6();
             @include col-lg-4();
-            padding: 0 2rem;
+            padding: 2rem;
+            padding-left: 6.5rem;
+            position: relative;
+
+            &::before {
+                content: '';
+                border: 0.6rem solid #006FE8;
+                border-radius: 0.8rem;
+                height: 3.2rem;
+                width: 3.2rem;
+                display: inline-block;
+                position: absolute;
+                left: 0;
+            }
 
             h2 {
                 color: #3F3F48;
                 font-size: 2rem;
                 font-weight: 500;
+                line-height: 2rem;
+                margin-bottom: 1rem;
             }
 
             p {
                 color: #87888C;
                 font-size: 1.4rem;
+                line-height: 2rem;
             }
         }
     }
