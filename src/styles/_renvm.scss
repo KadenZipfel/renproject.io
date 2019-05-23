@@ -270,5 +270,19 @@
     .footer--bottom {
         padding-top: 0.5rem;
         font-size: 1.4rem;
+        font-weight: 500;
+    }
+
+    .help--button {
+        @include flex();
+
+        img {
+            width: 1.5rem;
+            margin-right: 1rem;
+        }
+    }
+
+    .copy--social a {
+        color: #87888C;
     }
 }

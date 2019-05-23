@@ -56,6 +56,7 @@ export class RenVMStory extends React.Component<RenVMStoryProps, RenVMStoryState
 
     public render(): JSX.Element {
         const { tocHidden, postText } = this.state;
+        const helpIcon = require("../styles/images/icons/looking-for-help-icon.svg");
         return (
             <div>
                 <div className="renvm--story">
@@ -74,7 +75,7 @@ export class RenVMStory extends React.Component<RenVMStoryProps, RenVMStoryState
                             <ExternalLink className="button">Litepaper</ExternalLink>
                         </div>
                         <div className="footer--bottom">
-                            <ExternalLink>Ask us a question</ExternalLink>
+                            <ExternalLink className="help--button"><img src={helpIcon} />Ask us a question</ExternalLink>
                             <CopySocial />
                         </div>
                     </div>
