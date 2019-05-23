@@ -28,6 +28,36 @@ class RenVMPage extends React.Component {
                         </div>
                     </div>
                 </div>
+                <div className="section section--features">
+                    <div className="container">
+                        <div className="row">
+                            <div>
+                                <h2>Shamir's Secret Sharing</h2>
+                                <p>Integrate Warpgate and allow any decentralized exchange to settle any cross-blockchain cryptocurrency.</p>
+                            </div>
+                            <div>
+                                <h2>Secure multiparty Computation (sMPC)</h2>
+                                <p>Integrate Warpgate and allow any decentralized exchange to settle any cross-blockchain cryptocurrency.</p>
+                            </div>
+                            <div>
+                                <h2>Zero Knowledge</h2>
+                                <p>Integrate Warpgate and allow any decentralized exchange to settle any cross-blockchain cryptocurrency.</p>
+                            </div>
+                            <div>
+                                <h2>Byzantine Fault Tolerance</h2>
+                                <p>Integrate Warpgate and allow any decentralized exchange to settle any cross-blockchain cryptocurrency.</p>
+                            </div>
+                            <div>
+                                <h2>Hyperdrive</h2>
+                                <p>Integrate Warpgate and allow any decentralized exchange to settle any cross-blockchain cryptocurrency.</p>
+                            </div>
+                            <div>
+                                <h2>xxxx</h2>
+                                <p>Integrate Warpgate and allow any decentralized exchange to settle any cross-blockchain cryptocurrency.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div className="section section--story">
                     <div className="container">
                         <div className="row">
