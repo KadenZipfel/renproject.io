@@ -198,26 +198,25 @@
         }
     }
 
-    .toc-list-item {
-
-        a {
-            padding: 0.6rem 0;
-            max-width: 100%;
-            overflow: hidden;
-            white-space: nowrap;
-            text-overflow: ellipsis;
-        }
-    }
-
-    .toc-list {
-        margin: 0;
-        padding-left: 2.5rem;
-    }
-
-    a.toc-link {
+    .toc-list-item a {
         color: #585861;
         font-size: 1.4rem;
         font-weight: 500;
+        padding: 0.6rem 0;
+        padding-right: 4rem;
+        width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        position: relative;
+
+        &:hover {
+            background-color: #FCFCFD;
+        }
+
+        &::before {
+            content: '';
+        }
 
         &.node-name--H2, &.node-name--H3 {
             color: #9FA0A5;
@@ -225,7 +224,34 @@
 
         &.is-active-link {
             color: #006fe8;
+
+            &::after {
+                background-color: #006fe8;
+                content: " ";
+                display: inline-block;
+                height: 0.1rem;
+                left: 0;
+                margin-top: 0.8rem;
+                position: absolute;
+                width: 3rem;
+            }
         }
+
+        &.node-name--H1::before {
+            margin-right: 4rem;
+        }
+
+        &.node-name--H2::before {
+            margin-right: 5rem;
+        }
+
+        &.node-name--H3::before {
+            margin-right: 6rem;
+        }
+    }
+
+    .toc-list {
+        margin: 0;
     }
 
     .is-collapsible {
@@ -242,18 +268,6 @@
         position: fixed !important;
         top: 0;
     }
-
-    a.is-active-link::before {
-        background-color: #006fe8;
-        content: " ";
-        display: inline-block;
-        height: 0.1rem;
-        left: 0;
-        margin-top: 0.8rem;
-        position: absolute;
-        width: 3rem;
-    }
-
 }
 
 .renvm .renvm--toc--contents {
