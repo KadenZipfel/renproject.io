@@ -33,6 +33,11 @@
             padding: 0 2rem;
         }
     }
+
+    @media (max-width: $min-md) {
+        background-size: contain;
+        background-position: bottom right;
+    }
 }
 
 .renvm .section.section--story .row {
