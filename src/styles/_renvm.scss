@@ -218,6 +218,10 @@
         color: #585861;
         font-size: 1.4rem;
         font-weight: 500;
+
+        &.node-name--H2, &.node-name--H3 {
+            color: #9FA0A5;
+        }
     }
 
     .is-collapsible {
