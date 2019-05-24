@@ -105,8 +105,8 @@ class HomePage extends React.Component {
                         <div className="container">
                             <div className="row">
                                 <div className="content">
-                                    <HelpBlock title="More questions?" subtitle="Read more about RenVM" icon={questionsIcon} />
-                                    <HelpBlock title="Looking for help?" subtitle="Submit a support ticket on ZenDesk" icon={helpIcon} />
+                                    <HelpBlock href="" title="More questions?" subtitle="Read more about RenVM" icon={questionsIcon} />
+                                    <HelpBlock href="mailto:help@renproject.io" title="Looking for help?" subtitle="Email us at help@renproject.io" icon={helpIcon} />
                                 </div>
                             </div>
                         </div>

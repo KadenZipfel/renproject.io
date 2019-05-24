@@ -6,6 +6,7 @@ interface HelpBlockProps {
     title: string;
     subtitle: string;
     icon: string;
+    href: string;
 }
 
 interface HelpBlockState {
@@ -13,9 +14,9 @@ interface HelpBlockState {
 
 class HelpBlock extends React.Component<HelpBlockProps, HelpBlockState> {
     public render(): JSX.Element {
-        const { title, subtitle, icon } = this.props;
+        const { title, href, subtitle, icon } = this.props;
         return (
-            <ExternalLink href="" className="help--block">
+            <ExternalLink href={href} className="help--block">
                 <div className="help--block--content">
                     <img src={icon} />
                     <h2>{title}</h2>
