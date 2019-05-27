@@ -77,9 +77,9 @@ class HomePage extends React.Component {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="content--buttons">
+                                    {/* <div className="content--buttons">
                                         <ExternalLink className="featured--button secondary" href="">Get Started</ExternalLink>
-                                    </div>
+                                    </div> */}
                                 </ContentBlock>
                             </div>
                         </div>
