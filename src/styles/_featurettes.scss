@@ -4,6 +4,7 @@
     padding-bottom: 10rem;
     color: #3F3F48;
     overflow: hidden;
+    margin-top: 10rem;
     &::after {
         background: url('#{$images}/grey-oval.svg') no-repeat top;
         position: absolute;
