@@ -103,6 +103,10 @@
     text-align: center;
     .content--body {
         width: 100%;
+
+        p {
+            padding: 0 2rem;
+        }
     }
     .section--content {
         @include col-xs-12;
