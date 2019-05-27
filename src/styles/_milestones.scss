@@ -103,7 +103,7 @@
         // border-color: #007DDF;
     }
 
-    &.open.achieved::before {
+    &.achieved:not(.next-achieved)::before {
         // border-color: #D9EBFA;
         border-color: rgba(0, 111, 232, 0.15);
         // background-clip: initial;
