@@ -32,11 +32,18 @@
         }
     }
     .content--body {
+        @media(min-width: $min-md) {
+            width: 100%;
+        }
+
         margin: auto;
         p {
-            font-size: 2.7rem;
-            line-height: 4.2rem;
             color: #87888C;
+
+            @media(min-width: $min-md) {
+                font-size: 2.7rem;
+                line-height: 4.2rem;
+            }
         }
     }
 }
