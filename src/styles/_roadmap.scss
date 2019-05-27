@@ -30,14 +30,7 @@
     }
 }
 
-.roadmap .section .container .row div{
-    & > h1 {
-        font-weight: 500;
-        margin-bottom: 2rem;
-    }
-
-    & > p {
-        font-size: 2.7rem;
-        line-height: 4rem;
-    }
+.roadmap .section .container .row div > h1 {
+    font-weight: 500;
+    margin-bottom: 2rem;
 }
