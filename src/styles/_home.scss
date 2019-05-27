@@ -233,6 +233,9 @@
             p {
                 color: #87888C;
                 font-size: 1.6rem;
+                @media(min-width: $min-lg) {
+                    padding-right: 14rem;
+                }
             }
 
             img {
