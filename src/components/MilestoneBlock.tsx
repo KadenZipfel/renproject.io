@@ -3,6 +3,7 @@ import { Milestone } from "../lib/milestone";
 
 interface MilestoneBlockProps {
     milestone: Milestone;
+    nextMilestone?: Milestone | null;
 }
 
 interface MilestoneBlockState {
@@ -29,8 +30,9 @@ export class MilestoneBlock extends React.Component<MilestoneBlockProps, Milesto
     public render(): JSX.Element {
         const { open } = this.state;
         const { title, description, date, tags, achieved } = this.props.milestone;
+        const nextAchieved = this.props.nextMilestone && this.props.nextMilestone.achieved;
         return (
-            <div className={`milestone--block--container ${achieved ? "achieved" : ""} ${open ? "open" : ""}`}>
+            <div className={`milestone--block--container${achieved ? " achieved" : ""}${open ? " open" : ""}${nextAchieved ? " next-achieved" : ""}`}>
                 <div className={`milestone--block`}
                     onClick={() => {
                         this.toggle();

@@ -40,6 +40,7 @@ export class Milestones extends React.Component<MilestonesProps, MilestonesState
                 }
             }
         });
+        const finalMilestones = completedMilestones.sort(sortMilestones).concat(incompleteMilestones);
         return (
             <div className="milestones">
                 <h1>Milestones</h1>
@@ -65,8 +66,13 @@ export class Milestones extends React.Component<MilestonesProps, MilestonesState
                         <div className="milestone--block--tags">Tags</div>
                     </div>
                     {
-                        completedMilestones.sort(sortMilestones).concat(incompleteMilestones).map(m => {
-                            return <MilestoneBlock key={`milestone--block--${m.title}--${m.date}`} milestone={m} />;
+                        finalMilestones.map((m, i) => {
+                            const next = i === finalMilestones.length - 1 ? null : finalMilestones[i + 1];
+                            return <MilestoneBlock
+                                key={`milestone--block--${m.title}--${m.date}`}
+                                milestone={m}
+                                nextMilestone={next}
+                            />;
                         })
                     }
                 </div>

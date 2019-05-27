@@ -138,7 +138,7 @@
         }
     }
 
-    &.achieved::after {
+    &.achieved.next-achieved::after {
         border-color: #007DDF;
     }
 
