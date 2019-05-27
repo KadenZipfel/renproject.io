@@ -11,6 +11,14 @@
     @media(min-width: $min-md) {
         margin-top: 6rem;
     }
+
+    h4 {
+        color: #585861;
+    }
+
+    p {
+        color: #87888C;
+    }
 }
 .team--item::before {
     position: absolute;
