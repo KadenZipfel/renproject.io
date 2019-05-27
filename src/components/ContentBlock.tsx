@@ -4,7 +4,7 @@ const Fade = require("react-reveal/Fade");
 
 interface ContentBlockProps {
     title?: string;
-    subtitle: string;
+    subtitle: string | React.ReactNode;
     logo?: any;
 }
 
