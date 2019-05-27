@@ -1,3 +1,13 @@
+.section.section--banner {
+    min-height: 24rem;
+    @media(min-width: $min-md) {
+        min-height: 35rem;
+    }
+    @media(min-width: $min-lg) {
+        min-height: 31rem;
+    }
+}
+
 .roadmap .section.section--banner {
     &::before {
         background-image: url('#{$images}/roadmap-banner.svg');
