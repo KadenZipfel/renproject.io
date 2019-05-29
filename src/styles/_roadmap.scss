@@ -38,12 +38,9 @@
 
         margin: auto;
         p {
+            font-size: 1.8rem;
+            line-height: 2.7rem;
             color: #87888C;
-
-            @media(min-width: $min-md) {
-                font-size: 2.7rem;
-                line-height: 4.2rem;
-            }
         }
     }
 }
