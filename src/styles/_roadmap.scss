@@ -32,7 +32,7 @@
         }
     }
     .content--body {
-        @media(min-width: $min-md) {
+        @media(max-width: $min-lg) {
             width: 100%;
         }
 
