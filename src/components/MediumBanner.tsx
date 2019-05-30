@@ -6,7 +6,7 @@ import Slider from "react-slick";
 import { MediumPost } from "../lib/types";
 import { ExternalLink } from "./ExternalLink";
 
-const MEDIUM_FEED_URL = "https://medium-article-feed.herokuapp.com/";
+const MEDIUM_FEED_URL = "https://medium-article-feed.herokuapp.com";
 
 interface MediumBannerProps {
     /** The username of the medium account */
