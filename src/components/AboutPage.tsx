@@ -72,7 +72,7 @@ class AboutPage extends React.Component {
                                 <TeamItem name="Vincent Au" position="Software Developer" github="vinceau" linkedin="vinceau" />
                                 <TeamItem name="Ross Pure" position="Researcher" github="ross-pure" />
                                 <TeamItem name="Darren Toh" position="Legal &amp; Communications" linkedin="darren-toh-2a29885" />
-                                <TeamItem name="Michael Burgess" position="Operations" linkedin="michaelwburgess" />
+                                <TeamItem name="Michael Burgess" position="Operations" linkedin="michaelwburgess" twitter="mw_burgess" />
                                 <TeamItem name="Vincent Ward" position="Design" twitter="thevward" linkedin="vincent-ward-7395b4b8" />
                             </div>
                         </div>
