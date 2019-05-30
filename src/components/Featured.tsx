@@ -35,7 +35,7 @@ class Featured extends React.Component<FeaturedProps, FeaturedState> {
                                 <p>The first and only open protocol that provides access to inter-blockchain liquidity for all decentralized applications.</p>
 
                                 <div className="featured--buttons">
-                                    <FeaturedButton className="primary" href="" title="Learn More"></FeaturedButton>
+                                    {/* <FeaturedButton className="primary" href="" title="Learn More"></FeaturedButton> */}
                                     <FeaturedButton className="secondary" href="" title="Get Started"></FeaturedButton>
                                     <div className="social--links">
                                         <ExternalLink className="social" href={REN_URLS.twitter}><span className="social--icon"><FontAwesomeIcon icon={faTwitter} /></span>Follow us on Twitter</ExternalLink>
