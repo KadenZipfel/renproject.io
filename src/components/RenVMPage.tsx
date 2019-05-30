@@ -9,6 +9,8 @@ import { REN_URLS } from "../lib/constants";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTwitter, faRedditAlien } from "@fortawesome/free-brands-svg-icons";
 
+const Fade = require("react-reveal/Fade");
+
 class RenVMPage extends React.Component {
     private renvmStoryRef = React.createRef<HTMLDivElement>();
 
@@ -36,30 +38,32 @@ class RenVMPage extends React.Component {
                 <div className="section section--features">
                     <div className="container">
                         <div className="row">
-                            <div>
-                                <h2>Shamir's Secret Sharing</h2>
-                                <p>Integrate Warpgate and allow any decentralized exchange to settle any cross-blockchain cryptocurrency.</p>
-                            </div>
-                            <div>
-                                <h2>Secure multiparty Computation (sMPC)</h2>
-                                <p>Integrate Warpgate and allow any decentralized exchange to settle any cross-blockchain cryptocurrency.</p>
-                            </div>
-                            <div>
-                                <h2>Zero Knowledge</h2>
-                                <p>Integrate Warpgate and allow any decentralized exchange to settle any cross-blockchain cryptocurrency.</p>
-                            </div>
-                            <div>
-                                <h2>Byzantine Fault Tolerance</h2>
-                                <p>Integrate Warpgate and allow any decentralized exchange to settle any cross-blockchain cryptocurrency.</p>
-                            </div>
-                            <div>
-                                <h2>Hyperdrive</h2>
-                                <p>Integrate Warpgate and allow any decentralized exchange to settle any cross-blockchain cryptocurrency.</p>
-                            </div>
-                            <div>
-                                <h2>xxxx</h2>
-                                <p>Integrate Warpgate and allow any decentralized exchange to settle any cross-blockchain cryptocurrency.</p>
-                            </div>
+                            <Fade up distance="50px" delay={100}>
+                                <div>
+                                    <h2>Shamir's Secret Sharing</h2>
+                                    <p>Integrate Warpgate and allow any decentralized exchange to settle any cross-blockchain cryptocurrency.</p>
+                                </div>
+                                <div>
+                                    <h2>Secure multiparty Computation (sMPC)</h2>
+                                    <p>Integrate Warpgate and allow any decentralized exchange to settle any cross-blockchain cryptocurrency.</p>
+                                </div>
+                                <div>
+                                    <h2>Zero Knowledge</h2>
+                                    <p>Integrate Warpgate and allow any decentralized exchange to settle any cross-blockchain cryptocurrency.</p>
+                                </div>
+                                <div>
+                                    <h2>Byzantine Fault Tolerance</h2>
+                                    <p>Integrate Warpgate and allow any decentralized exchange to settle any cross-blockchain cryptocurrency.</p>
+                                </div>
+                                <div>
+                                    <h2>Hyperdrive</h2>
+                                    <p>Integrate Warpgate and allow any decentralized exchange to settle any cross-blockchain cryptocurrency.</p>
+                                </div>
+                                <div>
+                                    <h2>xxxx</h2>
+                                    <p>Integrate Warpgate and allow any decentralized exchange to settle any cross-blockchain cryptocurrency.</p>
+                                </div>
+                            </Fade>
                         </div>
                     </div>
                 </div>
