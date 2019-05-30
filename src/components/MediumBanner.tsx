@@ -6,6 +6,8 @@ import Slider from "react-slick";
 import { MediumPost } from "../lib/types";
 import { ExternalLink } from "./ExternalLink";
 
+const MEDIUM_FEED_URL = "https://medium-json-feed.herokuapp.com";
+
 interface MediumBannerProps {
     /** The username of the medium account */
     mediumName: string;
@@ -36,7 +38,7 @@ export class MediumBanner extends React.Component<MediumBannerProps, MediumBanne
 
     public async componentDidMount(): Promise<void> {
         const { mediumName, limit } = this.props;
-        const feedurl = `https://medium-json-feed.herokuapp.com/${mediumName}/latest`;
+        const feedurl = `${MEDIUM_FEED_URL}/${mediumName}/latest`;
         try {
             const resp = await axios.get(feedurl);
             if (resp.status !== 200) {
