@@ -10,4 +10,5 @@ export const REN_URLS = {
     telegramAnnouncements: "https://t.me/renprojectann",
     zendesk: "https://renproject.zendesk.com",
     gitbook: "https://docs.renproject.io/ren",
+    gitbookDarknodes: "https://docs.renproject.io/darknodes/",
 }

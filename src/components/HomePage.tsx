@@ -17,6 +17,7 @@ import { MediumBannerInstance } from "./MediumBanner";
 import { ExternalLink } from "./ExternalLink";
 import { Newsletter } from "./Newsletter";
 import HelpBlock from "./HelpBlock";
+import { REN_URLS } from "../lib/constants";
 
 const Fade = require("react-reveal/Fade");
 
@@ -92,7 +93,7 @@ class HomePage extends React.Component {
                                 <ContentBlock title="Darknodes" subtitle="Privacy and interoperability between all blockchains.">
                                     <p>Darknodes all around the world run the applications built on RenVM in complete secrecy. Darknodes are incentivized to work by capturing a percentage of volume transacted through RenVM.</p>
                                     <div className="content--buttons">
-                                        <ExternalLink href="" className="content--link" >More about Darknodes &rarr;</ExternalLink>
+                                        <ExternalLink href={REN_URLS.gitbookDarknodes} className="content--link" >More about Darknodes &rarr;</ExternalLink>
                                     </div>
                                 </ContentBlock>
                             </div>
