@@ -76,6 +76,9 @@ export class Milestones extends React.Component<MilestonesProps, MilestonesState
                         })
                     }
                 </div>
+                <div className="milestones--footnote">
+                    <p>Given the blockchain space is constantly evolving, certain features or decisions may change over time.</p>
+                </div>
             </div>
         );
     }
