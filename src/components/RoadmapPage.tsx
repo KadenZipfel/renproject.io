@@ -58,8 +58,7 @@ class RoadmapPage extends React.Component {
                                 <p>Provide input and feedback through our Telegram channel</p>
                             </div>
                             <TelegramSelector links={[
-                                { name: "Telegram Community (EN)", url: REN_URLS.telegram },
-                                { name: "Telegram Community (KR)", url: REN_URLS.telegramKorea },
+                                { name: "Telegram Community", url: REN_URLS.telegram },
                                 { name: "Telegram Announcements", url: REN_URLS.telegramAnnouncements },
                             ]} />
                         </div>

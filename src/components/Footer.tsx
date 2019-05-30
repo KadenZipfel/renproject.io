@@ -20,8 +20,7 @@ class Footer extends React.Component {
                             <p>Community</p>
                             <ul>
                                 <li><ExternalLink href={REN_URLS.telegramAnnouncements}>Telegram Announcements</ExternalLink></li>
-                                <li><ExternalLink href={REN_URLS.telegram}>Telegram Community (EN)</ExternalLink></li>
-                                <li><ExternalLink href={REN_URLS.telegramKorea}>Telegram Community (KR)</ExternalLink></li>
+                                <li><ExternalLink href={REN_URLS.telegram}>Telegram Community</ExternalLink></li>
                                 <li><ExternalLink href={REN_URLS.gitbook}>Help</ExternalLink></li>
                             </ul>
                         </div>
