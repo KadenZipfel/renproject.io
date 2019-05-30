@@ -26,7 +26,7 @@ class RoadmapPage extends React.Component {
                         <div className="row">
                             <div className="section--content">
                                 <ContentBlock subtitle="A growing ecosystem">
-                                    <p>We're dedicated to developing world class privacy and interoperability focused tools and keeping you up-to-date on our progress. Because the blockchain space is constantly evolving, certain features or decisions may change over time.</p>
+                                    <p>We're dedicated to developing world class privacy and interoperability focused tools as well as keeping you up-to-date on our progress.</p>
                                 </ContentBlock>
                             </div>
                         </div>
