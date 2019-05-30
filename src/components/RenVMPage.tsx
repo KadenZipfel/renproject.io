@@ -79,7 +79,7 @@ class RenVMPage extends React.Component {
                                     </div>
                                     <div>
                                         <h2>Ready to start building?</h2>
-                                        <ExternalLink className="featured--button primary" href="">View the Docs</ExternalLink>
+                                        <ExternalLink className="featured--button primary" href={REN_URLS.gitbook}>View the Docs</ExternalLink>
                                     </div>
                                 </div>
                                 <div>
