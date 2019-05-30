@@ -10,6 +10,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTwitter, faRedditAlien } from "@fortawesome/free-brands-svg-icons";
 
 class RenVMPage extends React.Component {
+    private renvmStoryRef = React.createRef<HTMLDivElement>();
+
     public render(): JSX.Element {
         const story = require("../styles/images/renvm-story.png");
         return (
@@ -23,7 +25,7 @@ class RenVMPage extends React.Component {
                                     <p>Secure multi-party computations power a privacy layer for decentralized applications, enabling private and interoperable lending, exchanges, collateralization &amp; more.</p>
 
                                     <div className="featured--buttons">
-                                        <ExternalLink className="featured--button primary" href="">Keep reading &darr;</ExternalLink>
+                                        <a onClick={this.scrollToStory} className="featured--button primary">Keep reading &darr;</a>
                                         <ExternalLink className="featured--button secondary" href="">Try RenEx, powered by RenVM</ExternalLink>
                                     </div>
                                 </ContentBlock>
@@ -63,7 +65,7 @@ class RenVMPage extends React.Component {
                 </div>
                 <div className="section section--story">
                     <div className="container">
-                        <div className="row">
+                        <div className="row" ref={this.renvmStoryRef}>
                             <RenVMStory />
                             <div className="story--sidebar">
                                 <div className="story--sidebar--buttons">
@@ -99,6 +101,12 @@ class RenVMPage extends React.Component {
                 <Footer />
             </div>
         );
+    }
+
+    private scrollToStory = () => {
+        if (this.renvmStoryRef.current) {
+            this.renvmStoryRef.current.scrollIntoView();
+        }
     }
 }
 
