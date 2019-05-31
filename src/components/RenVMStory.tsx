@@ -1,8 +1,5 @@
 import * as React from "react";
-import ReactMarkdown from "react-markdown";
-import tocbot from "tocbot";
 
-import story from "../data/renvmStory.md";
 import { ExternalLink } from "./ExternalLink";
 import { CopySocial } from "./Footer";
 
@@ -19,13 +16,6 @@ const flatten = (text: any, child: any): any => (
         ? text + child
         : React.Children.toArray(child.props.children).reduce(flatten, text)
 );
-
-const HeadingRenderer = (props: any) => {
-    var children = React.Children.toArray(props.children)
-    var text = children.reduce(flatten, '')
-    var slug = text.toLowerCase().replace(/\W/g, '-')
-    return React.createElement('h' + props.level, { id: slug }, props.children)
-}
 
 export class RenVMStory extends React.Component<RenVMStoryProps, RenVMStoryState> {
     // private storyRef: HTMLDivElement | null = null;
@@ -47,31 +37,21 @@ export class RenVMStory extends React.Component<RenVMStoryProps, RenVMStoryState
         document.removeEventListener("mousedown", this.handleClick, false);
     }
 
-    public async componentDidMount(): Promise<void> {
-        const resp = await fetch(story).then(resp => resp.text());
-        this.setState({ postText: resp });
-        tocbot.init({
-            tocSelector: ".renvm--toc--contents",
-            contentSelector: ".renvm--story",
-            headingSelector: "h1, h2, h3",
-            hasInnerContainers: true,
-        });
-    }
-
-    public componentDidUpdate() {
-        tocbot.refresh();
-    }
-
     public render(): JSX.Element {
-        const { tocHidden, postText } = this.state;
+        const { tocHidden } = this.state;
         const helpIcon = require("../styles/images/icons/looking-for-help-icon.svg");
         return (
             <div>
                 <div className="renvm--story">
-                    <ReactMarkdown
-                        source={postText}
-                        renderers={{ heading: HeadingRenderer }}
-                    />
+                    <h1>What is RenVM?</h1>
+                    <h2>RenVM serves as the engine that powers Ren.</h2>
+                    <p>Using a new secure multiparty computation algorithm, RenVM provides one of the only practical privacy + interoperability solutions that can scale, and is the only solution that allows for private computation over multiple inputs and multiple parties. </p>
+                    <h1>What problem does it solve?</h1>
+                    <h2>For many decentralized applications, in particular decentralized finance, solutions for privacy and interoperability are fundamental pieces of the puzzle that are still missing.</h2>
+                    <p>Trustless privacy and interoperability is absolutely necessary for achieving truly decentralized applications that are secure, usable, and liquid. Dark pools, DEXs, leverage, lending, collateralization, transferring digital assets and many other use cases are now made private, interoperable, and practical through RenVM.</p>
+                    <h1>What can be built with RenVM?</h1>
+                    <h2>RenVM serves as an plug-in for decentralized finance and therefore, any DeFi application can incorporate RenVM’s capabilities into their applications and existing smart contracts.</h2>
+                    <p>If your project would benefit from cross-chain liquidity, then you stand to benefit from integrating with RenVM.</p>
                 </div>
                 <div className={`renvm--toc ${tocHidden ? "hidden" : ""}`} ref={node => this.tocRef = node}>
                     <h1>Table of contents</h1>

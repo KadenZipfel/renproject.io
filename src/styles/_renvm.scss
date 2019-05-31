@@ -73,199 +73,6 @@
     }
 }
 
-.renvm .renvm--story {
-    // TOC fix for fixed header
-    h1::before,
-    h2::before,
-    h3::before,
-    h4::before,
-    h5::before,
-    h6::before {
-        display: block;
-        content: " ";
-        height: 8rem;
-        margin-top: -8rem;
-        visibility: hidden;
-    }
-
-    h1 {
-        font-size: 3.2rem;
-        font-weight: 500;
-        color: #3f3f48;
-        margin-top: 5rem;
-        margin-bottom: 2.5rem;
-    }
-
-    h2 {
-        font-size: 2.7rem;
-        font-weight: 500;
-        color: #3f3f48;
-        margin: 2rem 0;
-    }
-
-    h3 {
-        font-size: 2.2rem;
-        font-weight: 500;
-        color: #585861;
-        margin: 1.5rem 0;
-    }
-
-    p {
-        font-size: 1.8rem;
-        line-height: 3rem;
-        color: #87888c;
-        margin-bottom: 1rem;
-    }
-}
-
-.renvm .renvm--toc {
-    position: fixed;
-    top: 30%;
-    left: 0;
-    z-index: 999;
-    width: 40rem;
-    transition: all 0.3s ease-in-out;
-    box-shadow: 0.1rem 0 0.2rem 0 rgba(0, 27, 58, 0.12);
-    padding-right: 2rem;
-
-    background: linear-gradient(#FCFCFD, #FCFCFD);
-    background-color: white;
-    background-position: right;
-    background-size: 2rem;
-    background-repeat: no-repeat;
-
-    &.hidden {
-        margin-left: -40rem;
-        .toc--button {
-            opacity: 0.5;
-            background-color: #006fe8;
-
-            &:hover {
-                @media (min-width: $min-xl) {
-                    right: -4rem;
-                }
-            }
-        }
-    }
-
-    .toc--button {
-        cursor: pointer;
-        position: absolute;
-        height: 3rem;
-        width: 4rem;
-        right: -2rem;
-        top: 2rem;
-        content: " ";
-        background-image: url("#{$images}/icons/toc-icon.svg");
-        transition: all 0.3s ease-in-out;
-        background-color: #87888c;
-        background-repeat: no-repeat;
-        background-position: center center;
-        border-radius: 0.2rem;
-        z-index: 10;
-
-        &:hover {
-            opacity: 1;
-        }
-    }
-
-    h1 {
-        font-size: 2.2rem;
-        font-weight: 500;
-        color: #585861;
-        padding: 3rem 0 2rem 4rem;
-    }
-
-    /* Core Styles */
-
-    // To leverage the native smooth-scrolling by the browser (currently available in Firefox 36+ and Chrome 49+)
-    // body, .smooth-container { scroll-behavior: smooth }
-
-    .toc {
-        overflow-y: auto;
-    }
-
-    .toc > .toc-list {
-        overflow: hidden;
-        position: relative;
-
-        li {
-            list-style: none;
-        }
-    }
-
-    .toc-list-item a {
-        color: #585861;
-        font-size: 1.4rem;
-        font-weight: 500;
-        padding: 0.6rem 0;
-        padding-right: 4rem;
-        width: 100%;
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        position: relative;
-
-        &:hover {
-            background-color: #FCFCFD;
-        }
-
-        &::before {
-            content: '';
-        }
-
-        &.node-name--H2, &.node-name--H3 {
-            color: #9FA0A5;
-        }
-
-        &.is-active-link {
-            color: #006fe8;
-
-            &::after {
-                background-color: #006fe8;
-                content: " ";
-                display: inline-block;
-                height: 0.1rem;
-                left: 0;
-                margin-top: 0.8rem;
-                position: absolute;
-                width: 3rem;
-            }
-        }
-
-        &.node-name--H1::before {
-            margin-right: 4rem;
-        }
-
-        &.node-name--H2::before {
-            margin-right: 5rem;
-        }
-
-        &.node-name--H3::before {
-            margin-right: 6rem;
-        }
-    }
-
-    .toc-list {
-        margin: 0;
-    }
-
-    .is-collapsible {
-        max-height: 1000px;
-        overflow: hidden;
-        transition: all 300ms ease-in-out;
-    }
-
-    .is-collapsed {
-        max-height: 0;
-    }
-
-    .is-position-fixed {
-        position: fixed !important;
-        top: 0;
-    }
-}
-
 .renvm .renvm--toc--contents {
     padding: 2rem 0;
     max-height: 30rem;
@@ -433,5 +240,22 @@
             flex-direction: row;
         }
 
+    }
+}
+
+.renvm .renvm--story {
+    h1 {
+        font-size: 3.2rem;
+        line-height: 4.2rem;
+    }
+    h2 {
+        font-size: 2rem;
+        line-height: 2.9rem;
+        color: #585861;
+    }
+    p {
+        font-size: 1.8rem;
+        color: #87888C;
+        line-height: 2.7rem;
     }
 }
