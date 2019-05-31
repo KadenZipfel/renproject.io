@@ -25,7 +25,9 @@ class HomePage extends React.Component {
     public render(): JSX.Element {
         const questionsIcon = require("../styles/images/icons/more-questions-icon.svg");
         const helpIcon = require("../styles/images/icons/looking-for-help-icon.svg");
-        const featuretteIcon = require("../styles/images/blue-square-icon.svg");
+        const counterIcon = require("../styles/images/icons/icon-inf-counter.svg");
+        const lendingIcon = require("../styles/images/icons/icon-inf-lending.svg");
+        const pairIcon = require("../styles/images/icons/icon-inf-pair.svg");
         // const techStackImage = require("../styles/images/illustration-tech-stack-2.svg");
         // const codeImage = require("../styles/images/icons/rp-icon-code.svg");
         // const codeImageHover = require("../styles/images/icons/rp-icon-code-hvr.svg");
@@ -57,21 +59,27 @@ class HomePage extends React.Component {
                                     <p>Using RenVM to expand the capability of existing dApps or create entirely new business cases within the decentralized world.</p>
                                     <div className="infrastructure--list">
                                         <div className="infrastructure--list--item">
-                                            <img src={featuretteIcon} />
+                                            <div>
+                                                <img src={counterIcon} />
+                                            </div>
                                             <div>
                                                 <h2>No counterparty risk</h2>
                                                 <p>Traders conducting large volume OTC trades no longer at risk of counterparties failing to honor the trade.</p>
                                             </div>
                                         </div>
                                         <div className="infrastructure--list--item">
-                                            <img src={featuretteIcon} />
+                                            <div>
+                                                <img src={pairIcon} />
+                                            </div>
                                             <div>
                                                 <h2>Increase token pairs</h2>
                                                 <p>Integrate cross-chain assets such as Bitcoin and Zcash into existing DEX or liquidity pool infrastructure.</p>
                                             </div>
                                         </div>
                                         <div className="infrastructure--list--item">
-                                            <img src={featuretteIcon} />
+                                            <div>
+                                                <img src={lendingIcon} />
+                                            </div>
                                             <div>
                                                 <h2>Multi-collateral lending</h2>
                                                 <p>Utilize your existing non-custodial smart contracts to collateralize a range of crypto assets.</p>
