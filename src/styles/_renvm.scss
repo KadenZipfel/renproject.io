@@ -34,12 +34,11 @@
 .renvm .story--sidebar {
     @include flex();
     text-align: center;
-    flex-direction: column-reverse;
+    flex-direction: column;
     margin-top: 5rem;
 
     @media (min-width: $min-md) {
         margin-top: 15rem;
-        flex-direction: column;
     }
 
     img {
@@ -47,8 +46,6 @@
     }
 
     .story--sidebar--buttons {
-        margin-bottom: 10rem;
-
         & > div {
             padding: 4rem 0;
             border: solid 0.1rem #dbe0e8;
@@ -56,6 +53,7 @@
             width: 40rem;
             border-radius: 0.6rem;
             margin-bottom: 1rem;
+            box-shadow: 0 0.1rem 0.2rem 0 rgba(0,27,58,0.05);
 
             h2 {
                 color: #585861;
@@ -63,6 +61,26 @@
                 font-weight: 500;
                 margin-bottom: 2.5rem;
             }
+        }
+    }
+    .story--sidebar--footer {
+        margin-top: 4rem;
+        margin-bottom: 10rem;
+        font-size: 1.4rem;
+        font-weight: 500;
+
+        img {
+            margin-right: 1rem;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            color: #585861;
+            margin-bottom: 2rem;
+        }
+
+        .email--link {
+            margin-top: 1rem;
         }
     }
 }
@@ -120,6 +138,8 @@
     }
 }
 .renvm .renvm--story {
+    padding-right: 10rem;
+
     h1 {
         margin-top: 6rem;
         margin-bottom: 4rem;

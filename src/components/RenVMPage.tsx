@@ -69,7 +69,7 @@ class RenVMPage extends React.Component {
                                         />
                                     </div>
                             </Fade>
-                            <div className="renvm--story--container" ref={this.renvmStoryRef}>
+                            <div ref={this.renvmStoryRef}>
                                 <RenVMStory />
                             </div>
                         </div>
