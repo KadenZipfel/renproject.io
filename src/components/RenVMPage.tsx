@@ -41,7 +41,6 @@ class RenVMPage extends React.Component {
                     <div className="container">
                         <div className="row">
                             <Fade up distance="50px" delay={100}>
-                                <div>
                                     <h1>Overview</h1>
                                     <div className="overview--features row">
                                         <OverviewBlock
@@ -69,11 +68,10 @@ class RenVMPage extends React.Component {
                                             description="RenVM uses a modified version of the Tendermint consensus algorithm designed specifically for sharding and sMPC."
                                         />
                                     </div>
-                                </div>
-                                <div ref={this.renvmStoryRef}>
-                                    <RenVMStory />
-                                </div>
                             </Fade>
+                            <div className="renvm--story--container" ref={this.renvmStoryRef}>
+                                <RenVMStory />
+                            </div>
                         </div>
                     </div>
                 </div>
