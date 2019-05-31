@@ -40,7 +40,7 @@ class HomePage extends React.Component {
                     <div className="container">
                         <div className="row">
                             <div className="section--content">
-                                <ContentBlock subtitle="Transfer any token between any blockchain.">
+                                <ContentBlock subtitle={<>Transfer any token<br />between any blockchain.</>}>
                                     <p>Access tokens from any blockchain using your existing smart contracts without having to worry about wrapping or unwrapping tokens.</p>
                                     <div className="content--buttons">
                                         <ExternalLink href="" className="content--link" >How it works &rarr;</ExternalLink>
