@@ -44,15 +44,6 @@
             "tags": [
                 "development"
             ]
-        },
-        {
-            "title": "Make money",
-            "description": "We need to make some money",
-            "achieved": false,
-            "tags": [
-                "business",
-                "other"
-            ]
         }
     ]
 }
