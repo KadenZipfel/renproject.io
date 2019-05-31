@@ -322,53 +322,43 @@
 .renvm .section.section--features {
     .container {
         padding: 0;
-        margin-top: -6rem;
     }
 
 
-    .row {
-        border: 0.1rem solid #DBE0E8;
-        box-shadow: 0 0.1rem 0.2rem 0 rgba(0,27,58,0.05);
-        border-radius: 0.6rem;
-        padding: 1.5rem 4rem;
-        background-color: white;
-        padding-right: 2rem;
+    .overview--features {
+        border-top: solid 0.1rem #EBEDF2;
 
-        @media (max-width: $min-md) {
-            margin: 2rem;
-        }
-
-        & > div {
+        .overview--block {
+            @include flex();
             @include col-xs-12();
-            @include col-md-6();
-            @include col-lg-4();
+            @include col-lg-6();
             padding: 2rem;
-            padding-left: 6.5rem;
             position: relative;
+            border-bottom: solid 0.1rem #EBEDF2;
 
-            &::before {
-                content: '';
-                border: 0.6rem solid #006FE8;
-                border-radius: 0.8rem;
-                height: 3.2rem;
-                width: 3.2rem;
-                display: inline-block;
-                position: absolute;
-                left: 0;
+            .block--image {
+                padding-top: 2rem;
+                margin-right: 3rem;
+            }
+
+            h1 {
+                color: #3F3F48;
+                font-size: 2rem;
+                line-height: 5.8rem;
             }
 
             h2 {
-                color: #3F3F48;
-                font-size: 2rem;
-                font-weight: 500;
-                line-height: 2rem;
-                margin-bottom: 1rem;
+                font-size: 1.8rem;
+                line-height: 2.4rem;
+                color: #9FA0A5;
             }
 
             p {
-                color: #87888C;
-                font-size: 1.4rem;
-                line-height: 2rem;
+                font-size: 1.6rem;
+                line-height: 2.4rem;
+                color: #585861;
+                padding-top: 3rem;
+                padding-bottom: 2rem;
             }
         }
     }
