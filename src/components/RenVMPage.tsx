@@ -76,29 +76,25 @@ class RenVMPage extends React.Component {
                                         />
                                     </div>
                                 </div>
-                            </Fade>
-                        </div>
-                    </div>
-                </div>
-                <div className="section section--story">
-                    <div className="container">
-                        <div className="row" ref={this.renvmStoryRef}>
-                            <RenVMStory />
-                            <div className="story--sidebar">
-                                <div className="story--sidebar--buttons">
-                                    <div className="story--in-action">
-                                        <h2>Want to see it in action?</h2>
-                                        <ExternalLink className="featured--button primary" href="">View the demo</ExternalLink>
+                                <div ref={this.renvmStoryRef}>
+                                    <RenVMStory />
+                                </div>
+                                <div className="story--sidebar">
+                                    <div className="story--sidebar--buttons">
+                                        <div className="story--in-action">
+                                            <h2>Want to see it in action?</h2>
+                                            <ExternalLink className="featured--button primary" href="">View the demo</ExternalLink>
+                                        </div>
+                                        <div>
+                                            <h2>Ready to start building?</h2>
+                                            <ExternalLink className="featured--button primary" href={REN_URLS.gitbook}>View the Docs</ExternalLink>
+                                        </div>
                                     </div>
                                     <div>
-                                        <h2>Ready to start building?</h2>
-                                        <ExternalLink className="featured--button primary" href={REN_URLS.gitbook}>View the Docs</ExternalLink>
+                                        <img src={story} />
                                     </div>
                                 </div>
-                                <div>
-                                    <img src={story} />
-                                </div>
-                            </div>
+                            </Fade>
                         </div>
                     </div>
                 </div>
