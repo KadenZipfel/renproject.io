@@ -227,19 +227,20 @@
 
             h2 {
                 font-size: 2.2rem;
+                margin-bottom: 0.5rem;
             }
 
             p {
                 color: #87888C;
                 font-size: 1.6rem;
                 @media(min-width: $min-lg) {
-                    padding-right: 14rem;
+                    padding-right: 12rem;
                 }
             }
 
             img {
                 width: 4.5rem;
-                margin-top: 1rem;
+                margin-top: 0.8rem;
                 margin-right: 2.5rem;
             }
         }
