@@ -33,7 +33,7 @@ class AboutPage extends React.Component {
                     <div className="container">
                         <div className="row">
                             <div className="section--content">
-                                <ContentBlock subtitle={<>Working towards a private and<br />interoperable world of decentralized finance.</>}>
+                                <ContentBlock subtitle={<>Working towards a private<br />and interoperable world of<br />decentralized finance.</>}>
                                     <p>Ren allows the free movement of value between all blockchains and transfer of tokens in zero-knowledge. Unlocking new liquidity and resources to power a new wave of value in the open finance movement.</p>
                                     <p>With Ren all decentralized applications can run in secret, preserving the privacy of all users and data.</p>
                                     <div className="content--buttons">
@@ -58,7 +58,7 @@ class AboutPage extends React.Component {
                 <div className="team">
                     <Fade up distance="50px" delay={100}>
                         <div className="container">
-                            <h2>The Team</h2>
+                            <h1>The Team</h1>
                             <div className="row">
                                 <TeamItem name="Taiyang Zhang" position="CEO" github="sixteen" linkedin="taiyangzhang" medium="@taiyangzhang" />
                                 <TeamItem name="Loong Wang" position="CTO" github="loongy" twitter="bzlwang" linkedin="bzlwang" medium="@loong" />
@@ -81,7 +81,7 @@ class AboutPage extends React.Component {
                 <div className="team">
                     <Fade up distance="50px" delay={100}>
                         <div className="container">
-                            <h2>The Advisors</h2>
+                            <h1>The Advisors</h1>
                             <div className="row">
                                 <TeamItem name="Dorjee Sun" position="CEO, Perlin Network" linkedin="dorjee" />
                                 <TeamItem name="Loi Luu" position="CEO, KyberNetwork" linkedin="loiluu" />

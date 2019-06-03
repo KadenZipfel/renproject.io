@@ -54,6 +54,9 @@
             margin: auto;
         }
     }
+    .content--heading h1 {
+        font-size: 4.2rem;
+    }
     .content--body {
         width: 100%;
 
@@ -93,6 +96,10 @@
     overflow-x: hidden;
     @media(min-width: $min-md) {
         padding: 10rem 0;
+    }
+
+    h1 {
+        font-size: 3.2rem;
     }
 }
 .team .container {
