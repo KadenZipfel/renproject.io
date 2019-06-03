@@ -25,7 +25,7 @@ class RoadmapPage extends React.Component {
                     <div className="container">
                         <div className="row">
                             <div className="section--content">
-                                <ContentBlock subtitle="A growing ecosystem">
+                                <ContentBlock subtitle="A Growing Ecosystem">
                                     <p>We're dedicated to developing world class privacy and interoperability focused tools as well as keeping you up-to-date on our progress.</p>
                                 </ContentBlock>
                             </div>
