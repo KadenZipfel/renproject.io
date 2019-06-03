@@ -4,9 +4,15 @@
     background-repeat: no-repeat;
     background-position: center right;
 
-    .featured--content p {
-        font-size: 1.8rem;
-        color: #87888c;
+    .featured--content .content--body {
+        @media (max-width: $min-md) {
+            width: 100%;
+        }
+
+        p {
+            font-size: 1.8rem;
+            color: #87888c;
+        }
     }
 
     .featured--buttons {
