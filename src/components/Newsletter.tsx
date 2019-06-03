@@ -1,6 +1,7 @@
 import * as React from "react";
 
 import { ExternalLink } from "./ExternalLink";
+import { REN_URLS } from "../lib/constants";
 
 interface NewsletterProps {
 }
@@ -13,10 +14,9 @@ export class Newsletter extends React.Component<NewsletterProps, NewsletterState
         return (
             <div className="newsletter--container">
                 <div className="newsletter">
-                    <h2>Stay in the loop</h2>
-                    <p>Be the first to know when RenVM is operational. Or reach out if you have a project idea: <ExternalLink href="mailto:renshift@renproject.io">renshift@renproject.io</ExternalLink></p>
-                    <input placeholder="Email address"></input>
-                    <button className="featured--button primary">Sign up</button>
+                    <h2>Want to integrate RenVM?</h2>
+                    <p>Sign up here and we'll let you know when it's ready!</p>
+                    <ExternalLink className="featured--button primary" href={REN_URLS.typeform}>Sign up</ExternalLink>
                 </div>
             </div>
         );
