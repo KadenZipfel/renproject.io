@@ -33,7 +33,7 @@ class RoadmapPage extends React.Component {
                     </div>
                 </div>
                 <Fade up distance="50px" delay={100}>
-                    <div className="section">
+                    <div className="section section--github">
                         <div className="container">
                             <div className="row">
                                 <GithubStats limit={6} usernames={["renproject", "republicprotocol"]} />
@@ -42,7 +42,7 @@ class RoadmapPage extends React.Component {
                     </div>
                 </Fade>
                 <Fade up distance="50px" delay={100}>
-                    <div className="section">
+                    <div className="section section--milestones">
                         <div className="container">
                             <div className="row">
                                 <Milestones milestones={getMilestones()} />

@@ -44,6 +44,9 @@
     }
 }
 
-.roadmap .section .container .row div > h1 {
-    margin-bottom: 2rem;
+.section--github, .section--milestones {
+    h1 {
+        font-size: 2.3rem;
+        margin-bottom: 2rem;
+    }
 }
