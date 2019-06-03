@@ -40,11 +40,10 @@
 }
 .featured .content--heading h1 {
     color: $dark-grey;
-    font-size: 55pt;
-    font-weight: bold;
+    font-size: 5.5rem;
     @media(min-width: $min-md) {
-        font-size: 76pt;
-        line-height: 90pt;
+        font-size: 7.6rem;
+        line-height: 9rem;
     }
 }
 .featured .content--body p {
