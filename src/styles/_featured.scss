@@ -40,8 +40,12 @@
 }
 .featured .content--heading h1 {
     color: $dark-grey;
-    font-size: 76pt;
-    line-height: 90pt;
+    font-size: 55pt;
+    font-weight: bold;
+    @media(min-width: $min-md) {
+        font-size: 76pt;
+        line-height: 90pt;
+    }
 }
 .featured .content--body p {
     color: $light-grey;
