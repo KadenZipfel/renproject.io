@@ -61,7 +61,6 @@
         content: '+';
         color: #006FE8;
         font-size: 2.2rem;
-        font-weight: 500;
 
         @media (max-width: $min-md) {
             display: none;
@@ -174,13 +173,11 @@
 
     .achieved & .milestone--block--title {
         color: #3F3F48;
-        font-weight: 500;
     }
 }
 
 .milestones--header {
     font-size: 1.8rem;
-    font-weight: 500;
     color: #87888C;
     padding-bottom: 1.5rem;
 
@@ -199,7 +196,6 @@
 
     h2 {
         font-size: 1.4rem;
-        font-weight: 500;
         color: #979797;
         padding-bottom: 2rem;
     }

@@ -18,7 +18,6 @@
         padding: 1rem 1.5rem;
         color: #cbcbcb;
         font-size: 1.4rem;
-        font-weight: 500;
         cursor: pointer;
         user-select: none;
     }
@@ -57,7 +56,6 @@
     @include flex();
     align-items: center;
     font-size: 1.4rem;
-    font-weight: 500;
     color: #3f3f48;
 
     .repo--stat--icon {
@@ -86,7 +84,6 @@
 
     h2 {
         font-size: 1.6rem;
-        font-weight: 500;
         margin-bottom: 0.5rem;
     }
 
@@ -110,7 +107,6 @@
     }
 
     .repo--timeago {
-        font-weight: 500;
         font-size: 1.4rem;
         color: #cbcbcb;
     }
@@ -135,7 +131,6 @@
 
     p {
         font-size: 1.4rem;
-        font-weight: 500;
         color: #3f3f48;
     }
 
@@ -143,7 +138,6 @@
       padding: 1rem;
         h2 {
             font-size: 1.8rem;
-            font-weight: 500;
             color: #87888c;
             margin-bottom: 2rem;
             opacity: 0.6;
@@ -170,7 +164,6 @@
     @include flex();
     justify-content: space-between;
     font-size: 1.4rem;
-    font-weight: 500;
     color: #3F3F48;
   }
 
@@ -228,7 +221,6 @@
     width: 100%;
     text-align: right;
     font-size: 1.4rem;
-    font-weight: 500;
 }
 
 /* GITHUB ACTIVITY CHART */
