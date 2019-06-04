@@ -17,7 +17,12 @@
             "tags": [
                 "development"
             ],
-            "github": "https://github.com/republicprotocol"
+            "links": [
+                {
+                    "platform": "github",
+                    "url": "https://github.com/republicprotocol"
+                }
+            ]
         },
         {
             "title": "Darknode: Public",
@@ -28,7 +33,12 @@
                 "development",
                 "business"
             ],
-            "github": "https://github.com/republicprotocol/darknode-cli/blob/master/README.md"
+            "links": [
+                {
+                    "platform": "github",
+                    "url": "https://github.com/republicprotocol/darknode-cli/blob/master/README.md"
+                }
+            ]
         },
         {
             "title": "Republic Protocol Evolved to Ren",
@@ -38,7 +48,12 @@
             "tags": [
                 "other"
             ],
-            "medium": "https://medium.com/renproject/ren-the-evolution-of-a-protocol-ac28302c06a2"
+            "links": [
+                {
+                    "platform": "medium",
+                    "url": "https://medium.com/renproject/ren-the-evolution-of-a-protocol-ac28302c06a2"
+                }
+            ]
         },
         {
             "title": "WBTC Partnership",
@@ -48,7 +63,12 @@
             "tags": [
                 "business"
             ],
-            "medium": "https://medium.com/renproject/bringing-interoperability-to-renex-swapperd-and-wbtc-dd32d2674d8f"
+            "links": [
+                {
+                    "platform": "medium",
+                    "url": "https://medium.com/renproject/bringing-interoperability-to-renex-swapperd-and-wbtc-dd32d2674d8f"
+                }
+            ]
         },
         {
             "title": "Aztec Protocol Partnership",
@@ -58,7 +78,12 @@
             "tags": [
                 "business"
             ],
-            "medium": "https://medium.com/renproject/ren-partners-with-aztec-protocol-c2651a13a039"
+            "links": [
+                {
+                    "platform": "medium",
+                    "url": "https://medium.com/renproject/ren-partners-with-aztec-protocol-c2651a13a039"
+                }
+            ]
         },
         {
             "title": "Ren's Future in DeFi",
@@ -69,7 +94,12 @@
                 "research",
                 "development"
             ],
-            "medium": "https://medium.com/renproject/rens-future-in-defi-d34ffd903192"
+            "links": [
+                {
+                    "platform": "medium",
+                    "url": "https://medium.com/renproject/rens-future-in-defi-d34ffd903192"
+                }
+            ]
         },
         {
             "title": "RenVM Fee Model Announced",
@@ -80,7 +110,12 @@
                 "research",
                 "development"
             ],
-            "medium": "https://medium.com/renproject/a-new-fee-model-for-ren-63f9c3273bec"
+            "links": [
+                {
+                    "platform": "medium",
+                    "url": "https://medium.com/renproject/a-new-fee-model-for-ren-63f9c3273bec"
+                }
+            ]
         },
         {
             "title": "Hyperdrive",
@@ -89,7 +124,12 @@
             "tags": [
                 "development"
             ],
-            "github": "https://github.com/renproject/hyperdrive"
+            "links": [
+                {
+                    "platform": "github",
+                    "url": "https://github.com/renproject/hyperdrive"
+                }
+            ]
         },
         {
             "title": "RenVM Devnet",
