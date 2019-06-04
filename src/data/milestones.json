@@ -44,7 +44,7 @@
             "title": "Republic Protocol Evolved to Ren",
             "description": "Republic Protocol evolves into Ren and expands its scope to offer private and interoperable liquidity.",
             "achieved": true,
-            "date": "2019-01-01",
+            "date": "2019-01-18",
             "tags": [
                 "other"
             ],
@@ -59,7 +59,7 @@
             "title": "WBTC Partnership",
             "description": "Ren partners with BitGo and Kyber to begin the WBTC initiative; RenEx becomes a Merchant for WBTC.",
             "achieved": true,
-            "date": "2019-01-01",
+            "date": "2019-01-31",
             "tags": [
                 "business"
             ],
@@ -74,7 +74,7 @@
             "title": "Aztec Protocol Partnership",
             "description": "Ren partners with Aztec to incorporate their privacy focused tech into the Ren ecosystem.",
             "achieved": true,
-            "date": "2019-03-01",
+            "date": "2019-03-05",
             "tags": [
                 "business"
             ],
@@ -89,7 +89,7 @@
             "title": "Ren's Future in DeFi",
             "description": "Ren core dev team makes significant advancements and introduces RenVM.",
             "achieved": true,
-            "date": "2019-04-01",
+            "date": "2019-04-24",
             "tags": [
                 "research",
                 "development"
@@ -105,7 +105,7 @@
             "title": "RenVM Fee Model Announced",
             "description": "Fee distribution model is upgraded to improve the security and sustainability on the Darknode network.",
             "achieved": true,
-            "date": "2019-05-01",
+            "date": "2019-05-09",
             "tags": [
                 "research",
                 "development"
@@ -135,7 +135,7 @@
             "title": "RenVM Devnet",
             "description": "RenVM is successfully deployed to Devnet",
             "achieved": true,
-            "date": "2019-05-01",
+            "date": "2019-05-20",
             "tags": [
                 "development"
             ]
