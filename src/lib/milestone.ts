@@ -6,8 +6,8 @@ export interface Milestone {
     achieved: boolean;
     tags: string[];
     date?: string;
-    mediumPost?: string;
-    githubRepo?: string;
+    medium?: string;
+    github?: string;
 }
 
 export const getMilestones = (): Milestone[] => {
