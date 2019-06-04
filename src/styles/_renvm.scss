@@ -149,7 +149,7 @@
     }
 }
 .renvm .renvm--story {
-    @media (min-width: $min-lg) {
+    @media (min-width: $min-xl) {
         padding-right: 10rem;
     }
 
@@ -178,12 +178,14 @@
 .renvm .renvm--story--container {
     @include flex();
     flex-direction: column;
-    @media (min-width: $min-lg) {
+    @media (min-width: $min-xl) {
         flex-direction: row;
     }
 }
 .renvm--story .dev--resources {
-    width: 50%;
+    @media (min-width: $min-md) {
+        width: 50%;
+    }
 
     &::before {
         width: 6.6rem;
