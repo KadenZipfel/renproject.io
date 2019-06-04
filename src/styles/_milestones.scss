@@ -27,6 +27,9 @@
     }
 
     p {
+        padding-bottom: 1rem;
+    }
+    .milestone--block--footer--content {
         padding-bottom: 2rem;
     }
 }
@@ -57,6 +60,7 @@
 .milestone--block, .milestones--header {
     @include flex();
     justify-content: space-between;
+    align-items: center;
 
     &::after {
         content: '+';

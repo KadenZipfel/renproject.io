@@ -62,14 +62,16 @@ export class MilestoneBlock extends React.Component<MilestoneBlockProps, Milesto
                     </div>
                 </div>
                 <div className={`milestone--block--footer`}>
-                    <p>{description}</p>
-                    {links && links.length > 0 && <div>
-                        {links.map((l) => (
-                            <ExternalLink key={`${l.platform}--${l.url}`} href={l.url} className={`milestone--link ${l.platform}`}>
-                                {milestoneLink(l.platform)}
-                            </ExternalLink>
-                        ))}
-                    </div>}
+                    <div className="milestone--block--footer--content">
+                        <p>{description}</p>
+                        {links && links.length > 0 && <div>
+                            {links.map((l) => (
+                                <ExternalLink key={`${l.platform}--${l.url}`} href={l.url} className={`milestone--link ${l.platform}`}>
+                                    {milestoneLink(l.platform)}
+                                </ExternalLink>
+                            ))}
+                        </div>}
+                    </div>
                 </div>
             </div>
         );
