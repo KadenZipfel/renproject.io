@@ -36,7 +36,7 @@ export const RenVMStory = () => {
                         <div>
                             <h2>Want to integrate RenVM?</h2>
                             <p>Sign up here and we'll let you know when it's ready!</p>
-                            <ExternalLink className="featured--button primary" href="">Sign Up</ExternalLink>
+                            <ExternalLink className="featured--button primary" href={REN_URLS.typeform}>Sign Up</ExternalLink>
                         </div>
                     </div>
                     <div className="story--sidebar--footer">
