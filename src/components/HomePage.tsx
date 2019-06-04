@@ -56,7 +56,7 @@ class HomePage extends React.Component {
                         <div className="row">
                             <div className="section--content">
                                 <ContentBlock subtitle={<>Infrastructure for<br />connecting the unconnected</>}>
-                                    <p>Using RenVM to expand the capability of existing dApps or create entirely new business cases within the decentralized world.</p>
+                                    <p>Use RenVM to expand the capability of existing dApps or create entirely new business cases within the decentralized world.</p>
                                     <div className="infrastructure--list">
                                         <div className="infrastructure--list--item">
                                             <div>
