@@ -60,7 +60,6 @@
 .milestone--block, .milestones--header {
     @include flex();
     justify-content: space-between;
-    align-items: center;
 
     &::after {
         content: '+';
