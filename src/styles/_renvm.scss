@@ -42,11 +42,12 @@
     text-align: center;
     flex-direction: column;
     margin-top: 5rem;
+    flex-grow: 1;
 
-    @media (min-width: $min-md) {
-        margin-top: 15rem;
+    @media (min-width: $min-xl) {
         position: sticky;
         top: 15rem;
+        margin-top: 15rem;
     }
 
     img {
@@ -185,7 +186,7 @@
     }
 }
 .renvm--story .dev--resources {
-    @media (min-width: $min-md) {
+    @media (min-width: $min-xl) {
         width: 50%;
     }
 
