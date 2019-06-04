@@ -43,7 +43,7 @@ class HomePage extends React.Component {
                                 <ContentBlock subtitle={<>Transfer any token<br />between any blockchain.</>}>
                                     <p>Access tokens from any blockchain using your existing smart contracts without having to worry about wrapping or unwrapping tokens.</p>
                                     <div className="content--buttons">
-                                        <ExternalLink href="" className="content--link" >How it works &rarr;</ExternalLink>
+                                        <a href="/renvm" className="content--link" >How it works &rarr;</a>
                                     </div>
                                 </ContentBlock>
                             </div>
@@ -86,9 +86,6 @@ class HomePage extends React.Component {
                                             </div>
                                         </div>
                                     </div>
-                                    {/* <div className="content--buttons">
-                                        <ExternalLink className="featured--button secondary" href="">Get Started</ExternalLink>
-                                    </div> */}
                                 </ContentBlock>
                             </div>
                         </div>

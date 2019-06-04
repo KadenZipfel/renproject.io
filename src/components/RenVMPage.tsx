@@ -29,7 +29,6 @@ class RenVMPage extends React.Component {
 
                                     <div className="featured--buttons">
                                         <a onClick={this.scrollToStory} className="featured--button primary">Keep reading &darr;</a>
-                                        {/* <ExternalLink className="featured--button secondary" href="">Try RenEx, powered by RenVM</ExternalLink> */}
                                     </div>
                                 </ContentBlock>
                             </div>
