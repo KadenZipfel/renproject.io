@@ -11,5 +11,6 @@ export const REN_URLS = {
     zendesk: "https://renproject.zendesk.com",
     gitbook: "https://docs.renproject.io/ren",
     gitbookDarknodes: "https://docs.renproject.io/darknodes/",
-    typeform: "https://renprotocol.typeform.com/to/YIxBSp"
+    typeform: "https://renprotocol.typeform.com/to/YIxBSp",
+    supportEmail: "support@renproject.io"
 }

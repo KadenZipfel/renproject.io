@@ -38,7 +38,7 @@ class AboutPage extends React.Component {
                                     <p>With Ren all decentralized applications can run in secret, preserving the privacy of all users and data.</p>
                                     <div className="content--buttons">
                                         {/* <ExternalLink className={`featured--button primary`}>RenVM Overview</ExternalLink> */}
-                                        <ExternalLink className={`featured--button secondary`}>Get in touch</ExternalLink>
+                                        <ExternalLink href={`mailto:${REN_URLS.supportEmail}`} className={`featured--button secondary`}>Get in touch</ExternalLink>
                                     </div>
                                 </ContentBlock>
                             </div>

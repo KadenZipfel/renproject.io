@@ -24,9 +24,9 @@ export const RenVMStory = () => {
                     <h3>Developer resources</h3>
                     <p>Take a look at these developer resources for specifics on how RenVM operates.</p>
                     <div>
-                        <ExternalLink><img className="docs--icon" src={docsImage} /><span>Documentation</span></ExternalLink>
-                        <ExternalLink><span><FontAwesomeIcon icon={faGithub} pull="left" />Github</span></ExternalLink>
-                        <ExternalLink><span><FontAwesomeIcon icon={faTelegramPlane} pull="left" />Telegram Community</span></ExternalLink>
+                        <ExternalLink href={REN_URLS.gitbook}><img className="docs--icon" src={docsImage} /><span>Documentation</span></ExternalLink>
+                        <ExternalLink href={REN_URLS.github}><span><FontAwesomeIcon icon={faGithub} pull="left" />Github</span></ExternalLink>
+                        <ExternalLink href={REN_URLS.telegram}><span><FontAwesomeIcon icon={faTelegramPlane} pull="left" />Telegram Community</span></ExternalLink>
                     </div>
                 </div>
             </div>
@@ -42,7 +42,7 @@ export const RenVMStory = () => {
                     <div className="story--sidebar--footer">
                         <h2>More questions?</h2>
                         <ExternalLink className="featured--button secondary" href={REN_URLS.gitbook}><img src={docsImage} />Read the Docs</ExternalLink>
-                        <div className="email--link">Or, <ExternalLink href="mailto:help@renproject.io">email the team</ExternalLink></div>
+                        <div className="email--link">Or, <ExternalLink href={`mailto:${REN_URLS.supportEmail}`}>email the team</ExternalLink></div>
                     </div>
                 </div>
             </div>

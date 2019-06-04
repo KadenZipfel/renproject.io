@@ -114,8 +114,8 @@ class HomePage extends React.Component {
                                     <a href="/renvm" className="help--block">
                                         <HelpBlock title="More questions?" subtitle="Read more about RenVM" icon={questionsIcon} />
                                     </a>
-                                    <ExternalLink href="mailto:help@renproject.io" className="help--block">
-                                        <HelpBlock title="Looking for help?" subtitle="Email us at help@renproject.io" icon={helpIcon} />
+                                    <ExternalLink href={`mailto:${REN_URLS.supportEmail}`} className="help--block">
+                                        <HelpBlock title="Looking for help?" subtitle={`Email us at ${REN_URLS.supportEmail}`} icon={helpIcon} />
                                     </ExternalLink>
                                 </div>
                             </div>
