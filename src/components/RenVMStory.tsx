@@ -30,18 +30,20 @@ export const RenVMStory = () => {
                     </div>
                 </div>
             </div>
-            <div className="story--sidebar">
-                <div className="story--sidebar--buttons">
-                    <div>
-                        <h2>Want to integrate RenVM?</h2>
-                        <p>Sign up here and we'll let you know when it's ready!</p>
-                        <ExternalLink className="featured--button primary" href="">Sign Up</ExternalLink>
+            <div className="story--sidebar--container">
+                <div className="story--sidebar">
+                    <div className="story--sidebar--buttons">
+                        <div>
+                            <h2>Want to integrate RenVM?</h2>
+                            <p>Sign up here and we'll let you know when it's ready!</p>
+                            <ExternalLink className="featured--button primary" href="">Sign Up</ExternalLink>
+                        </div>
                     </div>
-                </div>
-                <div className="story--sidebar--footer">
-                    <h2>More questions?</h2>
-                    <ExternalLink className="featured--button secondary" href={REN_URLS.gitbook}><img src={docsImage} />Read the Docs</ExternalLink>
-                    <div className="email--link">Or, <ExternalLink href="mailto:help@renproject.io">email the team</ExternalLink></div>
+                    <div className="story--sidebar--footer">
+                        <h2>More questions?</h2>
+                        <ExternalLink className="featured--button secondary" href={REN_URLS.gitbook}><img src={docsImage} />Read the Docs</ExternalLink>
+                        <div className="email--link">Or, <ExternalLink href="mailto:help@renproject.io">email the team</ExternalLink></div>
+                    </div>
                 </div>
             </div>
         </div>
