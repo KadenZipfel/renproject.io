@@ -213,3 +213,14 @@
         }
     }
 }
+
+.milestone--link {
+    border: 0.1rem solid #006FE8;
+    border-radius: 0.2rem;
+    padding: 1rem;
+    font-size: 1.2rem;
+
+    span {
+        margin-left: 0.5rem;
+    }
+}
