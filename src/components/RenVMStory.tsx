@@ -1,5 +1,8 @@
 import * as React from "react";
 
+import { faGithub, faTelegramPlane } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import { ExternalLink } from "./ExternalLink";
 import { REN_URLS } from "../lib/constants";
 
@@ -17,6 +20,15 @@ export const RenVMStory = () => {
                 <h1>What can be built with RenVM?</h1>
                 <h2>RenVM serves as an plug-in for decentralized finance and therefore, any DeFi application can incorporate RenVM’s capabilities into their applications and existing smart contracts.</h2>
                 <p>If your project would benefit from cross-chain liquidity, then you stand to benefit from integrating with RenVM.</p>
+                <div className="dev--resources">
+                    <h3>Developer resources</h3>
+                    <p>Take a look at these developer resources for specifics on how RenVM operates.</p>
+                    <div>
+                        <ExternalLink><img className="docs--icon" src={docsImage} /><span>Documentation</span></ExternalLink>
+                        <ExternalLink><span><FontAwesomeIcon icon={faGithub} pull="left" />Github</span></ExternalLink>
+                        <ExternalLink><span><FontAwesomeIcon icon={faTelegramPlane} pull="left" />Telegram Community</span></ExternalLink>
+                    </div>
+                </div>
             </div>
             <div className="story--sidebar">
                 <div className="story--sidebar--buttons">
