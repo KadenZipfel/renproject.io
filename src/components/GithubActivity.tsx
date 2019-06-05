@@ -58,6 +58,7 @@ export class GithubActivity extends React.Component<GithubActivityProps, GithubA
         const commitChanges = data.reduce((total, num) => total + num, 0);
         // const commitChanges = data[data.length - 1] - data[0];
         // const percentChange = data[0] === 0 ? 0 : Math.round(commitChanges / data[0] * 100);
+        const activitySteps = ["1Y", "6M", "3M", "1M"];
         return (
             <div className="gh--activity">
                 {activity.length === 0 ?
@@ -69,10 +70,9 @@ export class GithubActivity extends React.Component<GithubActivityProps, GithubA
                         </div>
                         <ChartistGraph data={lineChartData} options={lineChartOptions} type={"Line"} />
                         <ul>
-                            <li className={`one ${selected === "1M" ? "selected" : ""}`}><a onClick={() => { this.updateSelected("1M") }}>1M</a></li>
-                            <li className={`two ${selected === "4M" ? "selected" : ""}`}><a onClick={() => { this.updateSelected("4M") }}>4M</a></li>
-                            <li className={`three ${selected === "6M" ? "selected" : ""}`}><a onClick={() => { this.updateSelected("6M") }}>6M</a></li>
-                            <li className={`four ${selected === "1Y" ? "selected" : ""}`}><a onClick={() => { this.updateSelected("1Y") }}>1Y</a></li>
+                            {activitySteps.map((step, index) =>
+                                <li key={step} className={`step${index+1}of${activitySteps.length} ${selected === step ? "selected" : ""}`}><a onClick={() => { this.updateSelected(step) }}>{step}</a></li>
+                            )}
                             <hr />
                         </ul>
                     </div>

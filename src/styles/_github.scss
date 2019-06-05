@@ -194,15 +194,15 @@
         user-select: none;
     }
 
-    .two.selected ~ hr {
+    .step2of4.selected ~ hr {
         margin-left: 25%;
     }
 
-    .three.selected ~ hr {
+    .step3of4.selected ~ hr {
         margin-left: 50%;
     }
 
-    .four.selected ~ hr {
+    .step4of4.selected ~ hr {
         margin-left: 75%;
     }
 
