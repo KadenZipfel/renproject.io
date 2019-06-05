@@ -52,7 +52,7 @@ export class GithubStats extends React.Component<GithubStatsProps, GithubStatsSt
                         <TabPanel>
                             <div className="gh--stats--overview">
                                 <div>
-                                    <h2>Activity</h2>
+                                    <h2>Commit Activity</h2>
                                     <GithubActivity repos={repos} />
                                 </div>
                                 <div>
