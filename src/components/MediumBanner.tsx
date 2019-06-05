@@ -5,6 +5,7 @@ import Slider from "react-slick";
 import { ExternalLink } from "./ExternalLink";
 import { TrashableReactProps, withTrashable } from "../lib/trashable";
 import { fetchMediumPosts, MediumPost } from "../lib/medium";
+import { StoreContext } from "../store/context";
 
 interface MediumBannerProps extends TrashableReactProps {
     /** The username of the medium account */
@@ -17,65 +18,38 @@ interface MediumBannerProps extends TrashableReactProps {
     freshness?: number;
 }
 
-interface MediumBannerState {
-    ready: boolean;
-    mediumPosts: MediumPost[];
-}
-
-class MediumBannerClass extends React.Component<MediumBannerProps, MediumBannerState> {
-    private mediumUrl: string;
-
-    public constructor(props: MediumBannerProps) {
-        super(props);
-        this.state = {
-            ready: false,
-            mediumPosts: [],
-        };
-        this.mediumUrl = `https://medium.com/${this.props.mediumName}/`;
+const MediumBannerClass = (props: MediumBannerProps) => {
+    const mediumUrl: string = `https://medium.com/${props.mediumName}/`;
+    const storeContext = React.useContext(StoreContext);
+    if (storeContext === null) {
+        return <></>;
     }
 
-    public async componentDidMount(): Promise<void> {
-        const { mediumName, limit } = this.props;
-        const mediumPosts = await this.props.registerPromise(fetchMediumPosts(mediumName));
-        const sliceUntil = (limit && limit > 0) ? limit : mediumPosts.length;
-        this.setState({
-            ready: true,
-            mediumPosts: mediumPosts.slice(0, sliceUntil),
-        });
+    const { mediumPosts, setMediumPosts } = storeContext;
+
+    const fetchData = async () => {
+        const { mediumName, limit } = props;
+        const allMediumPosts = await props.registerPromise(fetchMediumPosts(mediumName));
+        const sliceUntil = (limit && limit > 0) ? limit : allMediumPosts.length;
+        setMediumPosts(allMediumPosts.slice(0, sliceUntil));
     }
 
-    public render(): JSX.Element {
-        const { mediumPosts, ready } = this.state;
-        const settings = {
-            arrows: false,
-            dots: false,
-            autoplay: true,
-            autoplaySpeed: 5000,
-            pauseOnFocus: true,
-        };
-        return (
-            <div className="medium-banner">
-                <div className="container">
-                    <Slider className={`medium-banner--slider ${ready ? "ready" : ""}`} {...settings}>
-                        {mediumPosts.map(post => this.generateLink(post))}
-                    </Slider>
-                </div>
-            </div>
-        );
-    }
+    React.useEffect(() => {
+        fetchData();
+    }, []);
 
-    private generateLink(post: MediumPost): JSX.Element {
+    const generateLink = (post: MediumPost): JSX.Element => {
         return (
             <div className="medium-banner--link content--links" key={post.id}>
-                <ExternalLink href={this.mediumUrl + post.uniqueSlug}>
-                    <span className={this.isNew(post.firstPublishedAt) ? "new" : ""}>{post.title} &rarr;</span>
+                <ExternalLink href={mediumUrl + post.uniqueSlug}>
+                    <span className={isNew(post.firstPublishedAt) ? "new" : ""}>{post.title} &rarr;</span>
                 </ExternalLink>
             </div>
         );
     }
 
-    private isNew(timestamp: number): boolean {
-        const { freshness } = this.props;
+    const isNew = (timestamp: number): boolean => {
+        const { freshness } = props;
         // If freshness is undefined or <= zero, then don't show "new" label
         if (!freshness || freshness <= 0) {
             return false;
@@ -89,6 +63,25 @@ class MediumBannerClass extends React.Component<MediumBannerProps, MediumBannerS
         const daysBetween = (now - timestamp) / 1000 / 60 / 60 / 24;
         return daysBetween < freshness;
     }
+
+    const ready = mediumPosts !== undefined && mediumPosts.length > 0;
+
+    const settings = {
+        arrows: false,
+        dots: false,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        pauseOnFocus: true,
+    };
+    return (
+        <div className="medium-banner">
+            <div className="container">
+                <Slider className={`medium-banner--slider ${ready ? "ready" : ""}`} {...settings}>
+                    {mediumPosts.map(post => generateLink(post))}
+                </Slider>
+            </div>
+        </div>
+    );
 
 }
 

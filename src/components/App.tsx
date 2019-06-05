@@ -6,22 +6,21 @@ import AboutPage from "./AboutPage";
 import HomePage from "./HomePage";
 import RoadmapPage from "./RoadmapPage";
 import RenVMPage from "./RenVMPage";
+import { StoreProvider } from "../store/context";
 
-class App extends React.Component {
-    public render(): JSX.Element {
-        return (
-            <BrowserRouter basename={process.env.PUBLIC_URL}>
-                <>
-                    <ScrollToTop />
-                    <Route path="/" exact component={HomePage} />
-                    <Route path="/about" component={AboutPage} />
-                    <Route path="/roadmap" component={RoadmapPage} />
-                    <Route path="/renvm" component={RenVMPage} />
-                </>
-            </BrowserRouter>
-        );
-    }
-}
+const App = () => {
+    return (
+        <BrowserRouter basename={process.env.PUBLIC_URL}>
+            <StoreProvider>
+                <ScrollToTop />
+                <Route path="/" exact component={HomePage} />
+                <Route path="/about" component={AboutPage} />
+                <Route path="/roadmap" component={RoadmapPage} />
+                <Route path="/renvm" component={RenVMPage} />
+            </StoreProvider>
+        </BrowserRouter>
+    );
+};
 
 export default App;
 
