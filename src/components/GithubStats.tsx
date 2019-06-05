@@ -32,8 +32,13 @@ class GithubStatsClass extends React.Component<GithubStatsProps, GithubStatsStat
     }
 
     public async componentDidMount(): Promise<void> {
-        const repos = await this.props.registerPromise(this.fetchRepos());
-        this.setState({ repos, ready: true, error: false });
+        try {
+            const repos = await this.props.registerPromise(this.fetchRepos());
+            this.setState({ repos, ready: true, error: false });
+        } catch (err) {
+            console.error(err);
+            this.setState({ error: true });
+        }
     }
 
     public render(): JSX.Element {
