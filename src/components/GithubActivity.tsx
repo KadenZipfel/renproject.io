@@ -86,16 +86,11 @@ export class GithubActivity extends React.Component<GithubActivityProps, GithubA
     }
 
     private getLimit = (selected: string) => {
-        switch (selected) {
-            case "1M":
-                return 52 - 4;
-            case "4M":
-                return 52 - 16;
-            case "6M":
-                return 52 - 26;
-            default:
-                return 0;
+        let weeks = 52;
+        if (selected[selected.length-1] === "M") {
+            weeks = 4 * parseInt(selected.substring(0, selected.length-1));
         }
+        return 52 - weeks;
     }
 
 }
