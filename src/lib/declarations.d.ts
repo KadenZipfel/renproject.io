@@ -1,5 +1,5 @@
 declare module "github-colors";
-declare module "tocbot";
+declare module "trashable";
 
 declare module "*.md" {
     const content: string;

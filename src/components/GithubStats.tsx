@@ -8,8 +8,9 @@ import { GithubActivity } from "./GithubActivity";
 import { ExternalLink } from "./ExternalLink";
 import { REN_URLS } from "../lib/constants";
 import { naturalTime } from "../lib/conversions";
+import { withTrashable, TrashableReactProps } from "../lib/trashable";
 
-interface GithubStatsProps {
+interface GithubStatsProps extends TrashableReactProps {
     usernames: string[];
     limit?: number;
 }
@@ -20,7 +21,7 @@ interface GithubStatsState {
     error: boolean;
 }
 
-export class GithubStats extends React.Component<GithubStatsProps, GithubStatsState> {
+class GithubStatsClass extends React.Component<GithubStatsProps, GithubStatsState> {
     constructor(props: GithubStatsProps) {
         super(props);
         this.state = {
@@ -31,7 +32,12 @@ export class GithubStats extends React.Component<GithubStatsProps, GithubStatsSt
     }
 
     public async componentDidMount(): Promise<void> {
-        await this.updateRepos();
+        await this.props.registerPromise(this.fetchRepos()).then((repos: GithubRepo[]) => {
+            this.setState({ repos, ready: true, error: false });
+        }).catch((err: any) => {
+            console.error(err);
+            this.setState({ error: true });
+        });
     }
 
     public render(): JSX.Element {
@@ -98,18 +104,11 @@ export class GithubStats extends React.Component<GithubStatsProps, GithubStatsSt
         return repos;
     }
 
-    private updateRepos = async (): Promise<void> => {
+    private fetchRepos = async (): Promise<GithubRepo[]> => {
         const { usernames } = this.props;
-        try {
-            let repos: GithubRepo[] = [];
-            for (const username of usernames) {
-                repos = repos.concat(await fetchRepos(username));
-            }
-            this.setState({ repos, ready: true, error: false });
-        } catch (err) {
-            console.error(err);
-            this.setState({ error: true });
-        }
+        return Promise.all(usernames.map(username => fetchRepos(username))).then(l => ([] as GithubRepo[]).concat(...l));
     }
 
 }
+
+export const GithubStats = withTrashable(GithubStatsClass);

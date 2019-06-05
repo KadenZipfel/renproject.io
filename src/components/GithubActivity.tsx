@@ -3,8 +3,9 @@ import * as React from "react";
 import ChartistGraph from "react-chartist";
 
 import { GithubRepo, calculateTotalActivity } from "../lib/github";
+import { withTrashable, TrashableReactProps } from "../lib/trashable";
 
-interface GithubActivityProps {
+interface GithubActivityProps extends TrashableReactProps {
     repos: GithubRepo[];
 }
 
@@ -13,8 +14,7 @@ interface GithubActivityState {
     selected: string;
 }
 
-
-export class GithubActivity extends React.Component<GithubActivityProps, GithubActivityState> {
+class GithubActivityClass extends React.Component<GithubActivityProps, GithubActivityState> {
     constructor(props: GithubActivityProps) {
         super(props);
         this.state = {
@@ -25,9 +25,9 @@ export class GithubActivity extends React.Component<GithubActivityProps, GithubA
 
     public async componentDidMount(): Promise<void> {
         const { repos } = this.props;
-        const activity = await calculateTotalActivity(repos);
-        console.log(activity);
-        this.setState({ activity });
+        this.props.registerPromise(calculateTotalActivity(repos)).then(
+            (activity: any) => this.setState({ activity })
+        );
     }
 
     public render(): JSX.Element {
@@ -94,3 +94,5 @@ export class GithubActivity extends React.Component<GithubActivityProps, GithubA
     }
 
 }
+
+export const GithubActivity = withTrashable(GithubActivityClass);
