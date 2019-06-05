@@ -1,13 +1,10 @@
 import * as React from "react";
 
-import axios from "axios";
 import Slider from "react-slick";
 
-import { MediumPost } from "../lib/types";
 import { ExternalLink } from "./ExternalLink";
 import { TrashableReactProps, withTrashable } from "../lib/trashable";
-
-const MEDIUM_FEED_URL = "https://medium-article-feed.herokuapp.com";
+import { fetchMediumPosts, MediumPost } from "../lib/medium";
 
 interface MediumBannerProps extends TrashableReactProps {
     /** The username of the medium account */
@@ -38,10 +35,12 @@ class MediumBannerClass extends React.Component<MediumBannerProps, MediumBannerS
     }
 
     public async componentDidMount(): Promise<void> {
-        const mediumPosts = await this.props.registerPromise(this.fetchMediumPosts());
+        const { mediumName, limit } = this.props;
+        const mediumPosts = await this.props.registerPromise(fetchMediumPosts(mediumName));
+        const sliceUntil = (limit && limit > 0) ? limit : mediumPosts.length;
         this.setState({
             ready: true,
-            mediumPosts,
+            mediumPosts: mediumPosts.slice(0, sliceUntil),
         });
     }
 
@@ -89,17 +88,6 @@ class MediumBannerClass extends React.Component<MediumBannerProps, MediumBannerS
         // Otherwise check the number of days in between
         const daysBetween = (now - timestamp) / 1000 / 60 / 60 / 24;
         return daysBetween < freshness;
-    }
-
-    private async fetchMediumPosts(): Promise<MediumPost[]> {
-        const { mediumName, limit } = this.props;
-        const feedurl = `${MEDIUM_FEED_URL}/${mediumName}/latest`;
-        const resp = await axios.get(feedurl);
-        if (resp.status !== 200) {
-            throw new Error("Could not get medium posts");
-        }
-        const sliceUntil = (limit && limit > 0) ? limit : resp.data.response.length;
-        return resp.data.response.slice(0, sliceUntil);
     }
 
 }
