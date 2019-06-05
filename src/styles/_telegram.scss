@@ -45,7 +45,11 @@
         }
     }
     .banner--content img {
-        margin-right: 1rem;
+        padding-bottom: 1.7rem;
+        padding-left: 0.3rem;
+    }
+    .banner--content h2 {
+        font-weight: bold;
     }
     .banner--content p {
         font-size: 1.6rem;

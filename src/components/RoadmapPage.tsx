@@ -14,6 +14,7 @@ const Fade = require("react-reveal/Fade");
 
 class RoadmapPage extends React.Component {
     public render(): JSX.Element {
+        const speechIcon = require(`../styles/images/icons/icon-speech.svg`);
         return (
             <div className="roadmap">
                 <Header />
@@ -54,7 +55,7 @@ class RoadmapPage extends React.Component {
                     <div className="container">
                         <div className="banner--content">
                             <div>
-                                <h2>Have your say.</h2>
+                                <h2>Have your say<img src={speechIcon} /></h2>
                                 <p>Provide input and feedback through our Telegram channel</p>
                             </div>
                             <TelegramSelector links={[
