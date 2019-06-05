@@ -25,7 +25,6 @@ export class TelegramSelector extends React.Component<TelegramSelectorProps, Tel
     public render(): JSX.Element {
         const { links } = this.props;
         const { value } = this.state;
-        console.log(links);
         return (
             <div className="telegram--button">
                 <div className="telegram--button--container">
