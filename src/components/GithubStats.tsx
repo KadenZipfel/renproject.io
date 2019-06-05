@@ -2,7 +2,7 @@ import * as React from "react";
 
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 
-import { fetchRepos, GithubRepo, calculateStats } from "../lib/github";
+import { fetchRepos, GithubRepo, calculateStats, calculateTotalActivity } from "../lib/github";
 import { GithubBlock, GithubLanguage, GithubStar } from "./GithubBlock";
 import { GithubActivity } from "./GithubActivity";
 import { ExternalLink } from "./ExternalLink";
@@ -22,7 +22,7 @@ const GithubStatsClass = (props: GithubStatsProps) => {
     if (storeContext === null) {
         return <></>;
     }
-    const { githubRepos, setGithubRepos } = storeContext;
+    const { githubRepos, setGithubRepos, githubActivity, setGithubActivity } = storeContext;
 
     const fetchAllRepos = async (): Promise<GithubRepo[]> => {
         const { usernames } = props;
@@ -37,6 +37,8 @@ const GithubStatsClass = (props: GithubStatsProps) => {
         try {
             const repos = await props.registerPromise(fetchAllRepos());
             setGithubRepos(repos);
+            const activity = await calculateTotalActivity(repos);
+            setGithubActivity(activity);
         } catch (err) {
             console.error(err);
             setError(true);
@@ -81,7 +83,7 @@ const GithubStatsClass = (props: GithubStatsProps) => {
                         <div className="gh--stats--overview">
                             <div>
                                 <h2>Commit Activity</h2>
-                                <GithubActivity repos={githubRepos} />
+                                <GithubActivity activity={githubActivity} />
                             </div>
                             <div>
                                 <h2>Last Commit</h2>
