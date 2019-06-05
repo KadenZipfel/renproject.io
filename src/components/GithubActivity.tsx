@@ -25,9 +25,8 @@ class GithubActivityClass extends React.Component<GithubActivityProps, GithubAct
 
     public async componentDidMount(): Promise<void> {
         const { repos } = this.props;
-        this.props.registerPromise(calculateTotalActivity(repos)).then(
-            (activity: any) => this.setState({ activity })
-        );
+        const activity = await this.props.registerPromise(calculateTotalActivity(repos));
+        this.setState({ activity });
     }
 
     public render(): JSX.Element {

@@ -38,13 +38,10 @@ class MediumBannerClass extends React.Component<MediumBannerProps, MediumBannerS
     }
 
     public async componentDidMount(): Promise<void> {
-        await this.props.registerPromise(this.fetchMediumPosts()).then((mediumPosts: MediumPost[]) => {
-            this.setState({
-                ready: true,
-                mediumPosts,
-            });
-        }).catch((err: any) => {
-            console.error(err)
+        const mediumPosts = await this.props.registerPromise(this.fetchMediumPosts());
+        this.setState({
+            ready: true,
+            mediumPosts,
         });
     }
 
