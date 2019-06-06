@@ -37,7 +37,7 @@ const GithubStatsClass = (props: GithubStatsProps) => {
         try {
             const repos = await props.registerPromise(fetchAllRepos());
             setGithubRepos(repos);
-            const activity = await calculateTotalActivity(repos);
+            const activity = await props.registerPromise(calculateTotalActivity(repos));
             setGithubActivity(activity);
         } catch (err) {
             console.error(err);
