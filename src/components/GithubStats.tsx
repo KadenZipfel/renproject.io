@@ -18,6 +18,7 @@ interface GithubStatsProps extends TrashableProps {
 
 const GithubStatsClass = (props: GithubStatsProps) => {
     const [error, setError] = React.useState(false);
+    const [ready, setReady] = React.useState(false);
     const storeContext = React.useContext(StoreContext);
     if (storeContext === null) {
         return <></>;
@@ -30,7 +31,7 @@ const GithubStatsClass = (props: GithubStatsProps) => {
     }
 
     const fetchData = async () => {
-        if (githubRepos.length > 0) {
+        if (ready) {
             return
         };
 
@@ -39,6 +40,7 @@ const GithubStatsClass = (props: GithubStatsProps) => {
             setGithubRepos(repos);
             const activity = await props.registerPromise(calculateTotalActivity(repos));
             setGithubActivity(activity);
+            setReady(true);
         } catch (err) {
             console.error(err);
             setError(true);
@@ -65,7 +67,6 @@ const GithubStatsClass = (props: GithubStatsProps) => {
         return repos;
     }
 
-    const ready = githubRepos.length > 0;
     const stats = calculateStats(githubRepos);
     const fetchError = <p>Failed to fetch information from Github. Please try again later.</p>;
     const loadingMessage = <p>Fetching data from Github...</p>;
