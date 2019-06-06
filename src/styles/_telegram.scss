@@ -58,7 +58,7 @@
 
 .telegram--select {
     position: absolute;
-    bottom: -2rem;
+    bottom: -2.5rem;
 
     * {
         cursor: pointer;
@@ -68,10 +68,13 @@
         content: "Change ▾";
         position: absolute;
         right: 0;
-        font-size: 1.2rem;
-        line-height: 1.6rem;
+        line-height: 2.4rem;
         pointer-events: none;
-        font-weight: bold;
+    }
+
+    &::before, select {
+        font-size: 1.4rem;
+        font-weight: 300;
     }
 
     select {
