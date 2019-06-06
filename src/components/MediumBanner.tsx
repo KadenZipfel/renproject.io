@@ -3,11 +3,11 @@ import * as React from "react";
 import Slider from "react-slick";
 
 import { ExternalLink } from "./ExternalLink";
-import { TrashableReactProps, withTrashable } from "../lib/trashable";
+import { TrashableProps, withTrashable } from "react-trashable";
 import { fetchMediumPosts, MediumPost } from "../lib/medium";
 import { StoreContext } from "../store/context";
 
-interface MediumBannerProps extends TrashableReactProps {
+interface MediumBannerProps extends TrashableProps {
     /** The username of the medium account */
     mediumName: string;
     /** The maximum number of posts to display in the banner */

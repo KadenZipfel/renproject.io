@@ -8,10 +8,10 @@ import { GithubActivity } from "./GithubActivity";
 import { ExternalLink } from "./ExternalLink";
 import { REN_URLS } from "../lib/constants";
 import { naturalTime } from "../lib/conversions";
-import { withTrashable, TrashableReactProps } from "../lib/trashable";
+import { withTrashable, TrashableProps } from "react-trashable";
 import { StoreContext } from "../store/context";
 
-interface GithubStatsProps extends TrashableReactProps {
+interface GithubStatsProps extends TrashableProps {
     usernames: string[];
     limit?: number;
 }
