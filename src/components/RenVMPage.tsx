@@ -46,19 +46,19 @@ class RenVMPage extends React.Component {
                                             image={shamirIcon}
                                             title="Shamir's Secret Sharing"
                                             subtitle="The foundation to how RenVM keeps your data secret"
-                                            description="The premise is simple: a secret is divided into multiple shares, with participants in the secret sharing scheme needing a majority of the  parts to be able to reconstruct the secret."
+                                            description="The premise is simple: a secret is divided into multiple shares, with participants in the secret sharing scheme needing a majority of the parts to be able to reconstruct the secret."
                                         />
                                         <OverviewBlock
                                             image={smpcIcon}
                                             title="Secure multiparty Computation (sMPC)"
                                             subtitle="How RenVM efficiently runs secret scripts"
-                                            description="We have pioneered our own state-of-the-art sMPC algorithm that allows untrusted Darknodes to jointly run scripts without revealing the inputs or outputs of the script to anyone, not even to the machines powering RenVM. "
+                                            description="We have pioneered our own state-of-the-art sMPC algorithm that allows untrusted Darknodes to jointly run scripts without revealing the inputs or outputs of the script to anyone, not even to the machines powering RenVM."
                                         />
                                         <OverviewBlock
                                             image={bftIcon}
                                             title="Byzantine Fault Tolerance"
-                                            subtitle="Uptime in a dynamic &amp; potentially malicious environment "
-                                            description="Our network thrives even if Darknodes become unavailable or behave maliciously. Scripts keep running, and secrets stay secret "
+                                            subtitle="Uptime in a dynamic &amp; potentially malicious environment"
+                                            description="Our network thrives even if Darknodes become unavailable or behave maliciously. Scripts keep running, and secrets stay secret."
                                         />
                                         <OverviewBlock
                                             image={hyperdriveIcon}
