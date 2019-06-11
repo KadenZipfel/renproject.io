@@ -64,7 +64,7 @@ class AboutPage extends React.Component {
                                 <TeamItem name="Loong Wang" position="CTO" github="loongy" twitter="bzlwang" linkedin="bzlwang" medium="@loong" />
                             </div>
                             <div className="row">
-                                <TeamItem name="Noah I" position="Blockchain Developer" github="negaex" linkedin="noahi" />
+                                <TeamItem name="Noah I" position="Blockchain Developer" github="noiach" />
                                 <TeamItem name="Susruth Nadimpalli" position="Blockchain Developer" github="susruth" linkedin="susruth-nadimpalli" />
                                 <TeamItem name="Yunshi Sun" position="Software Developer" github="tok-kkk" linkedin="yunshi-sun" />
                                 <TeamItem name="Jaz Gulati" position="Software Developer" github="jazg" linkedin="jazg" />
