@@ -5,18 +5,15 @@
     &::before {
         background-image: url('#{$images}/illustration-about_header.svg');
         background-repeat: no-repeat;
-        background-position: left top;
-        background-size: contain;
+        background-position: left bottom;
+        background-size: cover;
         width: 35%;
         height: 100%;
-        content: "";
         position: absolute;
         top: 0;
-        right: -5rem;
+        right: 0;
         @media(min-width: $min-md) {
-            background-position: left bottom;
-            background-size: cover;
-            right: 0;
+            content: "";
         }
     }
     h1 {
