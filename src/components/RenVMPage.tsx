@@ -24,7 +24,7 @@ class RenVMPage extends React.Component {
                     <div className="container">
                         <div className="row">
                             <div className="featured--content">
-                                <ContentBlock subtitle={<>RenVM, a trustless &amp;<br />decentralized virtual machine.</>}>
+                                <ContentBlock subtitle={<>RenVM, a trustless &amp; <br />decentralized virtual machine.</>}>
                                     <p>Secure multi-party computations power a privacy layer for decentralized applications, enabling private and interoperable lending, exchanges, collateralization &amp; more.</p>
 
                                     <div className="featured--buttons">

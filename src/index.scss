@@ -93,6 +93,13 @@ p {
     font-size: 1.4rem;
     line-height: 2;
 }
+p, h1 {
+    @media(max-width: $min-xl) {
+        br {
+            display: none;
+        }
+    }
+}
 b {
 }
 a {

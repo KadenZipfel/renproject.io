@@ -32,7 +32,7 @@ class Featured extends React.Component<FeaturedProps, FeaturedState> {
                     <div className="row">
                         <div className="featured--content">
                             <ContentBlock subtitle="Liquidity, unchained.">
-                                <p>The first and only open protocol that provides access to inter-blockchain liquidity for all decentralized applications.</p>
+                                <p>The first and only open protocol that provides access to <br />inter-blockchain liquidity for all decentralized applications.</p>
 
                                 <div className="featured--buttons">
                                     <FeaturedButton className="primary" href={REN_URLS.gitbook} title="Read the docs"></FeaturedButton>
