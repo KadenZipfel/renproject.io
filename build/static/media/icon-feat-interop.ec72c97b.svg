@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>icon-interop</title>
+    <desc>Created with Sketch.</desc>
+    <g id="RenProject" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="home" transform="translate(-808.000000, -1475.000000)">
+            <g id="icon-interop" transform="translate(808.000000, 1475.000000)">
+                <rect id="Rectangle" fill="#006FE8" fill-rule="nonzero" x="0" y="0" width="64" height="64" rx="18"></rect>
+                <circle id="Oval" fill="#0053AE" fill-rule="nonzero" cx="33.37" cy="33.37" r="19.64"></circle>
+                <circle id="Oval" fill="#FFFFFF" fill-rule="nonzero" cx="32" cy="32" r="19.64"></circle>
+                <path d="M36.94,22.58 L43.79,29.42" id="Path" stroke="#0053AE" stroke-width="4"></path>
+                <path d="M27.06,22.58 L20.21,29.42" id="Path" stroke="#0053AE" stroke-width="4"></path>
+                <path d="M32,44.32 L32,35.75" id="Path" stroke="#0053AE" stroke-width="4"></path>
+            </g>
+        </g>
+    </g>
+</svg>
