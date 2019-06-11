@@ -14,5 +14,8 @@ yarn run start
 To deploy, run:
 
 ```bash
-yarn run deploy
+REACT_APP_GITHUB_TOKEN="your github token" yarn run deploy
 ```
+
+The Github token is needed to fetch Github repo information, since Github only allows 60 requests per hour for unauthenticated requests.
+
