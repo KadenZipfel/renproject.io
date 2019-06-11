@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="54px" height="54px" viewBox="0 0 54 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>Group 16</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="0.0004 0 54 0 54 53.9999 0.0004 53.9999"></polygon>
+        <polygon id="path-3" points="0.0004 0.0126 54 0.0126 54 1.0126 0.0004 1.0126"></polygon>
+        <polygon id="path-5" points="0 54 54 54 54 0 0 0"></polygon>
+    </defs>
+    <g id="RenProject" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="RenVM" transform="translate(-868.000000, -904.000000)">
+            <g id="Group-16" transform="translate(868.000000, 904.000000)">
+                <g id="Group-3">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <g id="Clip-2"></g>
+                    <path d="M36.0004,53.9999 L18.0004,53.9999 C8.0594,53.9999 0.0004,45.9409 0.0004,35.9999 L0.0004,17.9999 C0.0004,8.0589 8.0594,-0.0001 18.0004,-0.0001 L36.0004,-0.0001 C45.9404,-0.0001 54.0004,8.0589 54.0004,17.9999 L54.0004,35.9999 C54.0004,45.9409 45.9404,53.9999 36.0004,53.9999" id="Fill-1" fill="#006FE8" mask="url(#mask-2)"></path>
+                </g>
+                <g id="Group-6" transform="translate(0.000000, 29.000000)">
+                    <mask id="mask-4" fill="white">
+                        <use xlink:href="#path-3"></use>
+                    </mask>
+                    <g id="Clip-5"></g>
+                    <path d="M0.0004,0.5126 L54.0004,0.5126" id="Stroke-4" stroke="#FFFFFF" stroke-width="2" mask="url(#mask-4)"></path>
+                </g>
+                <polygon id="Fill-7" fill="#0053AE" points="46.4545 23.9457 46.4545 37.1337 29.4685 37.1337 38.9915 37.9327 48.5155 38.7327 47.1185 25.3017"></polygon>
+                <polygon id="Fill-9" fill="#0053AE" points="24.518 23.9457 24.518 37.1337 7.532 37.1337 26.58 38.7327 25.182 25.3017"></polygon>
+                <mask id="mask-6" fill="white">
+                    <use xlink:href="#path-5"></use>
+                </mask>
+                <g id="Clip-12"></g>
+                <polygon id="Fill-11" fill="#82B8F2" mask="url(#mask-6)" points="7.532 37.134 24.518 37.134 24.518 23.946 7.532 23.946"></polygon>
+                <path d="M20.8569,23.9457 L20.8569,20.3317 C20.8569,17.6627 18.6939,15.4997 16.0249,15.4997 C13.3559,15.4997 11.1929,17.6627 11.1929,20.3317 L11.1929,23.9457" id="Stroke-13" stroke="#FFFFFF" stroke-width="4.068" mask="url(#mask-6)"></path>
+                <polygon id="Fill-14" fill="#82B8F2" mask="url(#mask-6)" points="29.482 37.134 46.468 37.134 46.468 23.946 29.482 23.946"></polygon>
+                <path d="M42.8071,23.9457 L42.8071,20.3317 C42.8071,17.6627 40.6441,15.4997 37.9751,15.4997 C35.3061,15.4997 33.1431,17.6627 33.1431,20.3317 L33.1431,23.9457" id="Stroke-15" stroke="#FFFFFF" stroke-width="4.068" mask="url(#mask-6)"></path>
+            </g>
+        </g>
+    </g>
+</svg>
