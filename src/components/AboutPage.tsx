@@ -60,7 +60,7 @@ class AboutPage extends React.Component {
                         <div className="container">
                             <h1>The Team</h1>
                             <div className="row">
-                                <TeamItem name="Taiyang Zhang" position="CEO" github="sixteen" linkedin="taiyangzhang" medium="@taiyangzhang" />
+                                <TeamItem name="Taiyang Zhang" position="CEO" github="sixteen" twitter="bftzhang" linkedin="taiyangzhang" medium="@taiyangzhang" />
                                 <TeamItem name="Loong Wang" position="CTO" github="loongy" twitter="bzlwang" linkedin="bzlwang" medium="@loong" />
                             </div>
                             <div className="row">
