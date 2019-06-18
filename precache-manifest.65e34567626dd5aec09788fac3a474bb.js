@@ -4,8 +4,8 @@ self.__precacheManifest = [
     "url": "/static/media/icon-renvm-smpc.64050f49.svg"
   },
   {
-    "revision": "87da945c16bafd3dcd4b",
-    "url": "/static/css/main.b2152ec3.chunk.css"
+    "revision": "309956799be7cce161da",
+    "url": "/static/css/main.d9247246.chunk.css"
   },
   {
     "revision": "42ac5946195a7306e2a5",
@@ -76,8 +76,12 @@ self.__precacheManifest = [
     "url": "/static/media/icon-renvm-shamir.21edf993.svg"
   },
   {
-    "revision": "87da945c16bafd3dcd4b",
+    "revision": "309956799be7cce161da",
     "url": "/static/js/main.b3aacd51.chunk.js"
+  },
+  {
+    "revision": "bffb3b7aca9b89ef7609f0f6c9686a7d",
+    "url": "/static/media/illustration-about_header.bffb3b7a.svg"
   },
   {
     "revision": "4b46eca471a442db4ead71f332a3c07d",
@@ -90,10 +94,6 @@ self.__precacheManifest = [
   {
     "revision": "a034d0b94795623d28b464f7bbec4b2b",
     "url": "/static/media/grey-oval.a034d0b9.svg"
-  },
-  {
-    "revision": "bffb3b7aca9b89ef7609f0f6c9686a7d",
-    "url": "/static/media/illustration-about_header.bffb3b7a.svg"
   },
   {
     "revision": "5f775a47996f8d520d8015b8aaac4146",
@@ -112,20 +112,16 @@ self.__precacheManifest = [
     "url": "/static/media/renvm-circle-lines.cfebebe3.svg"
   },
   {
-    "revision": "4bd7f63ccf4d345b9265b8feea2e748d",
-    "url": "/static/media/illustration-ren_token.4bd7f63c.svg"
-  },
-  {
     "revision": "4299a6f9ef6351f541a1e9be70b93c78",
     "url": "/static/media/roadmap-banner.4299a6f9.svg"
   },
   {
-    "revision": "a95d44d70a47068ad70c96139c4f8fbe",
-    "url": "/static/media/SuisseIntl-Thin.a95d44d7.otf"
+    "revision": "4bd7f63ccf4d345b9265b8feea2e748d",
+    "url": "/static/media/illustration-ren_token.4bd7f63c.svg"
   },
   {
-    "revision": "ad716f22b3c5a0c6bf6837e9bbafadc4",
-    "url": "/static/media/SuisseIntl-Light.ad716f22.otf"
+    "revision": "a95d44d70a47068ad70c96139c4f8fbe",
+    "url": "/static/media/SuisseIntl-Thin.a95d44d7.otf"
   },
   {
     "revision": "55790fe1a97bfeba0ef289fd99549b23",
@@ -134,6 +130,10 @@ self.__precacheManifest = [
   {
     "revision": "3f16c813c5c1b5ebe4fb8f1e53eb57c6",
     "url": "/static/media/SuisseIntl-Regular.3f16c813.otf"
+  },
+  {
+    "revision": "ad716f22b3c5a0c6bf6837e9bbafadc4",
+    "url": "/static/media/SuisseIntl-Light.ad716f22.otf"
   },
   {
     "revision": "ceda09c978023f0b029310993b9f18c5",
@@ -152,7 +152,7 @@ self.__precacheManifest = [
     "url": "/static/media/illustration-chip.2258e058.png"
   },
   {
-    "revision": "32dd060d588559e5398a05ae8de9af40",
+    "revision": "ff55ea326e4c48a007509b2f5597f5e9",
     "url": "/index.html"
   }
 ];
