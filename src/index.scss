@@ -94,7 +94,7 @@ p {
     line-height: 150%;
 }
 p, h1 {
-    @media(max-width: $min-xl) {
+    @media(max-width: $min-lg) {
         br {
             display: none;
         }
