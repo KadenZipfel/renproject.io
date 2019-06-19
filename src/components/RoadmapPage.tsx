@@ -26,7 +26,7 @@ export const RoadmapPage = () => {
                     <div className="row">
                         <div className="section--content">
                             <ContentBlock subtitle="A Growing Ecosystem">
-                                <p>We're dedicated to developing world class privacy and interoperability <br />focused tools as well as keeping you up-to-date on our progress.</p>
+                                <p>We're dedicated to developing world class privacy and interoperability focused tools as well as keeping you up-to-date on our progress.</p>
                             </ContentBlock>
                         </div>
                     </div>

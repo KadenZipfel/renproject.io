@@ -40,8 +40,8 @@ class HomePage extends React.Component {
                     <div className="container">
                         <div className="row">
                             <div className="section--content">
-                                <ContentBlock subtitle={<>Transfer any token <br />between any blockchain.</>}>
-                                    <p>Access tokens from any blockchain using your existing smart contracts <br />without having to worry about wrapping or unwrapping tokens.</p>
+                                <ContentBlock subtitle={<>Transfer any token between any blockchain.</>}>
+                                    <p>Access tokens from any blockchain using your existing smart contracts without having to worry about wrapping or unwrapping tokens.</p>
                                     <div className="content--buttons">
                                         <a href="/renvm" className="content--link" >How it works &rarr;</a>
                                     </div>
@@ -55,8 +55,8 @@ class HomePage extends React.Component {
                     <div className="container">
                         <div className="row">
                             <div className="section--content">
-                                <ContentBlock subtitle={<>Infrastructure for <br />connecting the unconnected</>}>
-                                    <p>Use RenVM to expand the capability of existing dApps or create <br />entirely new business cases within the decentralized world.</p>
+                                <ContentBlock subtitle={<>Infrastructure for connecting the unconnected</>}>
+                                    <p>Use RenVM to expand the capability of existing dApps or create entirely new business cases within the decentralized world.</p>
                                     <div className="infrastructure--list">
                                         <div className="infrastructure--list--item">
                                             <div>
@@ -82,7 +82,7 @@ class HomePage extends React.Component {
                                             </div>
                                             <div>
                                                 <h2>Multi-collateral lending</h2>
-                                                <p>Utilize your existing non-custodial smart <br />contracts to collateralize cross-chain assets.</p>
+                                                <p>Utilize your existing non-custodial smart ontracts to collateralize cross-chain assets.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -95,7 +95,7 @@ class HomePage extends React.Component {
                     <div className="container">
                         <div className="row">
                             <div className="section--content">
-                                <ContentBlock title="Darknodes" subtitle={<>Powering decentralized, <br />trustless, permissionless applications.</>}>
+                                <ContentBlock title="Darknodes" subtitle={<>Powering decentralized, trustless, permissionless applications.</>}>
                                     <p>Darknodes all around the world run the applications built on RenVM in complete secrecy. Darknodes are incentivized to work by capturing a percentage of volume transacted through RenVM.</p>
                                     <div className="content--buttons">
                                         <ExternalLink href={REN_URLS.gitbookDarknodes} className="content--link" >More about Darknodes &rarr;</ExternalLink>
