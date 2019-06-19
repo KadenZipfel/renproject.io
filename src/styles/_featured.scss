@@ -46,8 +46,13 @@
         line-height: 9rem;
     }
 }
-.featured .content--body p {
-    color: $light-grey;
+.featured .content--body {
+    @media(max-width: $min-md) {
+        width: 100%;
+    }
+    p {
+        color: $light-grey;
+    }
 }
 .featured .content--body > *:first-child:not(.content--links) {
     margin-top: 4rem;
