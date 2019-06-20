@@ -82,7 +82,7 @@ class HomePage extends React.Component {
                                             </div>
                                             <div>
                                                 <h2>Multi-collateral lending</h2>
-                                                <p>Utilize your existing non-custodial smart ontracts to collateralize cross-chain assets.</p>
+                                                <p>Utilize your existing non-custodial smart contracts to collateralize cross-chain assets.</p>
                                             </div>
                                         </div>
                                     </div>
