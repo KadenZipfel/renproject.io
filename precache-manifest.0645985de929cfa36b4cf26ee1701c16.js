@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/static/media/icon-renvm-smpc.64050f49.svg"
   },
   {
-    "revision": "ffaeb440bb01bc69031d",
+    "revision": "1071e0491b400b8107b8",
     "url": "/static/css/main.cb1e52af.chunk.css"
   },
   {
@@ -76,24 +76,20 @@ self.__precacheManifest = [
     "url": "/static/media/icon-renvm-shamir.21edf993.svg"
   },
   {
-    "revision": "ffaeb440bb01bc69031d",
-    "url": "/static/js/main.09a913f2.chunk.js"
-  },
-  {
-    "revision": "64aef44ba20f75e0dbc244dab5db3664",
-    "url": "/static/media/illustration-header.64aef44b.svg"
+    "revision": "1071e0491b400b8107b8",
+    "url": "/static/js/main.ee872d3a.chunk.js"
   },
   {
     "revision": "bffb3b7aca9b89ef7609f0f6c9686a7d",
     "url": "/static/media/illustration-about_header.bffb3b7a.svg"
   },
   {
-    "revision": "4b46eca471a442db4ead71f332a3c07d",
-    "url": "/static/media/city2.4b46eca4.svg"
+    "revision": "64aef44ba20f75e0dbc244dab5db3664",
+    "url": "/static/media/illustration-header.64aef44b.svg"
   },
   {
-    "revision": "a034d0b94795623d28b464f7bbec4b2b",
-    "url": "/static/media/grey-oval.a034d0b9.svg"
+    "revision": "4b46eca471a442db4ead71f332a3c07d",
+    "url": "/static/media/city2.4b46eca4.svg"
   },
   {
     "revision": "5f775a47996f8d520d8015b8aaac4146",
@@ -104,6 +100,10 @@ self.__precacheManifest = [
     "url": "/static/media/logo-wordmark.a6830241.svg"
   },
   {
+    "revision": "a034d0b94795623d28b464f7bbec4b2b",
+    "url": "/static/media/grey-oval.a034d0b9.svg"
+  },
+  {
     "revision": "7bf214f5e7e348a512c3d03deae4cb84",
     "url": "/static/media/illustration-renex.7bf214f5.svg"
   },
@@ -112,12 +112,12 @@ self.__precacheManifest = [
     "url": "/static/media/renvm-circle-lines.cfebebe3.svg"
   },
   {
-    "revision": "4bd7f63ccf4d345b9265b8feea2e748d",
-    "url": "/static/media/illustration-ren_token.4bd7f63c.svg"
-  },
-  {
     "revision": "4299a6f9ef6351f541a1e9be70b93c78",
     "url": "/static/media/roadmap-banner.4299a6f9.svg"
+  },
+  {
+    "revision": "4bd7f63ccf4d345b9265b8feea2e748d",
+    "url": "/static/media/illustration-ren_token.4bd7f63c.svg"
   },
   {
     "revision": "a95d44d70a47068ad70c96139c4f8fbe",
@@ -132,16 +132,16 @@ self.__precacheManifest = [
     "url": "/static/media/SuisseIntl-Light.ad716f22.otf"
   },
   {
-    "revision": "3f16c813c5c1b5ebe4fb8f1e53eb57c6",
-    "url": "/static/media/SuisseIntl-Regular.3f16c813.otf"
+    "revision": "bf540a0fcd9ccff7af1e960a046cfc6d",
+    "url": "/static/media/SuisseIntl-Black.bf540a0f.otf"
   },
   {
     "revision": "ceda09c978023f0b029310993b9f18c5",
     "url": "/static/media/SuisseIntl-Bold.ceda09c9.otf"
   },
   {
-    "revision": "bf540a0fcd9ccff7af1e960a046cfc6d",
-    "url": "/static/media/SuisseIntl-Black.bf540a0f.otf"
+    "revision": "3f16c813c5c1b5ebe4fb8f1e53eb57c6",
+    "url": "/static/media/SuisseIntl-Regular.3f16c813.otf"
   },
   {
     "revision": "9af7a99c2579a07d4cac96c790216892",
@@ -152,7 +152,7 @@ self.__precacheManifest = [
     "url": "/static/media/illustration-chip.2258e058.png"
   },
   {
-    "revision": "2cda6773521f2b6f3383844d1cf717e4",
+    "revision": "5535966ceb7ae7daa8ded64c915d7297",
     "url": "/index.html"
   }
 ];
