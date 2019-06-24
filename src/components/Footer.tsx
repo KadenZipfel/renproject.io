@@ -21,7 +21,7 @@ class Footer extends React.Component {
                             <ul>
                                 <li><ExternalLink href={REN_URLS.telegramAnnouncements}>Telegram Announcements</ExternalLink></li>
                                 <li><ExternalLink href={REN_URLS.telegram}>Telegram Community</ExternalLink></li>
-                                <li><ExternalLink href={REN_URLS.gitbook}>Help</ExternalLink></li>
+                                <li><ExternalLink href={REN_URLS.gitbookHelp}>Help</ExternalLink></li>
                             </ul>
                         </div>
                         <div className="footer--links">

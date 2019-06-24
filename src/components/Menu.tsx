@@ -22,7 +22,7 @@ class Menu extends React.Component<MenuProps, MenuState> {
                 <li className="menu--link"><NavLink onClick={this.handleOnClick} to="/roadmap" activeClassName="active">Roadmap</NavLink></li>
                 <li className="menu--link"><NavLink onClick={this.handleOnClick} to="/renvm" activeClassName="active">RenVM</NavLink></li>
                 <li className="menu--link"><ExternalLink onClick={this.handleOnClick} href={REN_URLS.medium}>Blog</ExternalLink></li>
-                <li className="menu--link"><ExternalLink onClick={this.handleOnClick} href={REN_URLS.gitbook}>Help</ExternalLink></li>
+                <li className="menu--link"><ExternalLink onClick={this.handleOnClick} href={REN_URLS.gitbookHelp}>Help</ExternalLink></li>
             </>
         );
     }

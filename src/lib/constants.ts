@@ -10,6 +10,7 @@ export const REN_URLS = {
     telegramAnnouncements: "https://t.me/renprojectann",
     zendesk: "https://renproject.zendesk.com",
     gitbook: "https://docs.renproject.io/ren",
+    gitbookHelp: "https://docs.renproject.io/darknodes/community/help",
     gitbookDarknodes: "https://docs.renproject.io/darknodes/",
     typeform: "https://renprotocol.typeform.com/to/YIxBSp",
     supportEmail: "support@renproject.io"
