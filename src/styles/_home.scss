@@ -128,6 +128,9 @@
         height: 100%;
         left: 0;
         z-index: -1;
+        @media(min-width: $min-xxl) {
+            background-size: 100% 100%;
+        }
     }
     text-align: center;
     .content--heading h1 {
