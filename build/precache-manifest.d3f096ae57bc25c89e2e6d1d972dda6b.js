@@ -84,16 +84,16 @@ self.__precacheManifest = [
     "url": "/static/media/illustration-about_header.bffb3b7a.svg"
   },
   {
-    "revision": "a034d0b94795623d28b464f7bbec4b2b",
-    "url": "/static/media/grey-oval.a034d0b9.svg"
-  },
-  {
     "revision": "4b46eca471a442db4ead71f332a3c07d",
     "url": "/static/media/city2.4b46eca4.svg"
   },
   {
     "revision": "64aef44ba20f75e0dbc244dab5db3664",
     "url": "/static/media/illustration-header.64aef44b.svg"
+  },
+  {
+    "revision": "a034d0b94795623d28b464f7bbec4b2b",
+    "url": "/static/media/grey-oval.a034d0b9.svg"
   },
   {
     "revision": "5f775a47996f8d520d8015b8aaac4146",
@@ -108,12 +108,12 @@ self.__precacheManifest = [
     "url": "/static/media/illustration-renex.7bf214f5.svg"
   },
   {
-    "revision": "4299a6f9ef6351f541a1e9be70b93c78",
-    "url": "/static/media/roadmap-banner.4299a6f9.svg"
-  },
-  {
     "revision": "cfebebe312796c7b36b2b3e5c3109d99",
     "url": "/static/media/renvm-circle-lines.cfebebe3.svg"
+  },
+  {
+    "revision": "4299a6f9ef6351f541a1e9be70b93c78",
+    "url": "/static/media/roadmap-banner.4299a6f9.svg"
   },
   {
     "revision": "4bd7f63ccf4d345b9265b8feea2e748d",
@@ -152,7 +152,7 @@ self.__precacheManifest = [
     "url": "/static/media/illustration-chip.2258e058.png"
   },
   {
-    "revision": "6d1ef37d1fa5c635bba4fdd3a542e505",
+    "revision": "2aef874ed97e35af08e9694dc408a17b",
     "url": "/index.html"
   }
 ];
