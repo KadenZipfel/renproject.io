@@ -108,12 +108,12 @@ self.__precacheManifest = [
     "url": "/static/media/illustration-renex.7bf214f5.svg"
   },
   {
-    "revision": "cfebebe312796c7b36b2b3e5c3109d99",
-    "url": "/static/media/renvm-circle-lines.cfebebe3.svg"
-  },
-  {
     "revision": "4299a6f9ef6351f541a1e9be70b93c78",
     "url": "/static/media/roadmap-banner.4299a6f9.svg"
+  },
+  {
+    "revision": "cfebebe312796c7b36b2b3e5c3109d99",
+    "url": "/static/media/renvm-circle-lines.cfebebe3.svg"
   },
   {
     "revision": "4bd7f63ccf4d345b9265b8feea2e748d",
@@ -152,7 +152,7 @@ self.__precacheManifest = [
     "url": "/static/media/illustration-chip.2258e058.png"
   },
   {
-    "revision": "fa0d67c7f8cf4370a2f39e32ae9f3a99",
+    "revision": "77ee685fffe8b5a70bc22daf1219710b",
     "url": "/index.html"
   }
 ];
