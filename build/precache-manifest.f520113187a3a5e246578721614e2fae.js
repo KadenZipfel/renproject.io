@@ -80,28 +80,32 @@ self.__precacheManifest = [
     "url": "/static/js/main.ee872d3a.chunk.js"
   },
   {
-    "revision": "bffb3b7aca9b89ef7609f0f6c9686a7d",
-    "url": "/static/media/illustration-about_header.bffb3b7a.svg"
-  },
-  {
     "revision": "4b46eca471a442db4ead71f332a3c07d",
     "url": "/static/media/city2.4b46eca4.svg"
-  },
-  {
-    "revision": "64aef44ba20f75e0dbc244dab5db3664",
-    "url": "/static/media/illustration-header.64aef44b.svg"
   },
   {
     "revision": "a034d0b94795623d28b464f7bbec4b2b",
     "url": "/static/media/grey-oval.a034d0b9.svg"
   },
   {
+    "revision": "bffb3b7aca9b89ef7609f0f6c9686a7d",
+    "url": "/static/media/illustration-about_header.bffb3b7a.svg"
+  },
+  {
     "revision": "5f775a47996f8d520d8015b8aaac4146",
     "url": "/static/media/logo.5f775a47.svg"
   },
   {
+    "revision": "64aef44ba20f75e0dbc244dab5db3664",
+    "url": "/static/media/illustration-header.64aef44b.svg"
+  },
+  {
     "revision": "a6830241555b63ca30e9260e781673f6",
     "url": "/static/media/logo-wordmark.a6830241.svg"
+  },
+  {
+    "revision": "cfebebe312796c7b36b2b3e5c3109d99",
+    "url": "/static/media/renvm-circle-lines.cfebebe3.svg"
   },
   {
     "revision": "7bf214f5e7e348a512c3d03deae4cb84",
@@ -112,10 +116,6 @@ self.__precacheManifest = [
     "url": "/static/media/roadmap-banner.4299a6f9.svg"
   },
   {
-    "revision": "cfebebe312796c7b36b2b3e5c3109d99",
-    "url": "/static/media/renvm-circle-lines.cfebebe3.svg"
-  },
-  {
     "revision": "4bd7f63ccf4d345b9265b8feea2e748d",
     "url": "/static/media/illustration-ren_token.4bd7f63c.svg"
   },
@@ -124,12 +124,12 @@ self.__precacheManifest = [
     "url": "/static/media/SuisseIntl-Thin.a95d44d7.otf"
   },
   {
-    "revision": "ad716f22b3c5a0c6bf6837e9bbafadc4",
-    "url": "/static/media/SuisseIntl-Light.ad716f22.otf"
-  },
-  {
     "revision": "55790fe1a97bfeba0ef289fd99549b23",
     "url": "/static/media/SuisseIntl-Book.55790fe1.otf"
+  },
+  {
+    "revision": "ad716f22b3c5a0c6bf6837e9bbafadc4",
+    "url": "/static/media/SuisseIntl-Light.ad716f22.otf"
   },
   {
     "revision": "3f16c813c5c1b5ebe4fb8f1e53eb57c6",
