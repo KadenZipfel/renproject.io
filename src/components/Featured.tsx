@@ -28,6 +28,7 @@ class Featured extends React.Component<FeaturedProps, FeaturedState> {
     public render(): JSX.Element {
         return (
             <div className="section featured">
+                <div className="featured--background"></div>
                 <div className="container">
                     <div className="row">
                         <div className="featured--content">
